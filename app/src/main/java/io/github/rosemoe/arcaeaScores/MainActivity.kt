@@ -10,10 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
-import android.widget.BaseAdapter
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -75,6 +72,28 @@ class MainActivity : AppCompatActivity() {
                         }.show()
                 }
             }
+        }
+        findViewById<TextView>(R.id.player_name).let {
+            it.setOnClickListener {
+                val et = EditText(this)
+                et.layoutParams = ViewGroup.LayoutParams(-1, -1)
+                AlertDialog.Builder(this)
+                    .setTitle("设置名字")
+                    .setView(et)
+                    .setPositiveButton("好") { _, _ ->
+                        if (et.text.isEmpty()) {
+                            Toast.makeText(this, "这样不可以~", Toast.LENGTH_SHORT).show()
+                            return@setPositiveButton
+                        }
+                        val editor = prefs.edit()
+                        editor.putString("player_name", et.text.toString())
+                        editor.apply()
+                        (it as TextView).text = et.text
+                    }
+                    .setNegativeButton("不了", null)
+                    .show()
+            }
+            it.text = prefs.getString("player_name", "点我设置名字")
         }
     }
 
@@ -225,7 +244,10 @@ class MainActivity : AppCompatActivity() {
                         result.playPotential = when (result.score) {
                             in 10000000..20000000 -> result.constant + 2.0
                             in 9800000..10000000 -> result.constant + 1.0 + (result.score - 9800000) / 200000.0
-                            else -> Math.max(0.0, result.constant + (result.score - 9500000) / 300000.0)
+                            else -> Math.max(
+                                0.0,
+                                result.constant + (result.score - 9500000) / 300000.0
+                            )
                         }
                         list.add(result)
                     } while (cursor.moveToNext())
@@ -234,19 +256,27 @@ class MainActivity : AppCompatActivity() {
                 }
                 cursor.close()
                 var max = 0.0
+                var b30 = 0.0
                 for (i in 0 until Math.min(30, list.size)) {
                     if (i < 10) {
                         max += list[i].playPotential * 2
                     } else {
                         max += list[i].playPotential
                     }
+                    b30 += list[i].playPotential
                 }
                 max /= 40.0
+                b30 /= 30.0
                 runOnUiThread {
                     findViewById<ListView>(R.id.score_list).adapter = Adp(list, this)
                     findViewById<TextView>(R.id.date).text =
                         "刷新时间：" + SimpleDateFormat.getDateTimeInstance().format(Date(data))
-                    findViewById<TextView>(R.id.max_potential).text = "最高可能的潜力值:" + BigDecimal(max).setScale(2, RoundingMode.FLOOR).toPlainString()
+                    findViewById<TextView>(R.id.max_potential).text =
+                        "Best30: " + BigDecimal(b30).setScale(2, RoundingMode.FLOOR)
+                            .toPlainString() + "  最高可能的潜力值:" + BigDecimal(max).setScale(
+                            2,
+                            RoundingMode.FLOOR
+                        ).toPlainString()
                 }
             } catch (e: Exception) {
                 if (!fromStart) {
@@ -295,9 +325,10 @@ class MainActivity : AppCompatActivity() {
                 }.toInt()
                 setTextColor(color)
             }
-            view.findViewById<TextView>(R.id.potential).text = "单曲潜力值: ${String.format("%.5f", getItem(position).playPotential)}"
+            view.findViewById<TextView>(R.id.potential).text =
+                "单曲潜力值: ${String.format("%.5f", getItem(position).playPotential)}"
             view.findViewById<TextView>(R.id.score).text = getItem(position).score.toString()
-            view.findViewById<TextView>(R.id.rank).text = "#${position+1}"
+            view.findViewById<TextView>(R.id.rank).text = "#${position + 1}"
             val i = getItem(position)
             view.findViewById<TextView>(R.id.notes).text =
                 "Pure:${i.pure} (+${i.maxPure}) Far:${i.far} Lost:${i.lost}"
