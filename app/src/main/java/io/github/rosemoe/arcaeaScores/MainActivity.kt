@@ -270,10 +270,10 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread {
                     findViewById<ListView>(R.id.score_list).adapter = Adp(list, this)
                     findViewById<TextView>(R.id.date).text =
-                        "刷新时间：" + SimpleDateFormat.getDateTimeInstance().format(Date(data))
+                        "Update Time：" + SimpleDateFormat.getDateTimeInstance().format(Date(data))
                     findViewById<TextView>(R.id.max_potential).text =
                         "Best30: " + BigDecimal(b30).setScale(2, RoundingMode.FLOOR)
-                            .toPlainString() + "  最高可能的潜力值:" + BigDecimal(max).setScale(
+                            .toPlainString() + "  Max Possible Ptt:" + BigDecimal(max).setScale(
                             2,
                             RoundingMode.FLOOR
                         ).toPlainString()
@@ -349,7 +349,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
