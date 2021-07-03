@@ -30,14 +30,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(
                 arrayOf(
                     android.Manifest.permission.READ_EXTERNAL_STORAGE,
                     android.Manifest.permission.WRITE_EXTERNAL_STORAGE
                 ), 9999
             )
-        }
+        }*/
         prefs = getSharedPreferences("prefs", MODE_PRIVATE)
         try {
             openFileOutput("text.txt", MODE_PRIVATE).close()
@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         Thread {
             try {
                 // Load local states
-                val proc = Runtime.getRuntime().exec("su")
+                val proc = Runtime.getRuntime().exec("su -mm")
                 update("获取Root...")
                 BufferedWriter(OutputStreamWriter(proc.outputStream)).apply {
                     write("mkdir /data/data/io.github.rosemoe.arcaeaScores/databases/\ncp -f /data/data/moe.low.arc/files/st3 /data/data/io.github.rosemoe.arcaeaScores/databases/st3.db\nchmod 777 /data/data/io.github.rosemoe.arcaeaScores/databases/\nexit\n")
@@ -270,7 +270,7 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread {
                     findViewById<ListView>(R.id.score_list).adapter = Adp(list, this)
                     findViewById<TextView>(R.id.date).text =
-                        "Update Time：" + SimpleDateFormat.getDateTimeInstance().format(Date(data))
+                        "Update Time：" + SimpleDateFormat.getDateTimeInstance(SimpleDateFormat.DEFAULT, SimpleDateFormat.DEFAULT, Locale.ENGLISH).format(Date(data))
                     findViewById<TextView>(R.id.max_potential).text =
                         "Best30: " + BigDecimal(b30).setScale(2, RoundingMode.FLOOR)
                             .toPlainString() + "  Max Possible Ptt:" + BigDecimal(max).setScale(
@@ -355,7 +355,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                AlertDialog.Builder(this)
+                    .setTitle("About ArcaeaScores")
+                    .setMessage("Rosemoe闲的蛋疼时开发的一个用Root暴力读取Arcaea存档并计算Best30的工具。\n从这里获取更新：https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
+                    .setPositiveButton("好", null)
+                    .show()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
