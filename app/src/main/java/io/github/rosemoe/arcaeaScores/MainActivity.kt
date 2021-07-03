@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.PorterDuff
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -30,14 +29,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requestPermissions(
-                arrayOf(
-                    android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE
-                ), 9999
-            )
-        }*/
         prefs = getSharedPreferences("prefs", MODE_PRIVATE)
         try {
             openFileOutput("text.txt", MODE_PRIVATE).close()
@@ -114,9 +105,9 @@ class MainActivity : AppCompatActivity() {
                     write("mkdir /data/data/io.github.rosemoe.arcaeaScores/databases/\ncp -f /data/data/moe.low.arc/files/st3 /data/data/io.github.rosemoe.arcaeaScores/databases/st3.db\nchmod 777 /data/data/io.github.rosemoe.arcaeaScores/databases/\nexit\n")
                     flush()
                 }
-                update("读取Arcaea存档...")
-                readOutput(proc.inputStream, "Stdout")
-                readOutput(proc.errorStream, "Stderr")
+                update("获取Arcaea存档...")
+                //readOutput(proc.inputStream, "Stdout")
+                //readOutput(proc.errorStream, "Stderr")
                 val exitCode = proc.waitFor()
                 if (exitCode != 0) {
                     runOnUiThread {
@@ -179,7 +170,7 @@ class MainActivity : AppCompatActivity() {
             val br = BufferedReader(InputStreamReader(stream))
             var line = br.readLine()
             while (line != null) {
-                Log.e("ArcaeaScores", "$name: $line")
+                Log.e("ShellOutput", "$name: $line")
                 line = br.readLine()
             }
         }.start()
@@ -227,8 +218,10 @@ class MainActivity : AppCompatActivity() {
                     null,
                     null
                 )
+                val clearTypeCursor =
+                    db.query("clearTypes", arrayOf("clearType"), null, null, null, null, null)
                 val list = mutableListOf<PlayResult>()
-                if (cursor.moveToFirst()) {
+                if (cursor.moveToFirst() && clearTypeCursor.moveToFirst()) {
                     do {
                         val result = PlayResult(
                             cursor.getString(cursor.getColumnIndex("songId")),
@@ -249,12 +242,15 @@ class MainActivity : AppCompatActivity() {
                                 result.constant + (result.score - 9500000) / 300000.0
                             )
                         }
+                        result.clearType =
+                            clearTypeCursor.getInt(clearTypeCursor.getColumnIndex("clearType"))
                         list.add(result)
-                    } while (cursor.moveToNext())
+                    } while (cursor.moveToNext() && clearTypeCursor.moveToNext())
                     list.sort()
                     list.reverse()
                 }
                 cursor.close()
+                clearTypeCursor.close()
                 var max = 0.0
                 var b30 = 0.0
                 for (i in 0 until Math.min(30, list.size)) {
@@ -270,7 +266,11 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread {
                     findViewById<ListView>(R.id.score_list).adapter = Adp(list, this)
                     findViewById<TextView>(R.id.date).text =
-                        "Update Time：" + SimpleDateFormat.getDateTimeInstance(SimpleDateFormat.DEFAULT, SimpleDateFormat.DEFAULT, Locale.ENGLISH).format(Date(data))
+                        "Update Time：" + SimpleDateFormat.getDateTimeInstance(
+                            SimpleDateFormat.DEFAULT,
+                            SimpleDateFormat.DEFAULT,
+                            Locale.ENGLISH
+                        ).format(Date(data))
                     findViewById<TextView>(R.id.max_potential).text =
                         "Best30: " + BigDecimal(b30).setScale(2, RoundingMode.FLOOR)
                             .toPlainString() + "  Max Possible Ptt:" + BigDecimal(max).setScale(
@@ -314,22 +314,31 @@ class MainActivity : AppCompatActivity() {
             if (view.layoutParams == null) {
                 view.layoutParams = RecyclerView.LayoutParams(-1, -2)
             }
-            view.findViewById<TextView>(R.id.songId).apply {
-                text = getItem(position).title
-                val color = when (getItem(position).difficulty) {
-                    0 -> 0xFF3C95AC
-                    1 -> 0xFFB7C484
-                    2 -> 0xFF733064
-                    3 -> 0xFF941F38
-                    else -> Color.GRAY
-                }.toInt()
-                setTextColor(color)
+            val i = getItem(position)
+            view.findViewById<TextView>(R.id.songId).text = i.title
+
+            val color = when (i.difficulty) {
+                0 -> 0xFF3C95AC
+                1 -> 0xFFB7C484
+                2 -> 0xFF733064
+                3 -> 0xFF941F38
+                else -> Color.GRAY
+            }.toInt()
+            view.findViewById<View>(R.id.difficulty_color).setBackgroundColor(color)
+
+            view.findViewById<TextView>(R.id.clearType).text = when (getItem(position).clearType) {
+                0 -> "[TL]"
+                1 -> "[TC]"
+                2 -> "[FR]"
+                3 -> "[PM]"
+                4 -> "[EC]"
+                5 -> "[HC]"
+                else -> "[UNK]"
             }
             view.findViewById<TextView>(R.id.potential).text =
-                "单曲潜力值: ${String.format("%.5f", getItem(position).playPotential)}"
+                "Potential: ${i.constant} > ${String.format("%.5f", getItem(position).playPotential)}"
             view.findViewById<TextView>(R.id.score).text = getItem(position).score.toString()
             view.findViewById<TextView>(R.id.rank).text = "#${position + 1}"
-            val i = getItem(position)
             view.findViewById<TextView>(R.id.notes).text =
                 "Pure:${i.pure} (+${i.maxPure}) Far:${i.far} Lost:${i.lost}"
             return view

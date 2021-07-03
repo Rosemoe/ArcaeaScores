@@ -5,4 +5,4 @@
 ### Features
 * 展示Best30
 * 展示最大可能的潜力值
-* 展示所有本地游玩记录以及对应Potential/Pure/Far/Lost/MaxPure
+* 展示所有本地游玩记录以及对应Potential/Pure/Far/Lost/MaxPure/Clear状态/定数

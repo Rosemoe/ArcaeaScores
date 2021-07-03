@@ -3,7 +3,13 @@ package io.github.rosemoe.arcaeaScores
 class PlayResult constructor(val name:String, val difficulty: Int, val score: Long, val pure: Int, val maxPure: Int, val far: Int, val lost: Int) : Comparable<PlayResult> {
 
     /**
-     * -1 for not loaded
+     * -1 -> Not Loaded
+     * 0 -> Track Lost
+     * 1 -> Track Complete
+     * 2 -> Full Recall
+     * 3 -> Pure Memory
+     * 4 -> Easy Clear
+     * 5 -> Hard Clear
      */
     var clearType = -1
 
