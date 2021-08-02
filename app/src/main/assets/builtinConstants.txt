@@ -33,6 +33,8 @@
 |-
 |[[Misdeed -la bonté de Dieu et l'origine du mal-]]||10.8||8.5||5.5||
 |-
+|[[Divine Light of Myriad]]||10.8||7.5||4.5||
+|-
 |[[Halcyon]]||10.7||8.2||5.5||
 |-
 |[[ouroboros -twin stroke of the end-]]||10.7||7.0||4.5||
@@ -40,6 +42,8 @@
 |[[Singularity]]||10.7||7.5||4.5||
 |-
 |[[AMAZING MIGHTYYYY!!!!]]||10.7||7.5||4.5||
+|-
+|[[REKKA RESONANCE]]||10.7||8.3||5.0||
 |-
 
 <!-- FTR 10级曲 -->
@@ -66,6 +70,8 @@
 |-
 |[[Lightning Screw]]||10.5||7.5||4.5||
 |-
+|[[Seclusion]]||10.5||7.0||4.0||
+|-
 |[[Garakuta Doll Play]]||10.4||6.5||4.5||
 |-
 |[[Valhalla:0]]||10.4||7.0||4.5||
@@ -77,6 +83,8 @@
 |[[Viyella's Tears]]||10.4||7.0||4.0||
 |-
 |[[AttraqtiA]]||10.4||7.5||4.0||
+|-
+|[[Aurgelmir]]||10.4||7.5||4.5||
 |-
 |[[Ether Strike]]||10.3||8.3||5.5||
 |-
@@ -122,6 +130,8 @@
 |[[Nhelv]]||9.9||6.5||3.0||
 |-
 |[[Bamboo]]||9.9||6.5||3.0||
+|-
+|[[HIVEMIND]]||9.9||7.5||4.0||
 |-
 |[[Heavensdoor]]||9.9||7.5||4.5||
 |-
@@ -192,6 +202,10 @@
 |[[Vandalism]]||9.7||6.0||3.5||
 |-
 |[[nέο κόsmo]]||9.7||7.5||4.0||
+|-
+|[[THE ULTIMACY]]||9.7||7.0||3.0||
+|-
+|[[AlterAle]]||9.7||6.5||3.0||
 |-
 
 <!-- FTR 9级曲（包含dropdead） -->
@@ -278,6 +292,8 @@
 |-
 |[[Glow]]||9.3||7.5||4.0||
 |-
+|[[False Embellishment]]||9.3||6.5||3.5||
+|-
 |[[Can I Friend You on Bassbook? Lol]]||9.3||6.5||3.0||
 |-
 |[[Blocked Library]]||9.3||6.5||3.5||
@@ -304,7 +320,7 @@
 |-
 |[[Iconoclast]]||9.1||7.0||4.0||
 |-
-|[[La'qryma of the Wasteland]]||9.1||6.5||3.5||
+|[[La'qryma of the Wasteland]]||9.1||6.5||3.5||9.9
 |-
 |[[qualia -ideaesthesia-]]||9.1||7.0||4.5||
 |-
@@ -315,6 +331,8 @@
 |[[Life is PIANO]]||9.1||5.5||3.5||
 |-
 |[[Blue Rose]]||9.1||5.5||2.0||
+|-
+|[[Small Cloud Sugar Candy]]||9.1||6.0||3.0||
 |-
 |[[Kanagawa Cyber Culvert]]||9.0||5.5||1.0||
 |-
@@ -413,7 +431,7 @@
 |-
 |[[Shades of Light in a Transcendent Realm]]||8.3||6.0||3.0||
 |-
-|[[Bookmaker (2D Version)]]||8.3||6.5||4.5||
+|[[Bookmaker (2D Version)]]||8.3||6.5||4.5||10.0
 |-
 |[[April showers]]||8.3||5.5||2.0||
 |-

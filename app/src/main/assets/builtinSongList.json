@@ -8894,7 +8894,7 @@
       "title_localized": {
         "en": "THE ULTIMACY"
       },
-      "artist": "Massive New Krew vs aran",
+      "artist": "aran vs Massive New Krew",
       "bpm": "200",
       "bpm_base": 200,
       "set": "single",
@@ -8966,6 +8966,251 @@
           "ratingClass": 2,
           "chartDesigner": "夜浪 vs Nitro",
           "jacketDesigner": "Nagu + yusi.",
+          "rating": 10,
+          "ratingPlus": true
+        }
+      ]
+    }
+  ,
+    {
+      "id": "kyogenkigo",
+      "title_localized": {
+        "en": "False Embellishment",
+        "ja": "狂言綺語"
+      },
+      "artist": "影虎。 & ikaruga_nex",
+      "bpm": "155",
+      "bpm_base": 155,
+      "set": "extend",
+      "purchase": "extend",
+      "audioPreview": 0,
+      "audioPreviewEnd": 0,
+      "side": 1,
+      "bg": "nijuusei-conflict-b",
+      "remote_dl": true,
+      "world_unlock": true,
+      "date": 1626825604,
+      "version": "3.7",
+      "difficulties": [
+        {
+          "ratingClass": 0,
+          "chartDesigner": "Exschwasion",
+          "jacketDesigner": "あすだ",
+          "rating": 3
+        },
+        {
+          "ratingClass": 1,
+          "chartDesigner": "Exschwasion",
+          "jacketDesigner": "あすだ",
+          "rating": 6
+        },
+        {
+          "ratingClass": 2,
+          "chartDesigner": "Exschwasion",
+          "jacketDesigner": "あすだ",
+          "rating": 9
+        }
+      ]
+    }
+  ,
+    {
+      "id": "hivemind",
+      "title_localized": {
+        "en": "HIVEMIND"
+      },
+      "artist": "かたぎり",
+      "bpm": "252",
+      "bpm_base": 252,
+      "set": "extend",
+      "purchase": "extend",
+      "audioPreview": 0,
+      "audioPreviewEnd": 0,
+      "side": 1,
+      "bg": "observer_conflict",
+      "remote_dl": true,
+      "world_unlock": true,
+      "date": 1626825605,
+      "version": "3.7",
+      "difficulties": [
+        {
+          "ratingClass": 0,
+          "chartDesigner": "NITRO -unconnected-",
+          "jacketDesigner": "fixro2n",
+          "rating": 4
+        },
+        {
+          "ratingClass": 1,
+          "chartDesigner": "NITRO -unconnected-",
+          "jacketDesigner": "fixro2n",
+          "rating": 7
+        },
+        {
+          "ratingClass": 2,
+          "chartDesigner": "NITRO -unconnected-",
+          "jacketDesigner": "fixro2n",
+          "rating": 9,
+          "ratingPlus": true
+        }
+      ]
+    }
+  ,
+    {
+      "id": "seclusion",
+      "title_localized": {
+        "en": "Seclusion"
+      },
+      "artist": "Laur feat. Sennzai",
+      "bpm": "175",
+      "bpm_base": 175,
+      "set": "observer",
+      "purchase": "observer",
+      "audioPreview": 0,
+      "audioPreviewEnd": 0,
+      "side": 1,
+      "bg": "observer_conflict",
+      "remote_dl": true,
+      "world_unlock": true,
+      "date": 1626825603,
+      "version": "3.7",
+      "difficulties": [
+        {
+          "ratingClass": 0,
+          "chartDesigner": "Exschwasion",
+          "jacketDesigner": "海鵜げそ",
+          "rating": 4
+        },
+        {
+          "ratingClass": 1,
+          "chartDesigner": "Exschwasion",
+          "jacketDesigner": "海鵜げそ",
+          "rating": 7
+        },
+        {
+          "ratingClass": 2,
+          "chartDesigner": "N•Ex•T",
+          "jacketDesigner": "海鵜げそ",
+          "rating": 10
+        }
+      ]
+    }
+  ,
+    {
+      "id": "smallcloud",
+      "title_localized": {
+        "en": "Small Cloud Sugar Candy"
+      },
+      "artist": "テヅカ x Aoi feat.桃雛なの",
+      "bpm": "220",
+      "bpm_base": 220,
+      "set": "observer_append_2",
+      "purchase": "observer_append_2",
+      "audioPreview": 0,
+      "audioPreviewEnd": 0,
+      "side": 0,
+      "bg": "observer_light",
+      "remote_dl": true,
+      "world_unlock": false,
+      "date": 1626825600,
+      "version": "3.7",
+      "difficulties": [
+        {
+          "ratingClass": 0,
+          "chartDesigner": "én",
+          "jacketDesigner": "のう",
+          "rating": 3
+        },
+        {
+          "ratingClass": 1,
+          "chartDesigner": "én",
+          "jacketDesigner": "のう",
+          "rating": 6
+        },
+        {
+          "ratingClass": 2,
+          "chartDesigner": "én",
+          "jacketDesigner": "のう",
+          "rating": 9
+        }
+      ]
+    }
+  ,
+    {
+      "id": "alterale",
+      "title_localized": {
+        "en": "AlterAle"
+      },
+      "artist": "Arik Kau Delay (アラ＆かゆき＆でり）",
+      "bpm": "220-245",
+      "bpm_base": 245,
+      "set": "observer_append_2",
+      "purchase": "observer_append_2",
+      "audioPreview": 0,
+      "audioPreviewEnd": 0,
+      "side": 0,
+      "bg": "observer_light",
+      "remote_dl": true,
+      "world_unlock": false,
+      "date": 1626825601,
+      "version": "3.7",
+      "difficulties": [
+        {
+          "ratingClass": 0,
+          "chartDesigner": "CERiNG",
+          "jacketDesigner": "ちょこ庵",
+          "rating": 3
+        },
+        {
+          "ratingClass": 1,
+          "chartDesigner": "CERiNG",
+          "jacketDesigner": "ちょこ庵",
+          "rating": 6
+        },
+        {
+          "ratingClass": 2,
+          "chartDesigner": "CERiNG",
+          "jacketDesigner": "ちょこ庵",
+          "rating": 9,
+          "ratingPlus": true
+        }
+      ]
+    }
+  ,
+    {
+      "id": "divinelight",
+      "title_localized": {
+        "en": "Divine Light of Myriad",
+        "ja": "光速神授説 - Divine Light of Myriad -"
+      },
+      "artist": "yoho",
+      "bpm": "344",
+      "bpm_base": 172,
+      "set": "observer_append_2",
+      "purchase": "observer_append_2",
+      "audioPreview": 0,
+      "audioPreviewEnd": 0,
+      "side": 0,
+      "bg": "observer_light",
+      "remote_dl": true,
+      "world_unlock": false,
+      "date": 1626825602,
+      "version": "3.7",
+      "difficulties": [
+        {
+          "ratingClass": 0,
+          "chartDesigner": "東星※神授",
+          "jacketDesigner": "緋原ヨウ",
+          "rating": 4
+        },
+        {
+          "ratingClass": 1,
+          "chartDesigner": "東星※神授",
+          "jacketDesigner": "緋原ヨウ",
+          "rating": 7
+        },
+        {
+          "ratingClass": 2,
+          "chartDesigner": "東星※神授",
+          "jacketDesigner": "緋原ヨウ",
           "rating": 10,
           "ratingPlus": true
         }

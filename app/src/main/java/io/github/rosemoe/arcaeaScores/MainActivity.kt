@@ -141,12 +141,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun ensureFiles() {
         val path = filesDir.absolutePath
-        if (!File(path + "/songlist.json").exists()) {
+        //if (!File(path + "/songlist.json").exists()) {
             copyStreamTo(assets.open("builtinSongList.json"), File(path + "/songlist.json"))
-        }
-        if (!File(path + "/constants.txt").exists()) {
+        //}
+        //if (!File(path + "/constants.txt").exists()) {
             copyStreamTo(assets.open("builtinConstants.txt"), File(path + "/constants.txt"))
-        }
+        //}
     }
 
     private fun copyStreamTo(stream: InputStream, file: File) {
