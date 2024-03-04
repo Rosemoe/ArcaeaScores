@@ -1,6 +1,6 @@
 package io.github.rosemoe.arcaeaScores
 
-class PlayResult constructor(val name:String, val difficulty: Int, val score: Long, val pure: Int, val maxPure: Int, val far: Int, val lost: Int) : Comparable<PlayResult> {
+class PlayResult(val name:String, val difficulty: Int, val score: Long, val pure: Int, val maxPure: Int, val far: Int, val lost: Int) : Comparable<PlayResult> {
 
     /**
      * -1 -> Not Loaded
