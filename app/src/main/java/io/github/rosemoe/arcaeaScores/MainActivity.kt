@@ -20,6 +20,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.io.BufferedWriter
@@ -46,11 +47,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
         prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        try {
-            openFileOutput("text.txt", MODE_PRIVATE).close()
-        } catch (ignored: Exception) {
-
-        }
         try {
             updateUi(true)
         } catch (e: Exception) {
@@ -80,9 +76,9 @@ class MainActivity : AppCompatActivity() {
                 .setTitle("注意")
                 .setMessage("需要获取Root权限才可以读取Arcaea的数据目录！\n如果你信任本应用，我们将向您申请Root权限以继续操作。")
                 .setPositiveButton("同意") { _, _ ->
-                    val editor = prefs.edit()
-                    editor.putBoolean("agreeRootUsage", true)
-                    editor.apply()
+                    prefs.edit {
+                        putBoolean("agreeRootUsage", true)
+                    }
                     refreshScores()
                 }
                 .setNegativeButton("不同意") { _, _ ->
@@ -102,9 +98,9 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "名字不能为空", Toast.LENGTH_SHORT).show()
                     return@setPositiveButton
                 }
-                val editor = prefs.edit()
-                editor.putString("player_name", et.text.toString())
-                editor.apply()
+                prefs.edit {
+                    putString("player_name", et.text.toString())
+                }
                 findViewById<TextView>(R.id.player_name).text = et.text
             }
             .setNegativeButton("取消", null)
@@ -239,7 +235,7 @@ class MainActivity : AppCompatActivity() {
                     max /= 40.0
                     b30 /= 30.0
                     runOnUiThread {
-                        findViewById<ListView>(R.id.score_list).adapter = ScoreAdapter(list, this)
+                        findViewById<ListView>(R.id.score_list).adapter = ScoreAdapter(list)
                         findViewById<TextView>(R.id.date).text =
                             "Update Time：" + SimpleDateFormat.getDateTimeInstance(
                                 SimpleDateFormat.DEFAULT,
@@ -269,7 +265,27 @@ class MainActivity : AppCompatActivity() {
         }.start()
     }
 
-    class ScoreAdapter(private val data: List<PlayResult>, private val context: Context) :
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_settings -> {
+                AlertDialog.Builder(this)
+                    .setTitle("About ArcaeaScores")
+                    .setMessage("Rosemoe开发的一个用Root读取Arcaea存档并计算Best30的工具。\n从这里获取更新：https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
+                    .setPositiveButton("好", null)
+                    .show()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    inner class ScoreAdapter(private val data: List<PlayResult>) :
         BaseAdapter() {
 
         override fun getCount(): Int {
@@ -285,7 +301,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val view = convertView ?: LayoutInflater.from(context)
+            val view = convertView ?: LayoutInflater.from(this@MainActivity)
                 .inflate(R.layout.list_item, parent, false)
             if (view.layoutParams == null) {
                 view.layoutParams = RecyclerView.LayoutParams(-1, -2)
@@ -323,26 +339,6 @@ class MainActivity : AppCompatActivity() {
             view.findViewById<TextView>(R.id.notes).text =
                 "Pure:${i.pure} (+${i.maxPure}) Far:${i.far} Lost:${i.lost}"
             return view
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> {
-                AlertDialog.Builder(this)
-                    .setTitle("About ArcaeaScores")
-                    .setMessage("Rosemoe开发的一个用Root读取Arcaea存档并计算Best30的工具。\n从这里获取更新：https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
-                    .setPositiveButton("好", null)
-                    .show()
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
         }
     }
 
