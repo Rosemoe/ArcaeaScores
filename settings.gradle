@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BasicSampleApp"
+rootProject.name = "ArcaeaScores"
 include ':app'
