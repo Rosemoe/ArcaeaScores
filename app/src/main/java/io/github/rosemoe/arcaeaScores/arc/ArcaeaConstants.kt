@@ -1,4 +1,4 @@
-package io.github.rosemoe.arcaeaScores
+package io.github.rosemoe.arcaeaScores.arc
 
 import org.json.JSONObject
 import java.io.InputStream

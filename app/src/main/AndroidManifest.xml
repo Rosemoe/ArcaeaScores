@@ -10,7 +10,7 @@
         android:theme="@style/Theme.ArcaeaScores"
         android:requestLegacyExternalStorage="true">
         <activity
-            android:name=".MainActivity"
+            android:name=".app.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.ArcaeaScores.NoActionBar">
             <intent-filter>
