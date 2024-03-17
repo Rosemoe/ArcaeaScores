@@ -314,6 +314,7 @@ class MainActivity : AppCompatActivity() {
                 1 -> 0xFFB7C484
                 2 -> 0xFF733064
                 3 -> 0xFF941F38
+                4 -> 0xFF503B6A
                 else -> Color.GRAY
             }.toInt()
             view.findViewById<View>(R.id.difficulty_color).setBackgroundColor(color)
@@ -337,7 +338,7 @@ class MainActivity : AppCompatActivity() {
             view.findViewById<TextView>(R.id.score).text = getItem(position).score.toString()
             view.findViewById<TextView>(R.id.rank).text = "#${position + 1}"
             view.findViewById<TextView>(R.id.notes).text =
-                "Pure:${i.pure} (+${i.maxPure}) Far:${i.far} Lost:${i.lost}"
+                "P/F/L: ${i.pure}(+${i.maxPure}) / ${i.far} / ${i.lost}"
             return view
         }
     }
