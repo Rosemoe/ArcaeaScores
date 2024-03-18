@@ -23,9 +23,9 @@ import io.github.rosemoe.arcaeaScores.R
 import io.github.rosemoe.arcaeaScores.arc.ArcaeaConstants
 import io.github.rosemoe.arcaeaScores.arc.ArcaeaTitles
 import io.github.rosemoe.arcaeaScores.arc.readDatabase
-import io.github.rosemoe.arcaeaScores.util.toScaledString
 import io.github.rosemoe.arcaeaScores.util.showMsgDialog
 import io.github.rosemoe.arcaeaScores.util.showToast
+import io.github.rosemoe.arcaeaScores.util.toScaledString
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -197,8 +197,14 @@ class MainActivity : AppCompatActivity() {
                     "Rosemoe开发的一个用Root读取Arcaea存档并计算Best30的工具。\n\n" +
                             "从这里获取更新：https://github.com/Rosemoe/ArcaeaScores/releases/latest/"
                 )
-                Linkify.addLinks(text, Linkify.WEB_URLS)
-                showMsgDialog("About", text)
+                showMsgDialog("About", text).apply {
+                    findViewById<TextView>(android.R.id.message).apply {
+                        autoLinkMask = Linkify.WEB_URLS
+                        isClickable = true
+                        linksClickable = true
+                        this.text = text
+                    }
+                }
                 true
             }
 
