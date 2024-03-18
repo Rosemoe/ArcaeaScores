@@ -38,12 +38,6 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
 
     private lateinit var prefs: SharedPreferences
-    private val titles: ArcaeaTitles by lazy {
-        ArcaeaTitles(assets.open("songlist.json"))
-    }
-    private val constants: ArcaeaConstants by lazy {
-        ArcaeaConstants(assets.open("constants.json"))
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             it.setOnClickListener {
                 onSetNameClicked()
             }
-            it.text = prefs.getString("player_name", "点我设置名字")
+            it.text = prefs.getString("player_name", getString(R.string.click_to_set_name))
         }
     }
 
@@ -77,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             AlertDialog.Builder(this)
                 .setTitle("注意")
-                .setMessage("需要获取Root权限才可以读取Arcaea的数据目录！\n如果你信任本应用，我们将向您申请Root权限以继续操作。")
+                .setMessage("需要获取 Root 权限才可以访问 Arcaea 的数据目录！\n如果您信任本应用，我们将向您申请Root权限以继续操作。")
                 .setPositiveButton("同意") { _, _ ->
                     prefs.edit {
                         putBoolean("agree_using_root", true)
@@ -96,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle("设置名字")
             .setView(et)
-            .setPositiveButton("好") { _, _ ->
+            .setPositiveButton(android.R.string.ok) { _, _ ->
                 if (et.text.isEmpty()) {
                     showToast("名字不能为空")
                 } else {
@@ -106,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                     findViewById<TextView>(R.id.player_name).text = et.text
                 }
             }
-            .setNegativeButton("取消", null)
+            .setNegativeButton(android.R.string.cancel, null)
             .show()
     }
 
@@ -120,25 +114,19 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             runCatching {
-                // Load local states
+                // Copy `st3` database
                 val process = Runtime.getRuntime().exec("su -mm")
                 update("获取Root...")
-                BufferedWriter(OutputStreamWriter(process.outputStream)).apply {
-                    write("mkdir /data/data/io.github.rosemoe.arcaeaScores/databases/\ncp -f /data/data/moe.low.arc/files/st3 /data/data/io.github.rosemoe.arcaeaScores/databases/st3.db\nchmod 777 /data/data/io.github.rosemoe.arcaeaScores/databases/\nexit\n")
-                    flush()
+                process.outputStream.writer().use {
+                    it.write("mkdir /data/data/io.github.rosemoe.arcaeaScores/databases/\ncp -f /data/data/moe.low.arc/files/st3 /data/data/io.github.rosemoe.arcaeaScores/databases/st3.db\nchmod 777 /data/data/io.github.rosemoe.arcaeaScores/databases/\nexit\n")
+                    it.flush()
                 }
                 update("获取Arcaea存档...")
                 val exitCode = process.waitFor()
                 if (exitCode != 0) {
-                    withContext(Dispatchers.Main) {
-                        showMsgDialog(
-                            "读取失败",
-                            "错误输出:\n" + process.errorStream.reader().readText()
-                        )
-                        pd.cancel()
-                    }
-                    return@launch
+                    throw Exception("Non-zero exit code: $exitCode\nError Output:\n${process.errorStream.reader().readText()}")
                 }
+            }.onSuccess {
                 withContext(Dispatchers.Main) {
                     prefs.edit {
                         putLong("date", System.currentTimeMillis())
@@ -160,10 +148,11 @@ class MainActivity : AppCompatActivity() {
         if (!getDatabasePath("st3.db").exists()) {
             return
         }
-        val data = prefs.getLong("date", 0)
+        val updateTime = prefs.getLong("date", 0)
         lifecycleScope.launch {
-            try {
-                val record = readDatabase(this@MainActivity, titles, constants)
+            runCatching {
+                readDatabase(this@MainActivity)
+            }.onSuccess { record ->
                 withContext(Dispatchers.Main) {
                     findViewById<ListView>(R.id.score_list).adapter =
                         ArcaeaScoreAdapter(this@MainActivity, record.records)
@@ -172,14 +161,14 @@ class MainActivity : AppCompatActivity() {
                             SimpleDateFormat.DEFAULT,
                             SimpleDateFormat.DEFAULT,
                             Locale.ENGLISH
-                        ).format(Date(data))
+                        ).format(Date(updateTime))
                     findViewById<TextView>(R.id.max_potential).text =
                         "Best30: " + record.best30Potential.toScaledString() + "  Max Ptt: " + record.maxPotential.toScaledString()
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
+            }.onFailure {
+                it.printStackTrace()
                 withContext(Dispatchers.Main) {
-                    showMsgDialog("读取失败", "异常信息：$e")
+                    showMsgDialog("读取失败", "异常信息：$it")
                 }
             }
         }
@@ -194,7 +183,7 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.action_settings -> {
                 val text = Editable.Factory.getInstance().newEditable(
-                    "Rosemoe开发的一个用Root读取Arcaea存档并计算Best30的工具。\n\n" +
+                    "Rosemoe开发的一个用 Root 读取 Arcaea 存档并计算 Best30 的工具。\n\n" +
                             "从这里获取更新：https://github.com/Rosemoe/ArcaeaScores/releases/latest/"
                 )
                 showMsgDialog("About", text).apply {

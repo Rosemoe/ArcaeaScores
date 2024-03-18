@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">ArcaeaScores</string>
     <string name="action_settings">About</string>
-
+    <string name="click_to_set_name">Click to Set Name</string>
 </resources>

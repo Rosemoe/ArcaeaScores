@@ -15,7 +15,9 @@ private val ScoreQueryColumns = arrayOf(
 )
 
 @SuppressLint("Range")
-fun readDatabase(context: Context, titles: ArcaeaTitles, constants: ArcaeaConstants): ArcaeaRecord {
+fun readDatabase(context: Context): ArcaeaRecord {
+    val titles = ArcaeaTitles(context.assets.open("songlist.json"))
+    val constants = ArcaeaConstants(context.assets.open("constants.json"))
     context.openOrCreateDatabase(
         "st3.db",
         AppCompatActivity.MODE_PRIVATE,

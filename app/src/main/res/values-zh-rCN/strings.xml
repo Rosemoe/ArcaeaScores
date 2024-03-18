@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ArcaeaScores</string>
+    <string name="action_settings">关于</string>
+    <string name="click_to_set_name">点击设置名字</string>
+</resources>
