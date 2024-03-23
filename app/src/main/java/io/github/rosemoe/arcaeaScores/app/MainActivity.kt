@@ -44,11 +44,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
         prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        try {
-            updateScoreList()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
         findViewById<ListView>(R.id.score_list).dividerHeight = 0
         findViewById<FloatingActionButton>(R.id.fab).let {
             it.imageTintList = ColorStateList.valueOf(Color.WHITE)
@@ -63,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             }
             it.text = prefs.getString("player_name", getString(R.string.click_to_set_name))
         }
+        updateScoreList()
     }
 
     private fun onUpdateScoreClicked() {

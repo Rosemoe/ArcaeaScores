@@ -25,7 +25,7 @@ class ArcaeaScoreAdapter(private val activity: Activity, private val data: List<
         val view = convertView ?: LayoutInflater.from(activity)
             .inflate(R.layout.list_item, parent, false)
         if (view.layoutParams == null) {
-            view.layoutParams = RecyclerView.LayoutParams(-1, -2)
+            view.layoutParams = RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         }
         val i = getItem(position)
         view.findViewById<TextView>(R.id.songId).text = i.title
