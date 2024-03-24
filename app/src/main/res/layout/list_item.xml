@@ -12,7 +12,7 @@
         android:elevation="8dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="8dp"
-        android:layout_margin="6dp">
+        android:layout_margin="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:orientation="horizontal">
 
             <View
-                android:layout_width="4dp"
+                android:layout_width="5dp"
                 android:layout_height="match_parent"
                 android:background="@color/black"
                 android:layout_marginRight="12dp"
@@ -43,7 +43,6 @@
                         android:id="@+id/songId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
                         android:text="Name"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -51,15 +50,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="ClearType"
                         android:id="@+id/clearType"
-                        android:layout_marginLeft="8dp"
-                        android:typeface="monospace"/>
+                        android:layout_marginLeft="8dp"/>
 
                     <TextView
                         android:id="@+id/rank"
+                        android:text="Rank"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp" />
+                        android:layout_marginLeft="8dp"
+                        android:typeface="monospace"/>
 
                 </LinearLayout>
 
@@ -69,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Ptt"
-                    android:textSize="19sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -78,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Score"
-                    android:textSize="17sp" />
+                    android:textSize="19sp" />
 
                 <TextView
                     android:id="@+id/notes"

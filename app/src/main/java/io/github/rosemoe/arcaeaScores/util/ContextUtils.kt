@@ -13,3 +13,6 @@ fun Context.showMsgDialog(title: CharSequence, content: CharSequence): AlertDial
 
 fun Context.showToast(msg: CharSequence, length: Int = Toast.LENGTH_SHORT) =
     Toast.makeText(this, msg, length).show()
+
+fun Context.showToast(resId: Int, length: Int = Toast.LENGTH_SHORT) =
+    Toast.makeText(this, this.getString(resId), length).show()

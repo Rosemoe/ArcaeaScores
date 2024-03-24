@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">ArcaeaScores</string>
-    <string name="action_settings">About</string>
+    <string name="about_app">About</string>
     <string name="click_to_set_name">Click to Set Name</string>
+    <string name="pd_dialog_title">Updating Game Data</string>
+    <string name="state_obtaining_root">Requesting Root Permission...</string>
+    <string name="state_reading_save">Reading Game Save...</string>
+    <string name="tip_upddate_finished">Data is up-to-date!</string>
+    <string name="update_failed">Update Failed</string>
+    <string name="name_empty">Player name can not be empty.</string>
+    <string name="tip_reject_root">Unable to read game data if root is not permitted.</string>
+    <string name="action_permit">Permit</string>
+    <string name="dialog_title_root">Caution</string>
+    <string name="dialog_msg_root">Root permission is required by the app to read your Arcaea game data.\n\nPlease permit root permission if you trust our app.</string>
+    <string name="dialog_msg_about">ArcaeaScores reads Arcaea game data by Root and automatically computes best 30 scores, developed by Rosemoe.\n\nGet updates here: https://github.com/Rosemoe/ArcaeaScores/releases/latest/</string>
 </resources>

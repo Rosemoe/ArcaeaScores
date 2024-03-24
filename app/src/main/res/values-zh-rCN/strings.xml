@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ArcaeaScores</string>
-    <string name="action_settings">关于</string>
+    <string name="about_app">关于</string>
     <string name="click_to_set_name">点击设置名字</string>
+    <string name="pd_dialog_title">正在更新游戏数据</string>
+    <string name="state_obtaining_root">正在获取 Root 权限...</string>
+    <string name="state_reading_save">正在读取游戏存档...</string>
+    <string name="tip_upddate_finished">游戏数据已更新！</string>
+    <string name="update_failed">游戏数据更新失败</string>
+    <string name="name_empty">玩家名字不能为空</string>
+    <string name="tip_reject_root">不允许使用 Root 权限，我们将无法获取游戏数据。</string>
+    <string name="action_permit">允许</string>
+    <string name="dialog_title_root">注意</string>
+    <string name="dialog_msg_root">我们需要 Root 权限读取 Arcaea 游戏存档\n\n如果您信任我们的应用，请授予我们 Root 权限。</string>
+    <string name="dialog_msg_about">ArcaeaScores 是由 Rosemoe 开发的，使用 Root 权限读取 Arcaea 游戏存档并自动计算 Best30 成绩的工具。\n\n从这里获取更新： https://github.com/Rosemoe/ArcaeaScores/releases/latest/</string>
 </resources>
