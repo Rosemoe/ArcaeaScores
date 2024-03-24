@@ -43,6 +43,9 @@
                         android:id="@+id/songId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxEms="8"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:text="Name"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -50,6 +53,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:lines="1"
                         android:text="ClearType"
                         android:id="@+id/clearType"
                         android:layout_marginLeft="8dp"/>
@@ -57,6 +61,7 @@
                     <TextView
                         android:id="@+id/rank"
                         android:text="Rank"
+                        android:lines="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
