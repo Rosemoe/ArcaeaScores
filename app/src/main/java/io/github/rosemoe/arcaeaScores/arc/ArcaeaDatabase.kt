@@ -41,7 +41,11 @@ fun readDatabase(context: Context): ArcaeaRecord {
                 )
                 result.title = titles.queryForId(result.name)
                 result.constant = constants.queryForId(result.name, result.difficulty)
-                result.playPotential = calculatePlayPotential(result.constant, result.score)
+                result.playPotential = if (result.constant > 0.0) {
+                    calculatePlayPotential(result.constant, result.score)
+                } else {
+                    0.0
+                }
                 result.clearType =
                     clearTypeCursor.getInt(clearTypeCursor.getColumnIndex("clearType"))
                 list.add(result)
