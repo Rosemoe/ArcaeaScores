@@ -198,7 +198,7 @@
             "old": false
         },
         {
-            "constant": 9,
+            "constant": 9.1,
             "old": false
         }
     ],
@@ -248,7 +248,7 @@
             "old": false
         },
         {
-            "constant": 9.7,
+            "constant": 9.8,
             "old": false
         }
     ],
@@ -266,7 +266,7 @@
             "old": false
         },
         {
-            "constant": 11,
+            "constant": 11.2,
             "old": false
         }
     ],
@@ -280,7 +280,7 @@
             "old": false
         },
         {
-            "constant": 10.1,
+            "constant": 10,
             "old": false
         }
     ],
@@ -380,7 +380,7 @@
             "old": false
         },
         {
-            "constant": 10.1,
+            "constant": 10.3,
             "old": false
         }
     ],
@@ -422,7 +422,7 @@
             "old": false
         },
         {
-            "constant": 10.3,
+            "constant": 10.2,
             "old": false
         }
     ],
@@ -775,7 +775,7 @@
             "old": false
         },
         {
-            "constant": 10,
+            "constant": 9.9,
             "old": false
         }
     ],
@@ -789,7 +789,7 @@
             "old": false
         },
         {
-            "constant": 9.9,
+            "constant": 9.8,
             "old": false
         }
     ],
@@ -803,11 +803,11 @@
             "old": false
         },
         {
-            "constant": 10,
+            "constant": 9.9,
             "old": false
         },
         {
-            "constant": 10.5,
+            "constant": 10.6,
             "old": false
         }
     ],
@@ -849,7 +849,7 @@
             "old": false
         },
         {
-            "constant": 10.7,
+            "constant": 10.6,
             "old": false
         }
     ],
@@ -863,7 +863,7 @@
             "old": false
         },
         {
-            "constant": 11.3,
+            "constant": 11.1,
             "old": false
         }
     ],
@@ -895,7 +895,7 @@
             "old": false
         },
         {
-            "constant": 10,
+            "constant": 10.2,
             "old": false
         }
     ],
@@ -993,7 +993,7 @@
             "old": false
         },
         {
-            "constant": 9.5,
+            "constant": 9.4,
             "old": false
         }
     ],
@@ -1063,7 +1063,7 @@
             "old": false
         },
         {
-            "constant": 10.7,
+            "constant": 10.5,
             "old": false
         },
         {
@@ -1289,7 +1289,7 @@
             "old": false
         },
         {
-            "constant": 10.7,
+            "constant": 10.5,
             "old": false
         }
     ],
@@ -1317,7 +1317,7 @@
             "old": false
         },
         {
-            "constant": 11.3,
+            "constant": 11.1,
             "old": false
         }
     ],
@@ -1400,7 +1400,7 @@
             "old": false
         },
         {
-            "constant": 9.6,
+            "constant": 9.7,
             "old": false
         }
     ],
@@ -1516,7 +1516,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.3,
             "old": false
         }
     ],
@@ -1586,7 +1586,7 @@
             "old": false
         },
         {
-            "constant": 9,
+            "constant": 9.1,
             "old": false
         }
     ],
@@ -1618,7 +1618,7 @@
             "old": false
         },
         {
-            "constant": 9.8,
+            "constant": 9.7,
             "old": false
         }
     ],
@@ -1636,7 +1636,7 @@
             "old": false
         },
         {
-            "constant": 10.2,
+            "constant": 10.3,
             "old": false
         }
     ],
@@ -1650,7 +1650,7 @@
             "old": false
         },
         {
-            "constant": 10.1,
+            "constant": 10,
             "old": false
         }
     ],
@@ -1714,7 +1714,7 @@
             "old": false
         },
         {
-            "constant": 9.5,
+            "constant": 9.6,
             "old": false
         }
     ],
@@ -1760,7 +1760,7 @@
             "old": false
         },
         {
-            "constant": 11.1,
+            "constant": 11.2,
             "old": false
         }
     ],
@@ -1788,7 +1788,7 @@
             "old": false
         },
         {
-            "constant": 9,
+            "constant": 9.1,
             "old": false
         }
     ],
@@ -1872,7 +1872,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.3,
             "old": false
         }
     ],
@@ -1886,7 +1886,7 @@
             "old": false
         },
         {
-            "constant": 10.8,
+            "constant": 10.7,
             "old": false
         }
     ],
@@ -1901,20 +1901,6 @@
         },
         {
             "constant": 9.7,
-            "old": false
-        }
-    ],
-    "particlearts": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.8,
             "old": false
         }
     ],
@@ -2030,7 +2016,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.2,
             "old": false
         }
     ],
@@ -2044,7 +2030,7 @@
             "old": false
         },
         {
-            "constant": 10,
+            "constant": 9.9,
             "old": false
         }
     ],
@@ -2090,7 +2076,7 @@
             "old": false
         },
         {
-            "constant": 10.6,
+            "constant": 10.5,
             "old": false
         }
     ],
@@ -2192,7 +2178,7 @@
             "old": false
         },
         {
-            "constant": 9.9,
+            "constant": 10,
             "old": false
         }
     ],
@@ -2368,7 +2354,7 @@
             "old": false
         },
         {
-            "constant": 10.9,
+            "constant": 10.8,
             "old": false
         }
     ],
@@ -2382,7 +2368,7 @@
             "old": false
         },
         {
-            "constant": 10.9,
+            "constant": 11.1,
             "old": false
         }
     ],
@@ -2400,7 +2386,7 @@
             "old": false
         },
         {
-            "constant": 11.5,
+            "constant": 11.7,
             "old": false
         }
     ],
@@ -2428,7 +2414,7 @@
             "old": false
         },
         {
-            "constant": 9.7,
+            "constant": 9.8,
             "old": false
         }
     ],
@@ -2628,7 +2614,7 @@
             "old": false
         },
         {
-            "constant": 10.9,
+            "constant": 10.8,
             "old": false
         }
     ],
@@ -2642,7 +2628,7 @@
             "old": false
         },
         {
-            "constant": 9.8,
+            "constant": 9.9,
             "old": false
         }
     ],
@@ -2968,7 +2954,7 @@
             "old": false
         },
         {
-            "constant": 10.5,
+            "constant": 10.4,
             "old": false
         }
     ],
@@ -3052,7 +3038,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.5,
             "old": false
         }
     ],
@@ -3150,7 +3136,7 @@
             "old": false
         },
         {
-            "constant": 11.1,
+            "constant": 11.2,
             "old": false
         }
     ],
@@ -3164,7 +3150,7 @@
             "old": false
         },
         {
-            "constant": 9,
+            "constant": 9.1,
             "old": false
         }
     ],
@@ -3304,7 +3290,7 @@
             "old": false
         },
         {
-            "constant": 9.1,
+            "constant": 9.3,
             "old": false
         }
     ],
@@ -3346,7 +3332,7 @@
             "old": false
         },
         {
-            "constant": 9.7,
+            "constant": 9.8,
             "old": false
         }
     ],
@@ -3392,7 +3378,7 @@
             "old": false
         },
         {
-            "constant": 10.7,
+            "constant": 10.8,
             "old": false
         }
     ],
@@ -3420,7 +3406,7 @@
             "old": false
         },
         {
-            "constant": 10.6,
+            "constant": 10.5,
             "old": false
         }
     ],
@@ -3476,7 +3462,7 @@
             "old": false
         },
         {
-            "constant": 10.2,
+            "constant": 10.1,
             "old": false
         }
     ],
@@ -3508,7 +3494,7 @@
             "old": false
         },
         {
-            "constant": 10.1,
+            "constant": 10.2,
             "old": false
         }
     ],
@@ -3704,7 +3690,7 @@
             "old": false
         },
         {
-            "constant": 10.2,
+            "constant": 10.1,
             "old": false
         }
     ],
@@ -3746,7 +3732,7 @@
             "old": false
         },
         {
-            "constant": 9.3,
+            "constant": 9.4,
             "old": false
         }
     ],
@@ -3900,7 +3886,7 @@
             "old": false
         },
         {
-            "constant": 10.7,
+            "constant": 10.8,
             "old": false
         }
     ],
@@ -3914,7 +3900,7 @@
             "old": false
         },
         {
-            "constant": 9.3,
+            "constant": 9.4,
             "old": false
         }
     ],
@@ -3984,7 +3970,7 @@
             "old": false
         },
         {
-            "constant": 9.2,
+            "constant": 9.4,
             "old": false
         }
     ],
@@ -4058,11 +4044,11 @@
             "old": false
         },
         {
-            "constant": 9.9,
+            "constant": 10,
             "old": false
         },
         {
-            "constant": 11.2,
+            "constant": 11.1,
             "old": false
         }
     ],
@@ -4076,11 +4062,11 @@
             "old": false
         },
         {
-            "constant": 10.3,
+            "constant": 10.4,
             "old": false
         },
         {
-            "constant": 11.4,
+            "constant": 11.5,
             "old": false
         }
     ],
@@ -4098,7 +4084,7 @@
             "old": false
         },
         {
-            "constant": 11.4,
+            "constant": 11.6,
             "old": false
         }
     ],
@@ -4112,7 +4098,7 @@
             "old": false
         },
         {
-            "constant": 10.8,
+            "constant": 10.9,
             "old": false
         },
         {
@@ -4130,7 +4116,7 @@
             "old": false
         },
         {
-            "constant": 9.6,
+            "constant": 9.7,
             "old": false
         }
     ],
@@ -4185,7 +4171,7 @@
             "old": false
         },
         {
-            "constant": 9.3,
+            "constant": 9.6,
             "old": false
         }
     ],
@@ -4227,7 +4213,7 @@
             "old": false
         },
         {
-            "constant": 10.5,
+            "constant": 10.6,
             "old": false
         }
     ],
@@ -4241,7 +4227,7 @@
             "old": false
         },
         {
-            "constant": 10.9,
+            "constant": 11,
             "old": false
         }
     ],
@@ -4325,7 +4311,7 @@
             "old": false
         },
         {
-            "constant": 9.3,
+            "constant": 9.4,
             "old": false
         }
     ],
@@ -4367,7 +4353,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.5,
             "old": false
         }
     ],
@@ -4381,7 +4367,7 @@
             "old": false
         },
         {
-            "constant": 10.6,
+            "constant": 10.7,
             "old": false
         }
     ],
@@ -4395,7 +4381,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.6,
             "old": false
         }
     ],
@@ -4479,7 +4465,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.6,
             "old": false
         }
     ],
@@ -4507,7 +4493,7 @@
             "old": false
         },
         {
-            "constant": 10.7,
+            "constant": 10.8,
             "old": false
         }
     ],
@@ -4553,7 +4539,7 @@
             "old": false
         },
         {
-            "constant": 9.9,
+            "constant": 9.8,
             "old": false
         }
     ],
@@ -4707,7 +4693,7 @@
             "old": false
         },
         {
-            "constant": 10.5,
+            "constant": 10.4,
             "old": false
         }
     ],
@@ -4763,7 +4749,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.5,
             "old": false
         }
     ],
@@ -4805,7 +4791,7 @@
             "old": false
         },
         {
-            "constant": 9.7,
+            "constant": 9.9,
             "old": false
         }
     ],
@@ -4833,7 +4819,7 @@
             "old": false
         },
         {
-            "constant": 9.5,
+            "constant": 9.4,
             "old": false
         }
     ],
@@ -4881,7 +4867,7 @@
     ],
     "sacrifice": [
         {
-            "constant": 3,
+            "constant": 3.5,
             "old": false
         },
         {
@@ -4903,7 +4889,7 @@
             "old": false
         },
         {
-            "constant": 9.7,
+            "constant": 9.8,
             "old": false
         }
     ],
@@ -4945,7 +4931,7 @@
             "old": false
         },
         {
-            "constant": 10.4,
+            "constant": 10.5,
             "old": false
         }
     ],
@@ -4973,7 +4959,7 @@
             "old": false
         },
         {
-            "constant": 11.1,
+            "constant": 11.3,
             "old": false
         }
     ],
@@ -5015,7 +5001,7 @@
             "old": false
         },
         {
-            "constant": 9.5,
+            "constant": 9.6,
             "old": false
         }
     ],
@@ -5099,7 +5085,7 @@
             "old": false
         },
         {
-            "constant": 10.1,
+            "constant": 10.2,
             "old": false
         }
     ],
@@ -5123,7 +5109,7 @@
             "old": false
         },
         {
-            "constant": 9.4,
+            "constant": 9.6,
             "old": false
         },
         {
@@ -5169,7 +5155,7 @@
             "old": false
         },
         {
-            "constant": 9.9,
+            "constant": 9.8,
             "old": false
         }
     ],
@@ -5183,7 +5169,7 @@
             "old": false
         },
         {
-            "constant": 10.9,
+            "constant": 10.8,
             "old": false
         }
     ],
@@ -5295,7 +5281,7 @@
             "old": false
         },
         {
-            "constant": 10,
+            "constant": 10.1,
             "old": false
         }
     ],
@@ -5489,6 +5475,939 @@
         },
         {
             "constant": 8.2,
+            "old": false
+        },
+        {
+            "constant": 10.4,
+            "old": false
+        }
+    ],
+    "hellohell": [
+        {
+            "constant": 2.5,
+            "old": false
+        },
+        {
+            "constant": 5,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.3,
+            "old": false
+        }
+    ],
+    "ichirin": [
+        {
+            "constant": 2.5,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 9.5,
+            "old": false
+        }
+    ],
+    "awakeninruins": [
+        {
+            "constant": 3.5,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        {
+            "constant": 9.7,
+            "old": false
+        }
+    ],
+    "morningloom": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 8.8,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.8,
+            "old": false
+        }
+    ],
+    "lethalvoltage": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 10.4,
+            "old": false
+        }
+    ],
+    "mirinae": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 8.3,
+            "old": false
+        },
+        {
+            "constant": 10.4,
+            "old": false
+        }
+    ],
+    "ultradiaxon": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 8.5,
+            "old": false
+        },
+        {
+            "constant": 10.3,
+            "old": false
+        }
+    ],
+    "leaveallbehind": [
+        {
+            "constant": 2,
+            "old": false
+        },
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 9.2,
+            "old": false
+        }
+    ],
+    "distortedfate": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.6,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.8,
+            "old": false
+        }
+    ],
+    "floatingworld": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 7,
+            "old": false
+        },
+        {
+            "constant": 9.3,
+            "old": false
+        }
+    ],
+    "chromafill": [
+        {
+            "constant": 4,
+            "old": false
+        },
+        {
+            "constant": 7,
+            "old": false
+        },
+        {
+            "constant": 10,
+            "old": false
+        }
+    ],
+    "desive": [
+        {
+            "constant": 5,
+            "old": false
+        },
+        {
+            "constant": 8,
+            "old": false
+        },
+        {
+            "constant": 9.9,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.8,
+            "old": false
+        }
+    ],
+    "epicurus": [
+        {
+            "constant": 2.5,
+            "old": false
+        },
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        null,
+        {
+            "constant": 8.8,
+            "old": false
+        }
+    ],
+    "tasogare": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.5,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.5,
+            "old": false
+        }
+    ],
+    "oldschoolsalvage": [
+        {
+            "constant": 4,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.8,
+            "old": false
+        }
+    ],
+    "beautifuldreamer": [
+        {
+            "constant": 4,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.9,
+            "old": false
+        }
+    ],
+    "backtobasics": [
+        {
+            "constant": 5,
+            "old": false
+        },
+        {
+            "constant": 8.7,
+            "old": false
+        },
+        {
+            "constant": 10.6,
+            "old": false
+        }
+    ],
+    "stargateextreme": [
+        {
+            "constant": 4,
+            "old": false
+        },
+        {
+            "constant": 6,
+            "old": false
+        },
+        {
+            "constant": 9.3,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.9,
+            "old": false
+        }
+    ],
+    "hypervision": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        {
+            "constant": 9.8,
+            "old": false
+        }
+    ],
+    "signof": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 9.2,
+            "old": false
+        }
+    ],
+    "temptationgc": [
+        {
+            "constant": 4,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.8,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.5,
+            "old": false
+        }
+    ],
+    "blackmind": [
+        {
+            "constant": 5,
+            "old": false
+        },
+        {
+            "constant": 8,
+            "old": false
+        },
+        {
+            "constant": 10.8,
+            "old": false
+        }
+    ],
+    "distortionhuman": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 9.9,
+            "old": false
+        }
+    ],
+    "shrink": [
+        {
+            "constant": 3.5,
+            "old": false
+        },
+        {
+            "constant": 7,
+            "old": false
+        },
+        {
+            "constant": 9.8,
+            "old": false
+        }
+    ],
+    "hypnotize": [
+        {
+            "constant": 3.5,
+            "old": false
+        },
+        {
+            "constant": 7,
+            "old": false
+        },
+        {
+            "constant": 8.9,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.9,
+            "old": false
+        }
+    ],
+    "invain": [
+        {
+            "constant": 3.5,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 9.5,
+            "old": false
+        }
+    ],
+    "ashenboundary": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.9,
+            "old": false
+        }
+    ],
+    "judgement": [
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 8.6,
+            "old": false
+        },
+        {
+            "constant": 10.5,
+            "old": false
+        }
+    ],
+    "alterego": [
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 9.2,
+            "old": false
+        },
+        {
+            "constant": 10.5,
+            "old": false
+        },
+        null,
+        {
+            "constant": 11.3,
+            "old": false
+        }
+    ],
+    "epitaxy": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6,
+            "old": false
+        },
+        {
+            "constant": 8.6,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.6,
+            "old": false
+        }
+    ],
+    "waltzforlorelei": [
+        {
+            "constant": 2.5,
+            "old": false
+        },
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 8.8,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.8,
+            "old": false
+        }
+    ],
+    "dualdoom": [
+        {
+            "constant": 3.5,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 8.9,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.3,
+            "old": false
+        }
+    ],
+    "invertedworld": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 7,
+            "old": false
+        },
+        {
+            "constant": 9.5,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.7,
+            "old": false
+        }
+    ],
+    "mvurbd": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 10.6,
+            "old": false
+        }
+    ],
+    "vulcanus": [
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 8.5,
+            "old": false
+        },
+        {
+            "constant": 10.9,
+            "old": false
+        }
+    ],
+    "rainofconflict": [
+        {
+            "constant": 5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.5,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.5,
+            "old": false
+        }
+    ],
+    "saintorsinner": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6,
+            "old": false
+        },
+        {
+            "constant": 8.8,
+            "old": false
+        }
+    ],
+    "hailstone": [
+        {
+            "constant": 3.5,
+            "old": false
+        },
+        {
+            "constant": 7,
+            "old": false
+        },
+        {
+            "constant": 9.7,
+            "old": false
+        }
+    ],
+    "furetemitai": [
+        {
+            "constant": 2.5,
+            "old": false
+        },
+        {
+            "constant": 6,
+            "old": false
+        },
+        {
+            "constant": 8.4,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.4,
+            "old": false
+        }
+    ],
+    "gensounosatellite": [
+        {
+            "constant": 2.5,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 8.7,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.1,
+            "old": false
+        }
+    ],
+    "prayer": [
+        {
+            "constant": 2.5,
+            "old": false
+        },
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 8.2,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.1,
+            "old": false
+        }
+    ],
+    "crimsonquartz": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6,
+            "old": false
+        },
+        {
+            "constant": 8.8,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.8,
+            "old": false
+        }
+    ],
+    "thirdsun": [
+        {
+            "constant": 3.5,
+            "old": false
+        },
+        {
+            "constant": 7,
+            "old": false
+        },
+        {
+            "constant": 9.4,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10,
+            "old": false
+        }
+    ],
+    "spiritdauntless": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 10.5,
+            "old": false
+        }
+    ],
+    "diesirae": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        {
+            "constant": 9.5,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.6,
+            "old": false
+        }
+    ],
+    "astralexe": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6,
+            "old": false
+        },
+        {
+            "constant": 9.5,
+            "old": false
+        }
+    ],
+    "liftoff": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 8.2,
+            "old": false
+        },
+        null,
+        {
+            "constant": 9.8,
+            "old": false
+        }
+    ],
+    "superambulance": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        {
+            "constant": 10.3,
+            "old": false
+        }
+    ],
+    "dontfightmusic": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.3,
+            "old": false
+        },
+        null,
+        {
+            "constant": 10.7,
+            "old": false
+        }
+    ],
+    "andrevivemelody": [
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 8.5,
+            "old": false
+        },
+        {
+            "constant": 10.9,
+            "old": false
+        }
+    ],
+    "swansong": [
+        {
+            "constant": 3,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        {
+            "constant": 9.9,
+            "old": false
+        }
+    ],
+    "renegade": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.8,
+            "old": false
+        },
+        {
+            "constant": 9.6,
+            "old": false
+        },
+        {
+            "constant": 10.2,
+            "old": false
+        }
+    ],
+    "raysofremnant": [
+        {
+            "constant": 4.5,
+            "old": false
+        },
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        {
+            "constant": 9.7,
+            "old": false
+        },
+        {
+            "constant": 10.4,
+            "old": false
+        }
+    ],
+    "breachoffaith": [
+        {
+            "constant": 5.5,
+            "old": false
+        },
+        {
+            "constant": 8.4,
+            "old": false
+        },
+        {
+            "constant": 10.3,
+            "old": false
+        },
+        {
+            "constant": 10.9,
+            "old": false
+        }
+    ],
+    "lamentrain": [
+        {
+            "constant": 6.5,
+            "old": false
+        },
+        {
+            "constant": 8.8,
+            "old": false
+        },
+        {
+            "constant": 10.6,
+            "old": false
+        },
+        {
+            "constant": 11.4,
+            "old": false
+        }
+    ],
+    "designant": [
+        {
+            "constant": 7.5,
+            "old": false
+        },
+        {
+            "constant": 9.6,
+            "old": false
+        },
+        {
+            "constant": 10.9,
+            "old": false
+        },
+        {
+            "constant": 11.9,
+            "old": false
+        }
+    ],
+    "astralquant": [
+        {
+            "constant": 5,
+            "old": false
+        },
+        {
+            "constant": 8.1,
             "old": false
         },
         {
