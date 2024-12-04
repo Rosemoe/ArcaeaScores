@@ -12,6 +12,10 @@ class ArcaeaTitles(songListJsonFile: InputStream) {
         val songs = root.getJSONArray("songs")
         for (i in 0 until songs.length()) {
             val song = songs.getJSONObject(i)
+            if (song.has("deleted") && song.getBoolean("deleted")) {
+                // ignore deleted songs
+                continue
+            }
             mapping[song.getString("id")] = song.getJSONObject("title_localized").getString("en")
         }
     }
