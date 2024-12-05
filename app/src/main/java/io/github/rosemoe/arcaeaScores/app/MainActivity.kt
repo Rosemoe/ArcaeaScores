@@ -112,12 +112,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         lifecycleScope.launch {
+            val packageName = application.packageName
+            val arcaeaPackageName = "moe.low.arc"
             runCatching {
                 // Copy `st3` database
                 val process = Runtime.getRuntime().exec("su -mm")
                 update(getString(R.string.state_obtaining_root))
                 process.outputStream.writer().use {
-                    it.write("mkdir /data/data/io.github.rosemoe.arcaeaScores/databases/\ncp -f /data/data/moe.low.arc/files/st3 /data/data/io.github.rosemoe.arcaeaScores/databases/st3.db\nchmod 777 /data/data/io.github.rosemoe.arcaeaScores/databases/\nexit\n")
+                    it.write("mkdir /data/data/$packageName/databases/\n" +
+                            "cp -f /data/data/$arcaeaPackageName/files/st3 /data/data/$packageName/databases/st3.db\n" +
+                            "chmod 777 /data/data/$packageName/databases\n" +
+                            "chmod 777 /data/data/$packageName/databases/st3.db\n" +
+                            "exit\n")
                     it.flush()
                 }
                 update(getString(R.string.state_reading_save))
