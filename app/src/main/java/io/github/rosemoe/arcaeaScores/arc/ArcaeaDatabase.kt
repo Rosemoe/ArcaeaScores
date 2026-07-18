@@ -41,7 +41,7 @@ fun readDatabase(context: Context): ArcaeaRecord {
                     maxPureCount = cursor.getInt(cursor.getColumnIndexOrThrow("shinyPerfectCount")),
                     farCount = cursor.getInt(cursor.getColumnIndexOrThrow("nearCount")),
                     lostCount = cursor.getInt(cursor.getColumnIndexOrThrow("missCount")),
-                    title = titles.queryForId(songId),
+                    title = titles.queryForChart(songId, difficulty),
                     chartConstant = chartConstant,
                     playPotential = if (chartConstant > 0.0) {
                         calculatePlayPotential(chartConstant, score)
