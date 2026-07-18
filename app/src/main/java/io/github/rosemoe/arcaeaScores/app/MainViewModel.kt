@@ -18,23 +18,33 @@ import java.util.zip.ZipFile
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val app = getApplication<Application>()
-    private val preferences = app.getSharedPreferences("prefs", Application.MODE_PRIVATE)
+    private val settingsRepository = SettingsRepository(app)
     private val _uiState = MutableStateFlow(
         MainUiState(
-            playerName = preferences.getString("player_name", app.getString(R.string.click_to_set_name)).orEmpty(),
-            updateTime = preferences.getLong("date", 0),
-            showArtwork = preferences.getBoolean("show_artwork", true),
-            artworkDataVersion = preferences.getString("artwork_data_version", null)
+            playerName = app.getString(R.string.click_to_set_name)
         )
     )
     val uiState = _uiState.asStateFlow()
 
     init {
+        viewModelScope.launch {
+            settingsRepository.settings.collect { settings ->
+                _uiState.update {
+                    it.copy(
+                        playerName = settings.playerName,
+                        updateTime = settings.updateTime,
+                        rootPermissionGranted = settings.rootPermissionGranted,
+                        showArtwork = settings.showArtwork,
+                        artworkDataVersion = settings.artworkDataVersion
+                    )
+                }
+            }
+        }
         loadScores()
     }
 
     fun requestScoreUpdate() {
-        if (preferences.getBoolean("agree_using_root", false)) {
+        if (_uiState.value.rootPermissionGranted) {
             refreshScores()
         } else {
             _uiState.update { it.copy(showRootPermissionDialog = true) }
@@ -44,7 +54,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun onRootPermissionResult(permitted: Boolean) {
         _uiState.update { it.copy(showRootPermissionDialog = false) }
         if (permitted) {
-            preferences.edit().putBoolean("agree_using_root", true).apply()
+            _uiState.update { it.copy(rootPermissionGranted = true) }
+            viewModelScope.launch { settingsRepository.setRootPermissionGranted(true) }
             refreshScores()
         } else {
             showError(app.getString(R.string.tip_reject_root))
@@ -68,12 +79,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             showError(app.getString(R.string.name_empty))
             return
         }
-        preferences.edit().putString("player_name", name).apply()
+        viewModelScope.launch { settingsRepository.setPlayerName(name) }
         _uiState.update { it.copy(playerName = name, showNameDialog = false) }
     }
 
     fun setShowArtwork(showArtwork: Boolean) {
-        preferences.edit().putBoolean("show_artwork", showArtwork).apply()
+        viewModelScope.launch { settingsRepository.setShowArtwork(showArtwork) }
         _uiState.update { it.copy(showArtwork = showArtwork) }
     }
 
@@ -90,7 +101,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     importArtworkData(packageName)
                 }
             }.onSuccess { version ->
-                preferences.edit().putString("artwork_data_version", version).apply()
+                viewModelScope.launch { settingsRepository.setArtworkDataVersion(version) }
                 _uiState.update {
                     it.copy(
                         artworkDataVersion = version,
@@ -142,7 +153,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
             }.onSuccess {
                 val updateTime = System.currentTimeMillis()
-                preferences.edit().putLong("date", updateTime).apply()
+                viewModelScope.launch { settingsRepository.setUpdateTime(updateTime) }
                 _uiState.update { it.copy(updateTime = updateTime) }
                 loadScores()
             }.onFailure { error ->
@@ -169,7 +180,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         scores = record.scores,
                         best30Potential = record.best30Potential,
                         maxPotential = record.maxPotential,
-                        updateTime = preferences.getLong("date", 0),
                         isLoading = false,
                         loadingMessage = null
                     )

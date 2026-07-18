@@ -8,6 +8,7 @@ data class MainUiState(
     val best30Potential: Double = 0.0,
     val maxPotential: Double = 0.0,
     val updateTime: Long = 0,
+    val rootPermissionGranted: Boolean = false,
     val showArtwork: Boolean = true,
     val artworkDataVersion: String? = null,
     val completedArtworkUpdateVersion: String? = null,

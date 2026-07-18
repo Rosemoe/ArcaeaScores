@@ -3,6 +3,7 @@ agp = "9.2.1"
 buildTools = "37.0.0"
 compileSdk = "37"
 composeBom = "2026.06.00"
+datastore = "1.2.1"
 kotlin = "2.3.21"
 lifecycle = "2.10.0"
 minSdk = "23"
@@ -17,6 +18,7 @@ androidx-compose-material-icons-extended = { module = "androidx.compose.material
 androidx-compose-ui = { module = "androidx.compose.ui:ui" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.19.0" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
