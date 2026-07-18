@@ -1,30 +1,36 @@
 package io.github.rosemoe.arcaeaScores.ui.screens
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedCard
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.OpenInNew
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.github.rosemoe.arcaeaScores.R
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
-fun SettingsScreen(modifier: Modifier = Modifier) {
-    val uriHandler = LocalUriHandler.current
+fun SettingsScreen(
+    playerName: String,
+    onEditPlayerName: () -> Unit,
+    onCheckUpdates: () -> Unit,
+    onOpenAbout: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Scaffold(
         modifier = modifier,
         topBar = {
@@ -32,36 +38,67 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
         }
     ) { contentPadding ->
         LazyColumn(
-            contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.fillMaxSize().padding(contentPadding)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(contentPadding)
         ) {
             item {
-                ElevatedCard(
-                    modifier = Modifier.fillMaxWidth(),
-                    elevation = CardDefaults.elevatedCardElevation(defaultElevation = 2.dp)
-                ) {
-                    Column(modifier = Modifier.padding(20.dp)) {
-                        Text(
-                            text = stringResource(R.string.about_app),
-                            style = androidx.compose.material3.MaterialTheme.typography.titleLarge
-                        )
-                        Text(
-                            text = stringResource(R.string.dialog_msg_about),
-                            modifier = Modifier.padding(top = 12.dp),
-                            style = androidx.compose.material3.MaterialTheme.typography.bodyLarge
-                        )
-                        TextButton(
-                            onClick = {
-                                uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
-                            },
-                            modifier = Modifier.padding(top = 8.dp)
-                        ) {
-                            Text(stringResource(R.string.action_open_releases))
-                        }
-                    }
-                }
+                SettingsSectionHeader(stringResource(R.string.settings_section_profile))
+            }
+            item {
+                SettingsItem(
+                    title = stringResource(R.string.set_player_name),
+                    subtitle = playerName,
+                    icon = { Icon(Icons.Outlined.Person, contentDescription = null) },
+                    onClick = onEditPlayerName
+                )
+            }
+            item {
+                SettingsSectionHeader(stringResource(R.string.settings_section_app))
+            }
+            item {
+                SettingsItem(
+                    title = stringResource(R.string.check_updates),
+                    icon = { Icon(Icons.AutoMirrored.Outlined.OpenInNew, contentDescription = null) },
+                    onClick = onCheckUpdates
+                )
+            }
+            item { HorizontalDivider() }
+            item {
+                SettingsItem(
+                    title = stringResource(R.string.about_app),
+                    icon = { Icon(Icons.Outlined.Info, contentDescription = null) },
+                    onClick = onOpenAbout
+                )
             }
         }
     }
+}
+
+@Composable
+private fun SettingsSectionHeader(title: String) {
+    Text(
+        text = title,
+        color = MaterialTheme.colorScheme.primary,
+        style = MaterialTheme.typography.titleSmall,
+        modifier = Modifier.padding(start = 16.dp, top = 24.dp, bottom = 8.dp)
+    )
+}
+
+@Composable
+private fun SettingsItem(
+    title: String,
+    icon: @Composable () -> Unit,
+    onClick: () -> Unit,
+    subtitle: String? = null
+) {
+    ListItem(
+        headlineContent = { Text(title) },
+        supportingContent = subtitle?.let { { Text(it) } },
+        leadingContent = icon,
+        modifier = Modifier.clickable(onClick = onClick),
+        colors = androidx.compose.material3.ListItemDefaults.colors(
+            containerColor = MaterialTheme.colorScheme.surface
+        )
+    )
 }

@@ -1,5 +1,11 @@
 package io.github.rosemoe.arcaeaScores.ui
 
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Settings
@@ -11,58 +17,106 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
 import io.github.rosemoe.arcaeaScores.R
 import io.github.rosemoe.arcaeaScores.app.MainUiState
 import io.github.rosemoe.arcaeaScores.app.MainViewModel
 import io.github.rosemoe.arcaeaScores.ui.components.AppDialogHost
 import io.github.rosemoe.arcaeaScores.ui.screens.HomeScreen
+import io.github.rosemoe.arcaeaScores.ui.screens.AboutScreen
 import io.github.rosemoe.arcaeaScores.ui.screens.SettingsScreen
 
-private enum class AppTab(val labelRes: Int) {
-    Home(R.string.nav_home),
-    Settings(R.string.nav_settings)
+private enum class AppDestination(val route: String, val labelRes: Int) {
+    Home("home", R.string.nav_home),
+    Settings("settings", R.string.nav_settings)
 }
+
+private const val ABOUT_ROUTE = "about"
 
 @Composable
 fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
-    var selectedTab by rememberSaveable { mutableStateOf(AppTab.Home) }
+    val navController = rememberNavController()
+    val backStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = backStackEntry?.destination?.route
+    val uriHandler = LocalUriHandler.current
 
     Scaffold(
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         bottomBar = {
-            NavigationBar {
-                AppTab.entries.forEach { tab ->
-                    val selected = selectedTab == tab
-                    NavigationBarItem(
-                        selected = selected,
-                        onClick = { selectedTab = tab },
-                        icon = {
-                            Icon(
-                                imageVector = if (tab == AppTab.Home) Icons.Outlined.Home else Icons.Outlined.Settings,
-                                contentDescription = null
-                            )
-                        },
-                        label = { Text(stringResource(tab.labelRes)) },
-                        colors = NavigationBarItemDefaults.colors()
-                    )
+            if (currentRoute in AppDestination.entries.map(AppDestination::route)) {
+                NavigationBar {
+                    AppDestination.entries.forEach { destination ->
+                        NavigationBarItem(
+                            selected = currentRoute == destination.route,
+                            onClick = {
+                                navController.navigate(destination.route) {
+                                    popUpTo(navController.graph.findStartDestination().id) {
+                                        saveState = true
+                                    }
+                                    launchSingleTop = true
+                                    restoreState = true
+                                }
+                            },
+                            icon = {
+                                Icon(
+                                    imageVector = if (destination == AppDestination.Home) {
+                                        Icons.Outlined.Home
+                                    } else {
+                                        Icons.Outlined.Settings
+                                    },
+                                    contentDescription = null
+                                )
+                            },
+                            label = { Text(stringResource(destination.labelRes)) },
+                            colors = NavigationBarItemDefaults.colors()
+                        )
+                    }
                 }
             }
         }
     ) { contentPadding ->
-        when (selectedTab) {
-            AppTab.Home -> HomeScreen(
-                state = state,
-                onUpdate = viewModel::requestScoreUpdate,
-                onSetName = viewModel::showNameDialog,
-                modifier = Modifier.padding(contentPadding)
-            )
-
-            AppTab.Settings -> SettingsScreen(modifier = Modifier.padding(contentPadding))
+        NavHost(
+            navController = navController,
+            startDestination = AppDestination.Home.route,
+            modifier = Modifier.padding(contentPadding),
+            enterTransition = { slideInHorizontally { it } + fadeIn() },
+            exitTransition = { slideOutHorizontally { -it / 4 } + fadeOut() },
+            popEnterTransition = { slideInHorizontally { -it / 4 } + fadeIn() },
+            popExitTransition = { slideOutHorizontally { it } + fadeOut() }
+        ) {
+            composable(AppDestination.Home.route) {
+                HomeScreen(
+                    state = state,
+                    onUpdate = viewModel::requestScoreUpdate,
+                    onSetName = viewModel::showNameDialog
+                )
+            }
+            composable(AppDestination.Settings.route) {
+                SettingsScreen(
+                    playerName = state.playerName,
+                    onEditPlayerName = viewModel::showNameDialog,
+                    onCheckUpdates = {
+                        uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
+                    },
+                    onOpenAbout = { navController.navigate(ABOUT_ROUTE) }
+                )
+            }
+            composable(ABOUT_ROUTE) {
+                AboutScreen(
+                    onBack = navController::popBackStack,
+                    onOpenReleases = {
+                        uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
+                    },
+                    onOpenSource = { uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores") }
+                )
+            }
         }
     }
 

@@ -3,8 +3,16 @@
     <string name="about_app">About</string>
     <string name="nav_home">Home</string>
     <string name="nav_settings">Settings</string>
+    <string name="settings_section_profile">Profile</string>
+    <string name="settings_section_app">App</string>
     <string name="set_player_name">Set player name</string>
     <string name="action_open_releases">Open releases</string>
+    <string name="action_back">Back</string>
+    <string name="check_updates">Check for updates</string>
+    <string name="version_name">Version</string>
+    <string name="release_notes">Release notes</string>
+    <string name="source_code">Source code</string>
+    <string name="about_description">A tool for reading Arcaea game data and calculating Best 30 scores.</string>
     <string name="click_to_set_name">Click to Set Name</string>
     <string name="pd_dialog_title">Updating Game Data</string>
     <string name="state_obtaining_root">Requesting Root Permission...</string>

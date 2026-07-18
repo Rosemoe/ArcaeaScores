@@ -4,8 +4,16 @@
     <string name="about_app">关于</string>
     <string name="nav_home">首页</string>
     <string name="nav_settings">设置</string>
+    <string name="settings_section_profile">资料</string>
+    <string name="settings_section_app">应用</string>
     <string name="set_player_name">设置名字</string>
     <string name="action_open_releases">打开发布页面</string>
+    <string name="action_back">返回</string>
+    <string name="check_updates">检查更新</string>
+    <string name="version_name">版本号</string>
+    <string name="release_notes">更新说明</string>
+    <string name="source_code">源代码</string>
+    <string name="about_description">使用 Root 权限读取 Arcaea 游戏存档并自动计算 Best30 成绩。</string>
     <string name="click_to_set_name">点击设置名字</string>
     <string name="pd_dialog_title">正在更新游戏数据</string>
     <string name="state_obtaining_root">正在获取 Root 权限...</string>
