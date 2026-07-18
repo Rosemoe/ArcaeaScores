@@ -5,7 +5,7 @@ import org.junit.Test
 
 class SongListTest {
 
-    private val titles = ArcaeaTitles(
+    private val titles = SongList(
         """
             {
               "songs": [
@@ -13,7 +13,7 @@ class SongListTest {
                   "id": "example",
                   "title_localized": { "en": "Song title" },
                   "difficulties": [
-                    { "ratingClass": 2 },
+                    { "ratingClass": 2, "rating": 10, "ratingPlus": true },
                     {
                       "ratingClass": 3,
                       "title_localized": { "en": "Chart title" }
@@ -40,5 +40,14 @@ class SongListTest {
     fun queriesFallBackToSongIdWhenSongIsUnknown() {
         assertEquals("unknown", titles.queryForSongId("unknown"))
         assertEquals("unknown", titles.queryForChart("unknown", 3))
+    }
+
+    @Test
+    fun queryForChartInfo_returnsRatingAndRatingPlus() {
+        val chartInfo = titles.queryForChartInfo("example", 2)
+
+        assertEquals(10, chartInfo?.rating)
+        assertEquals(true, chartInfo?.ratingPlus)
+        assertEquals("10+", chartInfo?.displayRating)
     }
 }

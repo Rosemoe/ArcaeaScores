@@ -13,7 +13,7 @@ private val ScoreQueryColumns = arrayOf(
 )
 
 fun readDatabase(context: Context): ArcaeaRecord {
-    val titles = ArcaeaTitles(context.assets.open("songlist.json"))
+    val titles = SongList(context.assets.open("songlist.json"))
     val constants = ArcaeaConstants(context.assets.open("constants.json"))
     context.openOrCreateDatabase(
         "st3.db",
@@ -31,6 +31,7 @@ fun readDatabase(context: Context): ArcaeaRecord {
                 val difficulty = cursor.getInt(cursor.getColumnIndexOrThrow("songDifficulty"))
                 val chartConstant = constants.queryForChart(songId, difficulty)
                 val score = cursor.getLong(cursor.getColumnIndexOrThrow("score"))
+                val chartInfo = titles.queryForChartInfo(songId, difficulty)
                 val result = ArcaeaScore(
                     songId = songId,
                     difficulty = difficulty,
@@ -39,7 +40,8 @@ fun readDatabase(context: Context): ArcaeaRecord {
                     maxPureCount = cursor.getInt(cursor.getColumnIndexOrThrow("shinyPerfectCount")),
                     farCount = cursor.getInt(cursor.getColumnIndexOrThrow("nearCount")),
                     lostCount = cursor.getInt(cursor.getColumnIndexOrThrow("missCount")),
-                    title = titles.queryForChart(songId, difficulty),
+                    title = chartInfo?.title ?: titles.queryForChart(songId, difficulty),
+                    chartInfo = chartInfo,
                     chartConstant = chartConstant,
                     playPotential = if (chartConstant > 0.0) {
                         calculatePlayPotential(chartConstant, score)

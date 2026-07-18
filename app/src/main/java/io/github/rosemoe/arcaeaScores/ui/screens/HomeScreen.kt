@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.FilterList
 import androidx.compose.material.icons.outlined.MusicNote
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
@@ -20,14 +21,20 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
@@ -37,6 +44,7 @@ import io.github.rosemoe.arcaeaScores.R
 import io.github.rosemoe.arcaeaScores.app.MainUiState
 import io.github.rosemoe.arcaeaScores.ui.components.PlayerSummary
 import io.github.rosemoe.arcaeaScores.ui.components.ScoreCard
+import io.github.rosemoe.arcaeaScores.ui.components.ScoreSearchFilters
 import io.github.rosemoe.arcaeaScores.ui.components.rememberArcaeaFonts
 
 @Composable
@@ -49,6 +57,17 @@ fun HomeScreen(
 ) {
     val fonts = rememberArcaeaFonts()
     val topAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+    var isFiltering by rememberSaveable { mutableStateOf(false) }
+    var keyword by rememberSaveable { mutableStateOf("") }
+    var selectedClearTypes by rememberSaveable { mutableStateOf(emptyList<Int>()) }
+    var selectedLevels by rememberSaveable { mutableStateOf(emptyList<String>()) }
+    val filteredScores = state.scores.filter { score ->
+        (keyword.isBlank() ||
+            score.title.contains(keyword, ignoreCase = true) ||
+            score.songId.contains(keyword, ignoreCase = true)) &&
+            (selectedClearTypes.isEmpty() || score.clearType in selectedClearTypes) &&
+            (selectedLevels.isEmpty() || score.chartInfo?.displayRating in selectedLevels)
+    }
     Scaffold(
         modifier = modifier,
         topBar = {
@@ -61,13 +80,70 @@ fun HomeScreen(
                             contentDescription = stringResource(R.string.action_read_game_data)
                         )
                     }
+                    IconButton(
+                        onClick = { isFiltering = !isFiltering },
+                        colors = IconButtonDefaults.iconButtonColors(
+                            containerColor = if (isFiltering) {
+                                MaterialTheme.colorScheme.primary
+                            } else {
+                                Color.Transparent
+                            },
+                            contentColor = if (isFiltering) {
+                                MaterialTheme.colorScheme.onPrimary
+                            } else {
+                                MaterialTheme.colorScheme.onSurface
+                            }
+                        )
+                    ) {
+                        Icon(
+                            imageVector = Icons.Outlined.FilterList,
+                            contentDescription = stringResource(R.string.action_filter)
+                        )
+                    }
                 },
                 scrollBehavior = topAppBarScrollBehavior
             )
         }
     ) { contentPadding ->
         Box(modifier = Modifier.fillMaxSize().padding(contentPadding)) {
-            if (state.scores.isEmpty()) {
+            if (isFiltering) {
+                LazyColumn(
+                    contentPadding = PaddingValues(bottom = 24.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .nestedScroll(topAppBarScrollBehavior.nestedScrollConnection)
+                ) {
+                    item {
+                        ScoreSearchFilters(
+                            keyword = keyword,
+                            onKeywordChange = { keyword = it },
+                            selectedClearTypes = selectedClearTypes,
+                            onClearTypeToggle = { clearType ->
+                                selectedClearTypes = selectedClearTypes.toggle(clearType)
+                            },
+                            availableLevels = chartLevelOptions,
+                            selectedLevels = selectedLevels,
+                            onLevelToggle = { level ->
+                                selectedLevels = selectedLevels.toggle(level)
+                            }
+                        )
+                    }
+                    item {
+                        ScoreListHeader(scoreCount = filteredScores.size)
+                    }
+                    if (filteredScores.isEmpty()) {
+                        item { EmptySearchResults() }
+                    } else {
+                        itemsIndexed(
+                            items = filteredScores,
+                            key = { _, score -> "${score.songId}-${score.difficulty}" }
+                        ) { index, score ->
+                            ScoreCard(score = score, rank = index + 1, fonts = fonts)
+                        }
+                    }
+                }
+            } else if (state.scores.isEmpty()) {
                 Column(modifier = Modifier.fillMaxSize()) {
                     PlayerSummary(state = state, fonts = fonts, onClick = onSetName)
                     ScoreListHeader(scoreCount = 0)
@@ -154,6 +230,34 @@ private fun EmptyScores(onUpdate: () -> Unit) {
         )
         Button(onClick = onUpdate) {
             Text(stringResource(R.string.action_read_game_data))
+        }
+    }
+}
+
+@Composable
+private fun EmptySearchResults() {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(48.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = stringResource(R.string.no_matching_scores),
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+private fun <T> List<T>.toggle(item: T): List<T> =
+    if (item in this) this - item else this + item
+
+private val chartLevelOptions = buildList {
+    for (level in 1..12) {
+        add(level.toString())
+        if (level in 7..11) {
+            add("$level+")
         }
     }
 }

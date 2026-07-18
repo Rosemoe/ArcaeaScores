@@ -19,7 +19,8 @@ class ArcaeaScore(
     var clearType: Int,
     var chartConstant: Double,
     var playPotential: Double,
-    var title: String
+    var title: String,
+    val chartInfo: ChartInfo?
 ) : Comparable<ArcaeaScore> {
 
     override fun compareTo(other: ArcaeaScore): Int {
