@@ -16,8 +16,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.github.rosemoe.arcaeaScores.R
@@ -31,16 +33,22 @@ fun SettingsScreen(
     onOpenAbout: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val topAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+
     Scaffold(
         modifier = modifier,
         topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.nav_settings)) })
+            TopAppBar(
+                title = { Text(stringResource(R.string.nav_settings)) },
+                scrollBehavior = topAppBarScrollBehavior
+            )
         }
     ) { contentPadding ->
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(contentPadding)
+                .nestedScroll(topAppBarScrollBehavior.nestedScrollConnection)
         ) {
             item {
                 SettingsSectionHeader(stringResource(R.string.settings_section_profile))

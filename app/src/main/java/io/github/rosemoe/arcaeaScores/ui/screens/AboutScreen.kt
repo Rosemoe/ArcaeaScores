@@ -20,10 +20,11 @@ import androidx.compose.material.icons.outlined.Update
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LargeTopAppBar
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,7 +34,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,32 +48,28 @@ fun AboutScreen(
     onOpenReleases: () -> Unit,
     onOpenSource: () -> Unit
 ) {
+    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
+
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {},
+            LargeTopAppBar(
+                title = { Text(stringResource(R.string.about_app)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Outlined.ArrowBack, contentDescription = stringResource(R.string.action_back))
                     }
-                }
+                },
+                scrollBehavior = scrollBehavior
             )
         }
     ) { contentPadding ->
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(contentPadding),
+                .padding(contentPadding)
+                .nestedScroll(scrollBehavior.nestedScrollConnection),
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
-            item {
-                Text(
-                    text = stringResource(R.string.about_app),
-                    modifier = Modifier.padding(horizontal = 24.dp, vertical = 16.dp),
-                    fontSize = 28.sp,
-                    fontWeight = FontWeight.Medium
-                )
-            }
             item {
                 Column(
                     modifier = Modifier
