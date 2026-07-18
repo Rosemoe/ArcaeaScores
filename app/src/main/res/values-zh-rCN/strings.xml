@@ -2,6 +2,10 @@
 <resources>
     <string name="app_name">ArcaeaScores</string>
     <string name="about_app">关于</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_settings">设置</string>
+    <string name="set_player_name">设置名字</string>
+    <string name="action_open_releases">打开发布页面</string>
     <string name="click_to_set_name">点击设置名字</string>
     <string name="pd_dialog_title">正在更新游戏数据</string>
     <string name="state_obtaining_root">正在获取 Root 权限...</string>
