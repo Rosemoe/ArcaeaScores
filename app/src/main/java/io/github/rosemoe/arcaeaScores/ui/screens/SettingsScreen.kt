@@ -32,6 +32,7 @@ import io.github.rosemoe.arcaeaScores.R
 fun SettingsScreen(
     playerName: String,
     showArtwork: Boolean,
+    artworkDataVersion: String?,
     onEditPlayerName: () -> Unit,
     onShowArtworkChange: (Boolean) -> Unit,
     onUpdateArtworkData: () -> Unit,
@@ -85,6 +86,9 @@ fun SettingsScreen(
             item {
                 SettingsItem(
                     title = stringResource(R.string.update_artwork_data),
+                    subtitle = artworkDataVersion?.let {
+                        stringResource(R.string.artwork_data_version, it)
+                    } ?: stringResource(R.string.no_artwork_data),
                     icon = { Icon(Icons.Outlined.Update, contentDescription = null) },
                     onClick = onUpdateArtworkData
                 )

@@ -104,6 +104,7 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                 SettingsScreen(
                     playerName = state.playerName,
                     showArtwork = state.showArtwork,
+                    artworkDataVersion = state.artworkDataVersion,
                     onEditPlayerName = viewModel::showNameDialog,
                     onShowArtworkChange = viewModel::setShowArtwork,
                     onUpdateArtworkData = { navController.navigate(DATA_UPDATE_ROUTE) },

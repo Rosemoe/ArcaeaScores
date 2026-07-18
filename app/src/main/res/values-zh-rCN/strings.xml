@@ -15,6 +15,7 @@
     <string name="no_compatible_applications">未找到兼容的应用</string>
     <string name="state_updating_artwork">正在更新曲绘数据…</string>
     <string name="artwork_data_version">当前曲绘数据版本：%1$s</string>
+    <string name="no_artwork_data">暂无曲绘数据</string>
     <string name="artwork_update_complete">曲绘数据已更新</string>
     <string name="best_30_potential">Best 30 潜力值</string>
     <string name="best_30">成绩列表</string>

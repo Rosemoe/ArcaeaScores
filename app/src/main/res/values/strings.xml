@@ -14,6 +14,7 @@
     <string name="no_compatible_applications">No compatible applications found</string>
     <string name="state_updating_artwork">Updating artwork data…</string>
     <string name="artwork_data_version">Current artwork data version: %1$s</string>
+    <string name="no_artwork_data">No artwork data</string>
     <string name="artwork_update_complete">Artwork data updated</string>
     <string name="best_30_potential">Best 30 Potential</string>
     <string name="best_30">Scores</string>
