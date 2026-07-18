@@ -1,6 +1,45 @@
+import org.gradle.api.Project
+import java.io.File
+import java.util.Base64
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose.compiler)
+}
+
+private object AppSigning {
+
+    data class Config(
+        val storeFile: File,
+        val storePassword: String,
+        val keyAlias: String,
+        val keyPassword: String
+    )
+
+    fun loadOptional(project: Project): Result<Config> = runCatching {
+        val properties = Properties().also { properties ->
+            val file = project.rootProject.file("signing.properties")
+            if (file.exists()) {
+                file.reader().use { properties.load(it) }
+            }
+        }
+        val storeFile = project.rootProject.file("signing.keystore")
+        val storeBin = getEnvOrProperty(properties, "SIGNING_STORE_BIN")
+        val storePassword = getEnvOrProperty(properties, "SIGNING_STORE_PASSWORD")
+        val keyAlias = getEnvOrProperty(properties, "SIGNING_KEY_ALIAS")
+        val keyPassword = getEnvOrProperty(properties, "SIGNING_KEY_PASSWORD")
+
+        storeFile.writeBytes(Base64.getDecoder().decode(storeBin))
+        Config(storeFile, storePassword, keyAlias, keyPassword)
+    }
+
+    private fun getEnvOrProperty(properties: Properties, key: String): String {
+        return System.getenv(key)
+            ?.takeIf(String::isNotBlank)
+            ?: properties.getProperty(key)?.takeIf(String::isNotBlank)
+            ?: error("$key is not configured")
+    }
 }
 
 android {
@@ -16,6 +55,26 @@ android {
         versionName = "1.0.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        AppSigning.loadOptional(project)
+            .onSuccess { config ->
+                create("general") {
+                    storeFile = config.storeFile
+                    storePassword = config.storePassword
+                    keyAlias = config.keyAlias
+                    keyPassword = config.keyPassword
+                    enableV1Signing = true
+                    enableV2Signing = true
+                }
+                buildTypes.configureEach {
+                    signingConfig = signingConfigs.getByName("general")
+                }
+            }
+            .onFailure {
+                logger.info("App signing is not configured; using the default signing configuration.")
+            }
     }
 
     buildTypes {
