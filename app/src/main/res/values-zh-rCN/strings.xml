@@ -23,7 +23,7 @@
     <string name="last_updated">上次更新</string>
     <string name="not_updated">尚未更新</string>
     <plurals name="score_count">
-        <item quantity="other">%d 首</item>
+        <item quantity="other">%d 条</item>
     </plurals>
     <string name="empty_scores_title">暂无成绩</string>
     <string name="empty_scores_description">读取游戏数据后，即可查看 Best 30 成绩。</string>
