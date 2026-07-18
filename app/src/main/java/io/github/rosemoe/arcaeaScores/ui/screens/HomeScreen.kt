@@ -68,8 +68,9 @@ fun HomeScreen(
             (selectedClearTypes.isEmpty() || score.clearType in selectedClearTypes) &&
             (selectedLevels.isEmpty() || score.chartInfo?.displayRating in selectedLevels)
     }
-    Scaffold(
-        modifier = modifier,
+    Box(modifier = modifier.fillMaxSize()) {
+        Scaffold(
+            modifier = Modifier.fillMaxSize(),
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.nav_home)) },
@@ -104,8 +105,8 @@ fun HomeScreen(
                 scrollBehavior = topAppBarScrollBehavior
             )
         }
-    ) { contentPadding ->
-        Box(modifier = Modifier.fillMaxSize().padding(contentPadding)) {
+        ) { contentPadding ->
+            Box(modifier = Modifier.fillMaxSize().padding(contentPadding)) {
             if (isFiltering) {
                 LazyColumn(
                     contentPadding = PaddingValues(bottom = 24.dp),
@@ -178,9 +179,10 @@ fun HomeScreen(
                     }
                 }
             }
-            if (state.isLoading) {
-                LoadingOverlay(state.loadingMessage.orEmpty())
             }
+        }
+        if (state.isLoading) {
+            LoadingOverlay(state.loadingMessage.orEmpty())
         }
     }
 }
