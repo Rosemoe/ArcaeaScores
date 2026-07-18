@@ -34,6 +34,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.github.rosemoe.arcaeaScores.BuildConfig
@@ -99,7 +100,8 @@ fun AboutScreen(
                     Text(
                         text = stringResource(R.string.about_description),
                         modifier = Modifier.padding(horizontal = 32.dp),
-                        fontSize = 14.sp
+                        fontSize = 14.sp,
+                        textAlign = TextAlign.Center
                     )
                 }
             }
