@@ -1,6418 +1,2871 @@
 {
-    "sayonarahatsukoi": [
-        {
-            "constant": 1.5,
-            "old": false
-        },
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        null,
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "lostcivilization": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "goodtek": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "viyella": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "rise": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        }
-    ],
-    "lucifer": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        }
-    ],
-    "fairytale": [
-        {
-            "constant": 1,
-            "old": false
-        },
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "hearditsaid": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        }
-    ],
-    "babaroque": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "memoryfactory": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "snowwhite": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        }
-    ],
-    "relentless": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8,
-            "old": false
-        }
-    ],
-    "shadesoflight": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "vexaria": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        }
-    ],
-    "essenceoftwilight": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "qualia": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "pragmatism": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        },
-        {
-            "constant": 10.1,
-            "old": false
-        },
-        {
-            "constant": 11.2,
-            "old": false
-        }
-    ],
-    "sheriruth": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "lumia": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "dement": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "dandelion": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "anokumene": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "infinityheaven": [
-        {
-            "constant": 1.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "partyvinyl": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "flashback": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "flyburg": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        }
-    ],
-    "nirvluce": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "paradise": [
-        {
-            "constant": 1,
-            "old": false
-        },
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        }
-    ],
-    "brandnewworld": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        }
-    ],
-    "dataerror": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "crosssoul": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "yourvoiceso": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "chronostasis": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "kanagawa": [
-        {
-            "constant": 1,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "moonlightofsandcastle": [
-        {
-            "constant": 1.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        }
-    ],
-    "reconstruction": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        }
-    ],
-    "evoltex": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "oracle": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "aterlbus": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "clotho": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        null,
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "impurebird": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "ignotus": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "lethaeus": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "romancewars": [
-        {
-            "constant": 1,
-            "old": false
-        },
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        }
-    ],
-    "blossoms": [
-        {
-            "constant": 1,
-            "old": false
-        },
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        }
-    ],
-    "moonheart": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "genesis": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        }
-    ],
-    "harutopia": [
-        {
-            "constant": 1,
-            "old": false
-        },
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "auxesia": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "rabbitintheblackroom": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        }
-    ],
-    "modelista": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "soundwitch": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "trappola": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "iconoclast": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "conflict": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "axiumcrisis": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "grievouslady": [
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        },
-        {
-            "constant": 11.1,
-            "old": false
-        }
-    ],
-    "dreaminattraction": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "redandblue": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "onelastdrive": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        }
-    ],
-    "surrender": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "yozakurafubuki": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "cyanine": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "dreamgoeson": [
-        {
-            "constant": 1.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        }
-    ],
-    "journey": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "specta": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "quon": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "syro": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "reinvent": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "silentrush": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        }
-    ],
-    "singularity": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "memoryforest": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "strongholds": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "nexttoyou": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "metallicpunisher": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "blaster": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "guardina": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 8,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "carminescythe": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "bethere": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "cyberneciacatharsis": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "callmyname": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "inkarusi": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "mazenine": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "themessage": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "sulfur": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "halcyon": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "etherstrike": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "fractureray": [
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        {
-            "constant": 11.1,
-            "old": false
-        }
-    ],
-    "suomi": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        null,
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "bookmaker": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "darakunosono": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "dropdead": [
-        {
-            "constant": 1.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "fallensquare": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "nhelv": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "espebranch": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "purgatorium": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "hikari": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        }
-    ],
-    "stager": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "hallofmirrors": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        }
-    ],
-    "linearaccelerator": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "tiferet": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "alexandrite": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "rugie": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "astraltale": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "phantasia": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "empireofwinter": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "merlin": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "dxfullmetal": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "omakeno": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "scarletlance": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "ouroboros": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "libertas": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "solitarydream": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "antithese": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "corruption": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "blackterritory": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "viciousheroism": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        },
-        {
-            "constant": 11.2,
-            "old": false
-        }
-    ],
-    "cyaegha": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "revixy": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "grimheart": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "vector": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "supernova": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "dottodot": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        }
-    ],
-    "garakuta": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "ikazuchi": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "worldvanquisher": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "dreadnought": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "vindication": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "heavensdoor": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "ringedgenesis": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "chelsea": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "aiueoon": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "melodyoflove": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "tiemedowngently": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        }
-    ],
-    "valhallazero": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "mirzam": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "diode": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        }
-    ],
-    "freefall": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "gloryroad": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "monochromeprincess": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "heavenlycaress": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "senkyou": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "filament": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "avantraze": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "battlenoone": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "laqryma": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "einherjar": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "izana": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "saikyostronger": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        },
-        {
-            "constant": 11,
-            "old": false
-        }
-    ],
-    "worldexecuteme": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8,
-            "old": false
-        }
-    ],
-    "blrink": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "oblivia": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "amygdata": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "corpssansorganes": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "equilibrium": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "antagonism": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "lostdesire": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "dantalion": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "ifi": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        },
-        {
-            "constant": 11.1,
-            "old": false
-        }
-    ],
-    "tempestissimo": [
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        },
-        {
-            "constant": 11.7,
-            "old": false
-        }
-    ],
-    "arcahv": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "altale": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "givemeanightmare": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "blacklotus": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "gekka": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        }
-    ],
-    "vividtheory": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "onefr": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        }
-    ],
-    "scarletcage": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "faintlight": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "feelssoright": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "teriqma": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "mahoroba": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "badtek": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "maliciousmischance": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "gothiveofra": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "buchigireberserker": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "galaxyfriends": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "crossover": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "xeraphinite": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "lapis": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "xanatos": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "purpleverse": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "alicealamode": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "eccentrictale": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        }
-    ],
-    "alicessuitcase": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "jump": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        }
-    ],
-    "felis": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "besideyou": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "heartjackin": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "toaliceliddell": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "lazyaddiction": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "dazzlehop": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "viyellastears": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "omegafour": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "aprilshowers": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        }
-    ],
-    "seventhsense": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "oshamascramble": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "amazingmightyyyy": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "climax": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "lastcelebration": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "gou": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "glow": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "attraqtia": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "enchantedlove": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        }
-    ],
-    "take": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "gimmedablood": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "bassline": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "lifeispiano": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "paperwitch": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "crystalgravity": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "farawaylight": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "loschen": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "aegleseeker": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        },
-        {
-            "constant": 11.2,
-            "old": false
-        }
-    ],
-    "coastalhighway": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "odysseia": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "overwhelm": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "vandalism": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "turbocharger": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        }
-    ],
-    "theultimacy": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "rekkaresonance": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "kyogenkigo": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "hivemind": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "seclusion": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "smallcloud": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "alterale": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "divinelight": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "mazymetroplex": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "quonwacca": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "withu": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "genocider": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "letyoudivermx": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "sheriruthrmx": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "eveninginscarlet": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "bluecomet": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        }
-    ],
-    "energysynergymatrix": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "gengaozo": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        },
-        {
-            "constant": 10.1,
-            "old": false
-        }
-    ],
-    "goldenslaughterer": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "lastendconductor": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "redolentshape": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "cosmica": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "ascent": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "livefastdieyoung": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "summerfireworks": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "firstsnow": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        }
-    ],
-    "bluerose": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "blockedlibrary": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "neokosmo": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "lightningscrew": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "lightsofmuse": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        }
-    ],
-    "finalstep": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "akinokagerou": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "medusa": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10.1,
-            "old": false
-        }
-    ],
-    "init": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "internetoverdose": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        }
-    ],
-    "sakurafubuki": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "nulctrl": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "macromod": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "neowings": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "kissinglucifer": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "avril": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        }
-    ],
-    "aurgelmir": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "headbonkache": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "ddd": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "prism": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8,
-            "old": false
-        }
-    ],
-    "protoflicker": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "stasis": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "picopicotranslation": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "nekonote": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "mu": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "sanskia": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        }
-    ],
-    "altair": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "mukishitsu": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "trapcrow": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "pupa": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "defection": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "infinitestrife": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "worldender": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        },
-        {
-            "constant": 11.1,
-            "old": false
-        }
-    ],
-    "pentiment": [
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        },
-        {
-            "constant": 11.5,
-            "old": false
-        }
-    ],
-    "arcanaeden": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        },
-        {
-            "constant": 11.6,
-            "old": false
-        }
-    ],
-    "testify": [
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        },
-        {
-            "constant": 12,
-            "old": false
-        }
-    ],
-    "lovelessdress": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "last": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "lasteternity": [
-        null,
-        null,
-        null,
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "callimakarma": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "kokoro": [
-        {
-            "constant": 1,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "aidrew": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "fluffyflash": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "goodbyemerry": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "lamia": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 11,
-            "old": false
-        }
-    ],
-    "freemyself": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "cocorocosmetic": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "capella": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "dialnote": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "tsukinimurakumo": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "mantis": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "worldfragments": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "astrawalkthrough": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "chronicle": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "nullapophenia": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "crimsonthrone": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 8,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "manicjeer": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "hiirogekka": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "letsrock": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "cycles": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "maxrage": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "infinity": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "temptation": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "primitivelights": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "cosmopop": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "impact": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "genesischunithm": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "trrricksters": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.1,
-            "old": false
-        }
-    ],
-    "spidersthread": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "lostemotion": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "gimmick": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "thesurvivor": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "newyorkbackraise": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "galacticlove": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        }
-    ],
-    "lawlesspoint": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        }
-    ],
-    "lostintheabyss": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "hybris": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "tothemilkyway": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "internetyamero": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "bulletwaiting": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        }
-    ],
-    "devillicsphere": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "lucidtraveler": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "chaos": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "usedtobe": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "ultimatetaste": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "syuten": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        }
-    ],
-    "drg": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "nnglooms": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "ii": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "magnolia": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "sacrifice": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "rgb": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "waitfordawn": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        }
-    ],
-    "ravenspride": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "riseoftheworld": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "unknownlevels": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "abstrusedilemma": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 11.3,
-            "old": false
-        }
-    ],
-    "matenrou": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "tothefurthestdream": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "remindthesouls": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "dynitikos": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "amekagura": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "bbkkbkk": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "primevaltexture": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9,
-            "old": false
-        }
-    ],
-    "technicolour": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "logos": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "egoeimi": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "arghena": [
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        },
-        {
-            "constant": 11.3,
-            "old": false
-        }
-    ],
-    "fantasy": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "transientspace": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "namelesspassion": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "teravolt": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "stratoliner": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "ouverture": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "xtreme": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "edenwacca": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "metamysteria": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "aloneandlorn": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "wishuponasnow": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "overdrive": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.1,
-            "old": false
-        }
-    ],
-    "felys": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "onandon": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "lightmyway": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "hotarubinoyuki": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "theformula": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "lunarossa": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "jingle": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "innocence": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "ionostream": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "alephzero": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "masqueradelegion": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "kyorenromance": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "qovat": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "hellohell": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "ichirin": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "awakeninruins": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "morningloom": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "lethalvoltage": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "mirinae": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.3,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "ultradiaxon": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "leaveallbehind": [
-        {
-            "constant": 2,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "distortedfate": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "floatingworld": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        }
-    ],
-    "chromafill": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "desive": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "epicurus": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "tasogare": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "oldschoolsalvage": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "beautifuldreamer": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "backtobasics": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "stargateextreme": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "hypervision": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "signof": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        }
-    ],
-    "temptationgc": [
-        {
-            "constant": 4,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "blackmind": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8,
-            "old": false
-        },
-        {
-            "constant": 10.8,
-            "old": false
-        }
-    ],
-    "distortionhuman": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "shrink": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "hypnotize": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "invain": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "ashenboundary": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "judgement": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "alterego": [
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 9.2,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 11.3,
-            "old": false
-        }
-    ],
-    "epitaxy": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.6,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.6,
-            "old": false
-        }
-    ],
-    "waltzforlorelei": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "dualdoom": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.9,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "invertedworld": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "mvurbd": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "vulcanus": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "rainofconflict": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "saintorsinner": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        }
-    ],
-    "hailstone": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        }
-    ],
-    "furetemitai": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.4,
-            "old": false
-        }
-    ],
-    "gensounosatellite": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.7,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.1,
-            "old": false
-        }
-    ],
-    "prayer": [
-        {
-            "constant": 2.5,
-            "old": false
-        },
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.1,
-            "old": false
-        }
-    ],
-    "crimsonquartz": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "thirdsun": [
-        {
-            "constant": 3.5,
-            "old": false
-        },
-        {
-            "constant": 7,
-            "old": false
-        },
-        {
-            "constant": 9.4,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10,
-            "old": false
-        }
-    ],
-    "spiritdauntless": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 10.5,
-            "old": false
-        }
-    ],
-    "diesirae": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ],
-    "astralexe": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6,
-            "old": false
-        },
-        {
-            "constant": 9.5,
-            "old": false
-        }
-    ],
-    "liftoff": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.2,
-            "old": false
-        },
-        null,
-        {
-            "constant": 9.8,
-            "old": false
-        }
-    ],
-    "superambulance": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        }
-    ],
-    "dontfightmusic": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.3,
-            "old": false
-        },
-        null,
-        {
-            "constant": 10.7,
-            "old": false
-        }
-    ],
-    "andrevivemelody": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.5,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "swansong": [
-        {
-            "constant": 3,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.9,
-            "old": false
-        }
-    ],
-    "renegade": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.8,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        },
-        {
-            "constant": 10.2,
-            "old": false
-        }
-    ],
-    "raysofremnant": [
-        {
-            "constant": 4.5,
-            "old": false
-        },
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.7,
-            "old": false
-        },
-        {
-            "constant": 10.4,
-            "old": false
-        }
-    ],
-    "breachoffaith": [
-        {
-            "constant": 5.5,
-            "old": false
-        },
-        {
-            "constant": 8.4,
-            "old": false
-        },
-        {
-            "constant": 10.3,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        }
-    ],
-    "lamentrain": [
-        {
-            "constant": 6.5,
-            "old": false
-        },
-        {
-            "constant": 8.8,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        },
-        {
-            "constant": 11.4,
-            "old": false
-        }
-    ],
-    "designant": [
-        {
-            "constant": 7.5,
-            "old": false
-        },
-        {
-            "constant": 9.6,
-            "old": false
-        },
-        {
-            "constant": 10.9,
-            "old": false
-        },
-        {
-            "constant": 11.9,
-            "old": false
-        }
-    ],
-    "astralquant": [
-        {
-            "constant": 5,
-            "old": false
-        },
-        {
-            "constant": 8.1,
-            "old": false
-        },
-        {
-            "constant": 10.6,
-            "old": false
-        }
-    ]
+  "sayonarahatsukoi": {
+    "pst": 1.5,
+    "prs": 4.5,
+    "ftr": 7.0,
+    "etr": 8.5
+  },
+  "lostcivilization": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.2,
+    "byd": 9.8
+  },
+  "goodtek": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 9.3,
+    "byd": 9.8
+  },
+  "viyella": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 8.7
+  },
+  "rise": {
+    "pst": 2.5,
+    "prs": 4.0,
+    "ftr": 7.8
+  },
+  "lucifer": {
+    "pst": 3.5,
+    "prs": 5.5,
+    "ftr": 8.2
+  },
+  "fairytale": {
+    "pst": 1.0,
+    "prs": 3.5,
+    "ftr": 7.0,
+    "byd": 9.5
+  },
+  "hearditsaid": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 8.1
+  },
+  "babaroque": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 8.5
+  },
+  "memoryfactory": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.9
+  },
+  "snowwhite": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 8.4,
+    "byd": 9.7
+  },
+  "relentless": {
+    "pst": 4.5,
+    "prs": 6.5,
+    "ftr": 8.0
+  },
+  "shadesoflight": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.3,
+    "byd": 9.1
+  },
+  "vexaria": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 7.0,
+    "byd": 9.0
+  },
+  "essenceoftwilight": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 9.1
+  },
+  "qualia": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 9.1,
+    "byd": 9.8
+  },
+  "pragmatism": {
+    "pst": 4.5,
+    "prs": 8.6,
+    "ftr": 10.1,
+    "byd": 11.2
+  },
+  "sheriruth": {
+    "pst": 5.5,
+    "prs": 7.5,
+    "ftr": 10.0
+  },
+  "lumia": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.4,
+    "byd": 9.5
+  },
+  "dement": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 7.8,
+    "byd": 9.9
+  },
+  "dandelion": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.5
+  },
+  "anokumene": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 9.2,
+    "byd": 9.9
+  },
+  "infinityheaven": {
+    "pst": 1.5,
+    "prs": 5.5,
+    "ftr": 7.8,
+    "byd": 9.6
+  },
+  "partyvinyl": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.4,
+    "byd": 10.3
+  },
+  "flashback": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 8.9
+  },
+  "flyburg": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.0
+  },
+  "nirvluce": {
+    "pst": 2.5,
+    "prs": 7.0,
+    "ftr": 10.2
+  },
+  "paradise": {
+    "pst": 1.0,
+    "prs": 4.0,
+    "ftr": 7.8
+  },
+  "brandnewworld": {
+    "pst": 2.0,
+    "prs": 4.0,
+    "ftr": 7.8
+  },
+  "dataerror": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.5
+  },
+  "crosssoul": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "yourvoiceso": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "chronostasis": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 8.9
+  },
+  "kanagawa": {
+    "pst": 1.0,
+    "prs": 5.5,
+    "ftr": 9.0,
+    "byd": 9.8
+  },
+  "moonlightofsandcastle": {
+    "pst": 1.5,
+    "prs": 5.0,
+    "ftr": 7.8
+  },
+  "reconstruction": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.4
+  },
+  "evoltex": {
+    "pst": 2.0,
+    "prs": 7.0,
+    "ftr": 8.9
+  },
+  "oracle": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 9.3
+  },
+  "aterlbus": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.2
+  },
+  "clotho": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 7.8,
+    "etr": 8.8
+  },
+  "impurebird": {
+    "pst": 2.0,
+    "prs": 5.5,
+    "ftr": 9.4
+  },
+  "ignotus": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.3,
+    "byd": 9.9
+  },
+  "lethaeus": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "romancewars": {
+    "pst": 1.0,
+    "prs": 4.0,
+    "ftr": 7.8
+  },
+  "blossoms": {
+    "pst": 1.0,
+    "prs": 4.0,
+    "ftr": 7.0
+  },
+  "moonheart": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.4,
+    "byd": 9.7
+  },
+  "genesis": {
+    "pst": 2.0,
+    "prs": 5.5,
+    "ftr": 8.2
+  },
+  "harutopia": {
+    "pst": 1.0,
+    "prs": 4.5,
+    "ftr": 8.5
+  },
+  "auxesia": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.3
+  },
+  "rabbitintheblackroom": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.4
+  },
+  "modelista": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.9
+  },
+  "soundwitch": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "trappola": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.9,
+    "byd": 10.6
+  },
+  "iconoclast": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.1
+  },
+  "conflict": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.2
+  },
+  "axiumcrisis": {
+    "pst": 5.5,
+    "prs": 8.5,
+    "ftr": 10.6,
+    "byd": 11.3
+  },
+  "grievouslady": {
+    "pst": 6.5,
+    "prs": 9.3,
+    "ftr": 11.1
+  },
+  "dreaminattraction": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "redandblue": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.4,
+    "byd": 10.2
+  },
+  "onelastdrive": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.2
+  },
+  "surrender": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 8.8
+  },
+  "yozakurafubuki": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "cyanine": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.6
+  },
+  "dreamgoeson": {
+    "pst": 1.5,
+    "prs": 5.0,
+    "ftr": 7.8
+  },
+  "journey": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.1
+  },
+  "specta": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "quon": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 9.6
+  },
+  "syro": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.3
+  },
+  "reinvent": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 8.5
+  },
+  "silentrush": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 8.6
+  },
+  "singularity": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.5,
+    "byd": 10.4
+  },
+  "memoryforest": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.8
+  },
+  "strongholds": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 9.2
+  },
+  "nexttoyou": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 8.8,
+    "byd": 9.6
+  },
+  "metallicpunisher": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 10.3
+  },
+  "blaster": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.3
+  },
+  "guardina": {
+    "pst": 4.0,
+    "prs": 8.0,
+    "ftr": 10.4
+  },
+  "carminescythe": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.6
+  },
+  "bethere": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.4,
+    "byd": 10.5
+  },
+  "cyberneciacatharsis": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.5,
+    "byd": 9.8
+  },
+  "callmyname": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 8.7
+  },
+  "inkarusi": {
+    "pst": 2.0,
+    "prs": 4.0,
+    "ftr": 7.8,
+    "byd": 9.4
+  },
+  "mazenine": {
+    "pst": 3.0,
+    "prs": 3.5,
+    "ftr": 8.9
+  },
+  "themessage": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "sulfur": {
+    "pst": 4.0,
+    "prs": 6.0,
+    "ftr": 9.7
+  },
+  "halcyon": {
+    "pst": 5.5,
+    "prs": 8.2,
+    "ftr": 10.5
+  },
+  "etherstrike": {
+    "pst": 5.5,
+    "prs": 8.3,
+    "ftr": 10.3
+  },
+  "fractureray": {
+    "pst": 6.0,
+    "prs": 9.5,
+    "ftr": 11.1
+  },
+  "suomi": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 7.8,
+    "etr": 8.9
+  },
+  "bookmaker": {
+    "pst": 4.5,
+    "prs": 6.5,
+    "ftr": 8.3,
+    "byd": 10.0
+  },
+  "darakunosono": {
+    "pst": 2.0,
+    "prs": 7.0,
+    "ftr": 9.5
+  },
+  "dropdead": {
+    "pst": 1.5,
+    "prs": 9.5,
+    "ftr": 9.1,
+    "byd": 10.5
+  },
+  "fallensquare": {
+    "pst": 3.0,
+    "prs": 7.5,
+    "ftr": 9.7
+  },
+  "nhelv": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.9,
+    "byd": 10.9
+  },
+  "espebranch": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.6
+  },
+  "purgatorium": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.4,
+    "byd": 9.6
+  },
+  "hikari": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.1
+  },
+  "stager": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.5
+  },
+  "hallofmirrors": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 8.2
+  },
+  "linearaccelerator": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "tiferet": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.3
+  },
+  "alexandrite": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.0
+  },
+  "rugie": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.2
+  },
+  "astraltale": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 9.6
+  },
+  "phantasia": {
+    "pst": 4.0,
+    "prs": 5.5,
+    "ftr": 9.2
+  },
+  "empireofwinter": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.1
+  },
+  "merlin": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 8.9,
+    "byd": 9.4
+  },
+  "dxfullmetal": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.7
+  },
+  "omakeno": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.5,
+    "byd": 10.3
+  },
+  "scarletlance": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 10.0
+  },
+  "ouroboros": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.7
+  },
+  "libertas": {
+    "pst": 3.5,
+    "prs": 5.5,
+    "ftr": 9.2,
+    "byd": 10.5
+  },
+  "solitarydream": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 8.8
+  },
+  "antithese": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 8.8,
+    "byd": 9.6
+  },
+  "corruption": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "blackterritory": {
+    "pst": 3.0,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "viciousheroism": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.0,
+    "byd": 11.2
+  },
+  "cyaegha": {
+    "pst": 5.5,
+    "prs": 8.4,
+    "ftr": 10.7
+  },
+  "revixy": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.1
+  },
+  "grimheart": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 8.7
+  },
+  "vector": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "supernova": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.7
+  },
+  "dottodot": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.3
+  },
+  "garakuta": {
+    "pst": 4.5,
+    "prs": 6.5,
+    "ftr": 10.4
+  },
+  "ikazuchi": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 10.3
+  },
+  "worldvanquisher": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 10.7
+  },
+  "dreadnought": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "vindication": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 9.6
+  },
+  "heavensdoor": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.9,
+    "byd": 10.8
+  },
+  "ringedgenesis": {
+    "pst": 5.5,
+    "prs": 8.4,
+    "ftr": 10.8
+  },
+  "chelsea": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.9
+  },
+  "aiueoon": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "melodyoflove": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.6
+  },
+  "tiemedowngently": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 8.3
+  },
+  "valhallazero": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.2
+  },
+  "mirzam": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.9
+  },
+  "diode": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.1
+  },
+  "freefall": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 8.6,
+    "byd": 9.8
+  },
+  "gloryroad": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 10.5
+  },
+  "monochromeprincess": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.7
+  },
+  "heavenlycaress": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.8,
+    "byd": 10.9
+  },
+  "senkyou": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 8.7
+  },
+  "filament": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.7
+  },
+  "avantraze": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.6
+  },
+  "battlenoone": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "laqryma": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.1,
+    "byd": 10.0
+  },
+  "einherjar": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.8,
+    "byd": 10.9
+  },
+  "izana": {
+    "pst": 5.0,
+    "prs": 8.3,
+    "ftr": 10.3
+  },
+  "saikyostronger": {
+    "pst": 5.5,
+    "prs": 9.4,
+    "ftr": 11.0
+  },
+  "worldexecuteme": {
+    "pst": 3.5,
+    "prs": 5.0,
+    "ftr": 8.0
+  },
+  "blrink": {
+    "pst": 3.5,
+    "prs": 7.8,
+    "ftr": 9.7
+  },
+  "oblivia": {
+    "pst": 3.5,
+    "prs": 5.0,
+    "ftr": 8.3,
+    "byd": 9.7
+  },
+  "amygdata": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.7
+  },
+  "corpssansorganes": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.6
+  },
+  "equilibrium": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "antagonism": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "lostdesire": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.8
+  },
+  "dantalion": {
+    "pst": 5.0,
+    "prs": 8.2,
+    "ftr": 10.8
+  },
+  "ifi": {
+    "pst": 5.5,
+    "prs": 9.2,
+    "ftr": 11.1
+  },
+  "tempestissimo": {
+    "pst": 7.0,
+    "prs": 9.5,
+    "ftr": 10.7,
+    "byd": 11.7
+  },
+  "arcahv": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "altale": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 9.8,
+    "byd": 10.0
+  },
+  "givemeanightmare": {
+    "pst": 3.5,
+    "prs": 5.5,
+    "ftr": 8.9
+  },
+  "blacklotus": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "gekka": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 8.6
+  },
+  "vividtheory": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 8.8
+  },
+  "onefr": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 8.2
+  },
+  "scarletcage": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "faintlight": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.1
+  },
+  "feelssoright": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.3
+  },
+  "teriqma": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.4,
+    "byd": 9.7
+  },
+  "mahoroba": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.5
+  },
+  "badtek": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "maliciousmischance": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.2
+  },
+  "gothiveofra": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "buchigireberserker": {
+    "pst": 5.0,
+    "prs": 8.6,
+    "ftr": 10.8
+  },
+  "galaxyfriends": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.9
+  },
+  "crossover": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "xeraphinite": {
+    "pst": 3.0,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "lapis": {
+    "pst": 2.0,
+    "prs": 6.0,
+    "ftr": 9.4
+  },
+  "xanatos": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.0
+  },
+  "purpleverse": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.6,
+    "byd": 10.6
+  },
+  "alicealamode": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 9.2
+  },
+  "eccentrictale": {
+    "pst": 2.0,
+    "prs": 5.5,
+    "ftr": 8.4,
+    "byd": 9.9
+  },
+  "alicessuitcase": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.1
+  },
+  "jump": {
+    "pst": 4.0,
+    "prs": 6.0,
+    "ftr": 9.0
+  },
+  "felis": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.4
+  },
+  "besideyou": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.7
+  },
+  "heartjackin": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 9.7
+  },
+  "toaliceliddell": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.3
+  },
+  "lazyaddiction": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 9.6
+  },
+  "dazzlehop": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "viyellastears": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.3
+  },
+  "omegafour": {
+    "pst": 3.5,
+    "prs": 7.8,
+    "ftr": 10.8
+  },
+  "aprilshowers": {
+    "pst": 2.0,
+    "prs": 5.5,
+    "ftr": 8.6
+  },
+  "seventhsense": {
+    "pst": 3.0,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "oshamascramble": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 10.0
+  },
+  "amazingmightyyyy": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.7
+  },
+  "climax": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.4
+  },
+  "lastcelebration": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 10.4
+  },
+  "gou": {
+    "pst": 5.5,
+    "prs": 8.5,
+    "ftr": 10.9
+  },
+  "glow": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.3
+  },
+  "attraqtia": {
+    "pst": 4.0,
+    "prs": 8.3,
+    "ftr": 10.6
+  },
+  "enchantedlove": {
+    "pst": 2.0,
+    "prs": 4.5,
+    "ftr": 8.6
+  },
+  "take": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 10.0
+  },
+  "gimmedablood": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 10.5
+  },
+  "bassline": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.3
+  },
+  "lifeispiano": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.1
+  },
+  "paperwitch": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 8.7
+  },
+  "crystalgravity": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "farawaylight": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.8
+  },
+  "loschen": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 10.2
+  },
+  "aegleseeker": {
+    "pst": 5.5,
+    "prs": 9.1,
+    "ftr": 11.2
+  },
+  "coastalhighway": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.1
+  },
+  "odysseia": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.5
+  },
+  "overwhelm": {
+    "pst": 5.0,
+    "prs": 8.5,
+    "ftr": 10.6
+  },
+  "vandalism": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "turbocharger": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 9.0
+  },
+  "theultimacy": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "rekkaresonance": {
+    "pst": 5.0,
+    "prs": 8.9,
+    "ftr": 10.7
+  },
+  "kyogenkigo": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.3,
+    "byd": 9.9
+  },
+  "hivemind": {
+    "pst": 4.0,
+    "prs": 8.6,
+    "ftr": 10.0
+  },
+  "seclusion": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.6
+  },
+  "smallcloud": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.3,
+    "byd": 10.3
+  },
+  "alterale": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.7
+  },
+  "divinelight": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.8
+  },
+  "mazymetroplex": {
+    "pst": 3.0,
+    "prs": 7.8,
+    "ftr": 9.8
+  },
+  "quonwacca": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.7,
+    "byd": 10.2
+  },
+  "withu": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "genocider": {
+    "pst": 4.5,
+    "prs": 8.9,
+    "ftr": 10.8
+  },
+  "letyoudivermx": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "sheriruthrmx": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.5
+  },
+  "eveninginscarlet": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.5
+  },
+  "bluecomet": {
+    "pst": 3.5,
+    "prs": 5.0,
+    "ftr": 8.2
+  },
+  "energysynergymatrix": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.6,
+    "byd": 10.3
+  },
+  "gengaozo": {
+    "pst": 4.0,
+    "prs": 8.1,
+    "ftr": 10.1
+  },
+  "goldenslaughterer": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "lastendconductor": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.4,
+    "byd": 10.2
+  },
+  "redolentshape": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.2
+  },
+  "cosmica": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 8.8
+  },
+  "ascent": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.8
+  },
+  "livefastdieyoung": {
+    "pst": 4.5,
+    "prs": 8.5,
+    "ftr": 10.6
+  },
+  "summerfireworks": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.9
+  },
+  "firstsnow": {
+    "pst": 2.5,
+    "prs": 4.5,
+    "ftr": 7.8
+  },
+  "bluerose": {
+    "pst": 2.0,
+    "prs": 6.0,
+    "ftr": 9.1
+  },
+  "blockedlibrary": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.3
+  },
+  "neokosmo": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.7
+  },
+  "lightningscrew": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.5
+  },
+  "lightsofmuse": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.9
+  },
+  "finalstep": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "akinokagerou": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "medusa": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 10.1
+  },
+  "init": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "internetoverdose": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 8.4
+  },
+  "sakurafubuki": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "nulctrl": {
+    "pst": 3.0,
+    "prs": 7.5,
+    "ftr": 9.5
+  },
+  "macromod": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.8
+  },
+  "neowings": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.2
+  },
+  "kissinglucifer": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.4
+  },
+  "avril": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.3
+  },
+  "aurgelmir": {
+    "pst": 4.5,
+    "prs": 8.5,
+    "ftr": 10.5
+  },
+  "headbonkache": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "ddd": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 8.5
+  },
+  "prism": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 8.0
+  },
+  "protoflicker": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "stasis": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 10.8
+  },
+  "picopicotranslation": {
+    "pst": 2.0,
+    "prs": 6.0,
+    "ftr": 9.4
+  },
+  "nekonote": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.2
+  },
+  "mu": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.7
+  },
+  "sanskia": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 8.3
+  },
+  "altair": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.5
+  },
+  "mukishitsu": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "trapcrow": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "pupa": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.4
+  },
+  "defection": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "infinitestrife": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.9,
+    "byd": 10.9
+  },
+  "worldender": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.0,
+    "byd": 11.1
+  },
+  "pentiment": {
+    "pst": 7.0,
+    "prs": 8.7,
+    "ftr": 10.4,
+    "byd": 11.5
+  },
+  "arcanaeden": {
+    "pst": 5.5,
+    "prs": 8.7,
+    "ftr": 10.5,
+    "byd": 11.6
+  },
+  "testify": {
+    "pst": 7.8,
+    "prs": 9.4,
+    "ftr": 10.9,
+    "byd": 12.0
+  },
+  "lovelessdress": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "last": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.0,
+    "byd": 9.6
+  },
+  "lasteternity": {
+    "byd": 9.7
+  },
+  "callimakarma": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "kokoro": {
+    "pst": 1.0,
+    "prs": 5.0,
+    "ftr": 9.6
+  },
+  "aidrew": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "fluffyflash": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "goodbyemerry": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.6
+  },
+  "lamia": {
+    "pst": 5.0,
+    "prs": 8.5,
+    "ftr": 11.0
+  },
+  "freemyself": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.0
+  },
+  "cocorocosmetic": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.2
+  },
+  "capella": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.2
+  },
+  "dialnote": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.8
+  },
+  "tsukinimurakumo": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.7
+  },
+  "mantis": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "worldfragments": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "astrawalkthrough": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "chronicle": {
+    "pst": 5.0,
+    "prs": 8.9,
+    "ftr": 10.5
+  },
+  "nullapophenia": {
+    "pst": 4.5,
+    "prs": 8.8,
+    "ftr": 10.7
+  },
+  "crimsonthrone": {
+    "pst": 4.0,
+    "prs": 8.0,
+    "ftr": 10.6
+  },
+  "manicjeer": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.6
+  },
+  "hiirogekka": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 10.3
+  },
+  "letsrock": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "cycles": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 8.8
+  },
+  "maxrage": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.9
+  },
+  "infinity": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.6
+  },
+  "temptation": {
+    "pst": 5.0,
+    "prs": 8.2,
+    "ftr": 10.9
+  },
+  "primitivelights": {
+    "pst": 5.5,
+    "prs": 8.8,
+    "ftr": 10.8
+  },
+  "cosmopop": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.8
+  },
+  "impact": {
+    "pst": 3.5,
+    "prs": 7.8,
+    "ftr": 9.6,
+    "byd": 10.4
+  },
+  "genesischunithm": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "trrricksters": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.1
+  },
+  "spidersthread": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.8
+  },
+  "lostemotion": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.3
+  },
+  "gimmick": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 9.5
+  },
+  "thesurvivor": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.9
+  },
+  "newyorkbackraise": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 9.9
+  },
+  "galacticlove": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.0
+  },
+  "lawlesspoint": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.0
+  },
+  "lostintheabyss": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "hybris": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.8
+  },
+  "tothemilkyway": {
+    "pst": 5.0,
+    "prs": 8.9,
+    "ftr": 10.4
+  },
+  "internetyamero": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "bulletwaiting": {
+    "pst": 2.5,
+    "prs": 4.5,
+    "ftr": 8.1
+  },
+  "devillicsphere": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "lucidtraveler": {
+    "pst": 4.5,
+    "prs": 8.9,
+    "ftr": 10.5
+  },
+  "chaos": {
+    "pst": 5.5,
+    "prs": 7.5,
+    "ftr": 10.9
+  },
+  "usedtobe": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 9.2
+  },
+  "ultimatetaste": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.9
+  },
+  "syuten": {
+    "pst": 2.0,
+    "prs": 5.0,
+    "ftr": 8.5
+  },
+  "drg": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "nnglooms": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.3
+  },
+  "ii": {
+    "pst": 5.0,
+    "prs": 8.9,
+    "ftr": 10.8
+  },
+  "magnolia": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.2
+  },
+  "sacrifice": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.7
+  },
+  "rgb": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.8
+  },
+  "waitfordawn": {
+    "pst": 2.5,
+    "prs": 7.8,
+    "ftr": 8.7
+  },
+  "ravenspride": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "riseoftheworld": {
+    "pst": 4.5,
+    "prs": 8.1,
+    "ftr": 10.5
+  },
+  "unknownlevels": {
+    "pst": 4.0,
+    "prs": 8.1,
+    "ftr": 10.6
+  },
+  "abstrusedilemma": {
+    "pst": 5.5,
+    "prs": 8.9,
+    "ftr": 11.3
+  },
+  "matenrou": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "tothefurthestdream": {
+    "pst": 4.5,
+    "prs": 8.5,
+    "ftr": 9.8
+  },
+  "remindthesouls": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.6
+  },
+  "dynitikos": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.5
+  },
+  "amekagura": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.9
+  },
+  "bbkkbkk": {
+    "pst": 4.5,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "primevaltexture": {
+    "pst": 3.0,
+    "prs": 7.5,
+    "ftr": 9.0
+  },
+  "technicolour": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "logos": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.2
+  },
+  "egoeimi": {
+    "pst": 5.5,
+    "prs": 8.6,
+    "ftr": 10.5
+  },
+  "arghena": {
+    "pst": 7.5,
+    "prs": 9.6,
+    "ftr": 11.3
+  },
+  "fantasy": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "transientspace": {
+    "pst": 2.5,
+    "prs": 7.0,
+    "ftr": 9.5
+  },
+  "namelesspassion": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "teravolt": {
+    "pst": 5.0,
+    "prs": 8.9,
+    "ftr": 10.8
+  },
+  "stratoliner": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.6
+  },
+  "ouverture": {
+    "pst": 2.5,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "xtreme": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.5
+  },
+  "edenwacca": {
+    "pst": 4.5,
+    "prs": 8.2,
+    "ftr": 10.5
+  },
+  "metamysteria": {
+    "pst": 5.0,
+    "prs": 7.8,
+    "ftr": 10.8
+  },
+  "aloneandlorn": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.6
+  },
+  "wishuponasnow": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.5
+  },
+  "overdrive": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 10.1
+  },
+  "felys": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.5
+  },
+  "onandon": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.5
+  },
+  "lightmyway": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "hotarubinoyuki": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "theformula": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.3
+  },
+  "lunarossa": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.7
+  },
+  "jingle": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 7.8,
+    "etr": 9.5
+  },
+  "innocence": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 8.5,
+    "etr": 9.7
+  },
+  "ionostream": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 8.7,
+    "etr": 9.7
+  },
+  "alephzero": {
+    "pst": 5.5,
+    "prs": 8.8,
+    "ftr": 10.5
+  },
+  "masqueradelegion": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 10.0
+  },
+  "kyorenromance": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 10.7
+  },
+  "qovat": {
+    "pst": 4.5,
+    "prs": 8.2,
+    "ftr": 10.4
+  },
+  "hellohell": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 7.5,
+    "etr": 9.3
+  },
+  "ichirin": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 9.5
+  },
+  "awakeninruins": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.7
+  },
+  "morningloom": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 8.8,
+    "etr": 9.8
+  },
+  "lethalvoltage": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.4
+  },
+  "mirinae": {
+    "pst": 4.5,
+    "prs": 8.3,
+    "ftr": 10.4
+  },
+  "ultradiaxon": {
+    "pst": 4.5,
+    "prs": 8.5,
+    "ftr": 10.3
+  },
+  "leaveallbehind": {
+    "pst": 2.0,
+    "prs": 5.5,
+    "ftr": 9.2
+  },
+  "distortedfate": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.6,
+    "etr": 10.8
+  },
+  "floatingworld": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.3
+  },
+  "chromafill": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 10.0
+  },
+  "desive": {
+    "pst": 5.0,
+    "prs": 8.0,
+    "ftr": 9.9,
+    "etr": 10.8
+  },
+  "epicurus": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 7.5,
+    "etr": 8.8
+  },
+  "tasogare": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.5,
+    "etr": 10.5
+  },
+  "oldschoolsalvage": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.8
+  },
+  "beautifuldreamer": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "backtobasics": {
+    "pst": 5.0,
+    "prs": 8.7,
+    "ftr": 10.6
+  },
+  "stargateextreme": {
+    "pst": 4.0,
+    "prs": 6.0,
+    "ftr": 9.3,
+    "etr": 9.9
+  },
+  "signof": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.2
+  },
+  "temptationgc": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.8,
+    "etr": 10.5
+  },
+  "blackmind": {
+    "pst": 5.0,
+    "prs": 8.0,
+    "ftr": 10.8
+  },
+  "hypervision": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.8
+  },
+  "distortionhuman": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.9
+  },
+  "shrink": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "invain": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.5
+  },
+  "hypnotize": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 8.9,
+    "etr": 9.9
+  },
+  "ashenboundary": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9
+  },
+  "judgement": {
+    "pst": 5.5,
+    "prs": 8.6,
+    "ftr": 10.5
+  },
+  "alterego": {
+    "pst": 6.5,
+    "prs": 9.2,
+    "ftr": 10.5,
+    "etr": 11.3
+  },
+  "epitaxy": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.6,
+    "etr": 9.6
+  },
+  "waltzforlorelei": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.8,
+    "etr": 9.8
+  },
+  "dualdoom": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.9,
+    "etr": 10.3
+  },
+  "invertedworld": {
+    "pst": 3.0,
+    "prs": 7.0,
+    "ftr": 9.5,
+    "etr": 10.7
+  },
+  "mvurbd": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.6
+  },
+  "vulcanus": {
+    "pst": 5.5,
+    "prs": 8.5,
+    "ftr": 10.9
+  },
+  "rainofconflict": {
+    "pst": 5.0,
+    "prs": 7.8,
+    "ftr": 9.5,
+    "etr": 10.5
+  },
+  "saintorsinner": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.8,
+    "byd": 10.4
+  },
+  "hailstone": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "furetemitai": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.4,
+    "etr": 9.4
+  },
+  "gensounosatellite": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 8.7,
+    "etr": 10.1
+  },
+  "prayer": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.2,
+    "etr": 9.1
+  },
+  "crimsonquartz": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 8.8,
+    "etr": 9.8
+  },
+  "thirdsun": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.4,
+    "etr": 10.0
+  },
+  "spiritdauntless": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.5
+  },
+  "diesirae": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.5,
+    "etr": 10.6
+  },
+  "astralexe": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.5
+  },
+  "liftoff": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 8.2,
+    "etr": 9.8
+  },
+  "superambulance": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 10.3
+  },
+  "dontfightmusic": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.3,
+    "etr": 10.7
+  },
+  "andrevivemelody": {
+    "pst": 5.5,
+    "prs": 8.5,
+    "ftr": 10.9
+  },
+  "swansong": {
+    "pst": 3.0,
+    "prs": 7.5,
+    "ftr": 9.9
+  },
+  "renegade": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.6,
+    "byd": 10.2
+  },
+  "raysofremnant": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.7,
+    "byd": 10.4
+  },
+  "breachoffaith": {
+    "pst": 5.5,
+    "prs": 8.4,
+    "ftr": 10.3,
+    "byd": 10.9
+  },
+  "lamentrain": {
+    "pst": 6.5,
+    "prs": 8.8,
+    "ftr": 10.6,
+    "byd": 11.4
+  },
+  "designant": {
+    "pst": 7.5,
+    "prs": 9.6,
+    "ftr": 10.9,
+    "byd": 11.9
+  },
+  "astralquant": {
+    "pst": 5.0,
+    "prs": 8.1,
+    "ftr": 10.6
+  },
+  "ignition": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.8
+  },
+  "blazingair": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.9,
+    "etr": 10.1
+  },
+  "eightem": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.5,
+    "etr": 10.3
+  },
+  "daat": {
+    "pst": 5.5,
+    "prs": 8.4,
+    "ftr": 10.9
+  },
+  "breakbreak": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.8,
+    "etr": 10.3
+  },
+  "straightintolights": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.5,
+    "etr": 10.5
+  },
+  "virtus": {
+    "pst": 5.5,
+    "prs": 8.6,
+    "ftr": 9.9,
+    "etr": 10.9
+  },
+  "yomibitoshirazu": {
+    "pst": 4.5,
+    "prs": 8.0,
+    "ftr": 9.8
+  },
+  "aethercrest": {
+    "pst": 6.0,
+    "prs": 8.9,
+    "ftr": 10.6,
+    "etr": 11.5
+  },
+  "heartache": {
+    "pst": 1.5,
+    "prs": 4.5,
+    "ftr": 7.5,
+    "etr": 8.7
+  },
+  "deathbyglamour": {
+    "pst": 2.5,
+    "prs": 5.0,
+    "ftr": 7.8,
+    "etr": 9.4
+  },
+  "yourbestnightmare": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.9,
+    "byd": 10.2
+  },
+  "lastgoodbye": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 8.2,
+    "etr": 9.7
+  },
+  "megalovania": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.5,
+    "etr": 10.5
+  },
+  "megalovaniarmx": {
+    "pst": 5.5,
+    "prs": 8.4,
+    "ftr": 9.8,
+    "etr": 10.9
+  },
+  "placebobattler": {
+    "pst": 5.5,
+    "prs": 8.3,
+    "ftr": 10.4
+  },
+  "blackmirror": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.6,
+    "etr": 9.7
+  },
+  "shinchoku": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 8.8,
+    "etr": 9.9
+  },
+  "trpno": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.0
+  },
+  "tau": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.7
+  },
+  "dullblade": {
+    "pst": 4.5,
+    "prs": 8.0,
+    "ftr": 10.5
+  },
+  "wontbackdown": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.8
+  },
+  "dontdie": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.4,
+    "etr": 10.1
+  },
+  "ladymadestar": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 8.4,
+    "etr": 9.2
+  },
+  "endmoonlight": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 9.5
+  },
+  "uad": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.7,
+    "etr": 9.8
+  },
+  "oblivion": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.5,
+    "etr": 10.1
+  },
+  "nightmare": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.8,
+    "etr": 10.8
+  },
+  "tictactoe": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 8.8,
+    "etr": 9.9
+  },
+  "satisfaction": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.5,
+    "etr": 9.5
+  },
+  "someday": {
+    "pst": 3.0,
+    "prs": 6.0,
+    "ftr": 9.5
+  },
+  "miles": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.2,
+    "etr": 9.8
+  },
+  "iwantyou": {
+    "pst": 3.0,
+    "prs": 5.5,
+    "ftr": 8.3,
+    "etr": 9.4
+  },
+  "syriana": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.9
+  },
+  "liar": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 10.0
+  },
+  "blythe": {
+    "pst": 3.0,
+    "prs": 7.5,
+    "ftr": 9.4,
+    "etr": 10.5
+  },
+  "wereallgonnadie": {
+    "pst": 5.5,
+    "prs": 8.0,
+    "ftr": 10.1,
+    "etr": 10.9
+  },
+  "dematerialized": {
+    "pst": 1.5,
+    "prs": 4.5,
+    "ftr": 7.5,
+    "etr": 8.3
+  },
+  "seethelights": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.6,
+    "etr": 9.6
+  },
+  "scarletlunar": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.8
+  },
+  "dualdependency": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.5,
+    "etr": 10.4
+  },
+  "lilly": {
+    "pst": 5.0,
+    "prs": 8.4,
+    "ftr": 9.9,
+    "etr": 10.8
+  },
+  "extradimensional": {
+    "pst": 6.5,
+    "prs": 8.8,
+    "ftr": 10.6,
+    "etr": 11.3
+  },
+  "disintegration": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 8.3,
+    "etr": 9.8
+  },
+  "factorder": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 8.6,
+    "etr": 9.6
+  },
+  "incompleteone": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 8.8,
+    "etr": 9.9
+  },
+  "chaosblast": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.6,
+    "etr": 10.5
+  },
+  "welcomequeen": {
+    "pst": 5.0,
+    "prs": 8.5,
+    "ftr": 10.1,
+    "etr": 10.9
+  },
+  "altergate": {
+    "pst": 5.5,
+    "prs": 8.7,
+    "ftr": 10.7
+  },
+  "acheron": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.7
+  },
+  "eternitybreak": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.6,
+    "etr": 10.4
+  },
+  "rostpagegene": {
+    "pst": 5.0,
+    "prs": 8.2,
+    "ftr": 10.3
+  },
+  "violaillyria": {
+    "pst": 2.5,
+    "prs": 6.5,
+    "ftr": 9.5
+  },
+  "vainspire": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 8.4,
+    "etr": 9.9
+  },
+  "nowayback": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 8.9,
+    "etr": 10.4
+  },
+  "andorxor": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9,
+    "etr": 10.8
+  },
+  "undyingmacula": {
+    "pst": 5.5,
+    "prs": 8.7,
+    "ftr": 10.1,
+    "etr": 11.0
+  },
+  "awakening": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 7.5,
+    "etr": 8.7
+  },
+  "mod": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.4
+  },
+  "particle": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.5,
+    "etr": 9.7
+  },
+  "paradoxpalette": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 8.8,
+    "etr": 9.9
+  },
+  "xxium": {
+    "pst": 2.5,
+    "prs": 7.8,
+    "ftr": 9.9,
+    "etr": 10.5
+  },
+  "angelsboundary": {
+    "pst": 5.0,
+    "prs": 8.5,
+    "ftr": 10.2
+  },
+  "xterfusion": {
+    "pst": 4.5,
+    "prs": 8.3,
+    "ftr": 9.8,
+    "etr": 10.7
+  },
+  "infinitedim": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.6,
+    "etr": 10.1
+  },
+  "incarnator": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.9,
+    "etr": 10.4
+  },
+  "zephyrlast": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.5,
+    "etr": 10.3
+  },
+  "marenyx": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.5,
+    "etr": 10.8
+  },
+  "codeoblivion": {
+    "pst": 5.5,
+    "prs": 8.3,
+    "ftr": 9.9,
+    "etr": 10.9
+  },
+  "azalea": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.4,
+    "etr": 10.0
+  },
+  "tabootears": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 8.4,
+    "etr": 9.8
+  },
+  "grandspell": {
+    "pst": 4.5,
+    "prs": 8.4,
+    "ftr": 10.2
+  },
+  "undefined": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 9.4
+  },
+  "mask": {
+    "pst": 4.5,
+    "prs": 8.0,
+    "ftr": 9.9
+  },
+  "paranoidarc": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.6,
+    "etr": 10.5
+  },
+  "subsphere": {
+    "pst": 5.0,
+    "prs": 8.1,
+    "ftr": 9.6,
+    "etr": 10.6
+  },
+  "theraft": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.5,
+    "etr": 10.4
+  },
+  "omajinai": {
+    "pst": 2.5,
+    "prs": 7.0,
+    "ftr": 9.4
+  },
+  "chaintonite": {
+    "pst": 4.0,
+    "prs": 6.5,
+    "ftr": 8.6,
+    "etr": 9.9
+  },
+  "onestepcloser": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.5
+  },
+  "mylifeismine": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.8,
+    "etr": 10.1
+  },
+  "meltyrhapsody": {
+    "pst": 3.5,
+    "prs": 7.5,
+    "ftr": 9.6,
+    "etr": 10.4
+  },
+  "signal": {
+    "pst": 4.0,
+    "prs": 7.8,
+    "ftr": 9.8,
+    "etr": 10.7
+  },
+  "caramelpop": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.1,
+    "etr": 9.1
+  },
+  "shinoukyoseki": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 9.7
+  },
+  "unknownnum": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.7
+  },
+  "thirdavenue": {
+    "pst": 3.0,
+    "prs": 8.1,
+    "ftr": 9.2
+  },
+  "vallista": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.7
+  },
+  "goodrage": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.3,
+    "etr": 10.2
+  },
+  "cryogenic": {
+    "pst": 5.0,
+    "prs": 7.5,
+    "ftr": 9.2,
+    "etr": 10.1
+  },
+  "desertrealm": {
+    "pst": 4.5,
+    "prs": 8.5,
+    "ftr": 10.6
+  },
+  "spiderdance": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 7.8,
+    "etr": 9.5
+  },
+  "spearofjustice": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.8,
+    "etr": 9.9
+  },
+  "asgore": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 8.8,
+    "etr": 10.2
+  },
+  "mirrorrmx": {
+    "pst": 4.0,
+    "prs": 7.0,
+    "ftr": 9.9
+  },
+  "riotsystem": {
+    "pst": 4.5,
+    "prs": 7.5,
+    "ftr": 9.5,
+    "etr": 10.1
+  },
+  "cosmogyral": {
+    "pst": 2.5,
+    "prs": 5.5,
+    "ftr": 8.6,
+    "etr": 9.8
+  },
+  "flexidefine": {
+    "pst": 2.0,
+    "prs": 6.0,
+    "ftr": 9.9
+  },
+  "altersist": {
+    "pst": 2.5,
+    "prs": 6.0,
+    "ftr": 8.4,
+    "etr": 9.8
+  },
+  "csqn": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.6,
+    "etr": 10.3
+  },
+  "sucromania": {
+    "pst": 3.0,
+    "prs": 6.5,
+    "ftr": 9.1,
+    "etr": 10.1
+  },
+  "lavie": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 8.8,
+    "etr": 9.9
+  },
+  "kamippoi": {
+    "pst": 3.5,
+    "prs": 7.0,
+    "ftr": 9.3,
+    "etr": 10.0
+  },
+  "override": {
+    "pst": 4.0,
+    "prs": 7.5,
+    "ftr": 9.5,
+    "etr": 10.2
+  },
+  "telepathy": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.6,
+    "etr": 10.4
+  },
+  "aishite": {
+    "pst": 3.5,
+    "prs": 6.5,
+    "ftr": 8.7,
+    "etr": 10.5
+  },
+  "particlearts": {
+    "pst": 3.5,
+    "prs": 6.0,
+    "ftr": 8.8
+  }
 }
