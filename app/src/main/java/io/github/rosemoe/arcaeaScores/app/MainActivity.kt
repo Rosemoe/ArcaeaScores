@@ -85,7 +85,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun onSetNameClicked() {
         val et = EditText(this)
-        et.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        et.layoutParams = ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
         AlertDialog.Builder(this)
             .setTitle("设置名字")
             .setView(et)
@@ -119,17 +122,23 @@ class MainActivity : AppCompatActivity() {
                 val process = Runtime.getRuntime().exec("su -mm")
                 update(getString(R.string.state_obtaining_root))
                 process.outputStream.writer().use {
-                    it.write("mkdir /data/data/$packageName/databases/\n" +
-                            "cp -f /data/data/$arcaeaPackageName/files/st3 /data/data/$packageName/databases/st3.db\n" +
-                            "chmod 777 /data/data/$packageName/databases\n" +
-                            "chmod 777 /data/data/$packageName/databases/st3.db\n" +
-                            "exit\n")
+                    it.write(
+                        "mkdir /data/data/$packageName/databases/\n" +
+                                "cp -f /data/data/$arcaeaPackageName/files/st3 /data/data/$packageName/databases/st3.db\n" +
+                                "chmod 777 /data/data/$packageName/databases\n" +
+                                "chmod 777 /data/data/$packageName/databases/st3.db\n" +
+                                "exit\n"
+                    )
                     it.flush()
                 }
                 update(getString(R.string.state_reading_save))
                 val exitCode = process.waitFor()
                 if (exitCode != 0) {
-                    throw Exception("Non-zero exit code: $exitCode\nError Output:\n${process.errorStream.reader().readText()}")
+                    throw Exception(
+                        "Non-zero exit code: $exitCode\nError Output:\n${
+                            process.errorStream.reader().readText()
+                        }"
+                    )
                 }
             }.onSuccess {
                 withContext(Dispatchers.Main) {
@@ -187,7 +196,8 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_settings -> {
-                val text = Editable.Factory.getInstance().newEditable(getString(R.string.dialog_msg_about))
+                val text =
+                    Editable.Factory.getInstance().newEditable(getString(R.string.dialog_msg_about))
                 showMsgDialog(getString(R.string.about_app), text).apply {
                     findViewById<TextView>(android.R.id.message).apply {
                         autoLinkMask = Linkify.WEB_URLS

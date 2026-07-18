@@ -1,6 +1,14 @@
 package io.github.rosemoe.arcaeaScores.arc
 
-class ArcaeaPlayResult(val name:String, val difficulty: Int, val score: Long, val pure: Int, val maxPure: Int, val far: Int, val lost: Int) : Comparable<ArcaeaPlayResult> {
+class ArcaeaPlayResult(
+    val name: String,
+    val difficulty: Int,
+    val score: Long,
+    val pure: Int,
+    val maxPure: Int,
+    val far: Int,
+    val lost: Int
+) : Comparable<ArcaeaPlayResult> {
 
     /**
      * -1 -> Not Loaded
@@ -20,16 +28,12 @@ class ArcaeaPlayResult(val name:String, val difficulty: Int, val score: Long, va
     var title: String = "Unk"
 
     override fun compareTo(other: ArcaeaPlayResult): Int {
-        val cmp = compare(playPotential, other.playPotential)
-        if (cmp == 0) {
-            return name.compareTo(other.name)
+        val cmp = playPotential.compareTo(other.playPotential)
+        return if (cmp == 0) {
+            name.compareTo(other.name)
         } else {
-            return cmp
+            cmp
         }
-    }
-
-    fun compare(x: Double, y: Double): Int {
-        return (if (x < y) -1 else if (x == y) 0 else 1)
     }
 
 

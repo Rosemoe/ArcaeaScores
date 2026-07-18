@@ -16,7 +16,7 @@ fun clearTypeShortString(clearType: Int): String = when (clearType) {
 private val ScoreLimits = arrayOf(9900000L, 9800000L, 9500000L, 9200000L, 8900000L, 8600000L)
 private val ScoreGrades = arrayOf("EX+", "EX", "AA", "A", "B", "C", "D")
 
-fun scoreGrade(score: Long) : String {
+fun scoreGrade(score: Long): String {
     for (i in ScoreLimits.indices) {
         if (score >= ScoreLimits[i]) {
             return ScoreGrades[i]

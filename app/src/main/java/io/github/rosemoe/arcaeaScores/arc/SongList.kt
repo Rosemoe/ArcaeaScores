@@ -20,7 +20,7 @@ class ArcaeaTitles(songListJsonFile: InputStream) {
         }
     }
 
-    fun queryForId(id: String) : String {
+    fun queryForId(id: String): String {
         return mapping[id] ?: id
     }
 
