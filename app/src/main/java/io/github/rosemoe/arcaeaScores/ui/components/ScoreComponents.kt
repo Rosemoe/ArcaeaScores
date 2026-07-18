@@ -35,6 +35,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
@@ -221,6 +222,7 @@ fun ScoreCard(
                         text = score.title,
                         modifier = Modifier.weight(1f),
                         maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                         fontFamily = fonts.title,
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Normal,

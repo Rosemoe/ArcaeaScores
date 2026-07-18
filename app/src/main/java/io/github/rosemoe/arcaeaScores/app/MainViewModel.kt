@@ -189,6 +189,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val versionName = packageInfo.versionName ?: error("The selected application has no version name.")
         val stagingDirectory = File(app.filesDir, "songs.staging")
 
+        clearArtworkBackup()
         stagingDirectory.deleteRecursively()
         stagingDirectory.mkdirs()
         try {
@@ -230,10 +231,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 mkdir -p "${'$'}destination"
                 (
                     cd "${'$'}source"
-                    find . -type f -name '*.jpg' | while IFS= read -r artwork; do
-                        mkdir -p "${'$'}destination/${'$'}(dirname "${'$'}artwork")"
-                        cp "${'$'}artwork" "${'$'}destination/${'$'}artwork"
-                    done
+                    find . -type f -name '*.jpg' -print0 | tar -c -f - --null -T -
+                ) | (
+                    cd "${'$'}destination"
+                    tar -x -f -
                 )
                 cp "${'$'}source_metadata" "${'$'}destination_metadata"
                 chmod -R 755 "${'$'}destination"
@@ -270,7 +271,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private fun replaceArtworkDirectory(stagingDirectory: File) {
         val destination = File(app.filesDir, "songs")
         val backup = File(app.filesDir, "songs.backup")
-        backup.deleteRecursively()
+        clearArtworkBackup()
         val hasExistingArtwork = destination.exists()
         if (hasExistingArtwork && !destination.renameTo(backup)) {
             error("Unable to back up existing artwork data.")
@@ -283,6 +284,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 backup.renameTo(destination)
             }
             throw error
+        }
+    }
+
+    private fun clearArtworkBackup() {
+        val backup = File(app.filesDir, "songs.backup")
+        check(!backup.exists() || backup.deleteRecursively()) {
+            "Unable to remove previous artwork backup."
         }
     }
 

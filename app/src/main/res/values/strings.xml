@@ -10,7 +10,7 @@
     <string name="show_artwork">Show artwork</string>
     <string name="show_artwork_description">Show artwork in the score list</string>
     <string name="update_artwork_data">Update artwork data</string>
-    <string name="select_application">Select an application</string>
+    <string name="select_application">Select an Arcaea app to import data</string>
     <string name="no_compatible_applications">No compatible applications found</string>
     <string name="state_updating_artwork">Updating artwork data…</string>
     <string name="artwork_data_version">Current artwork data version: %1$s</string>

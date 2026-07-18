@@ -19,6 +19,7 @@ import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -126,17 +127,18 @@ fun DataUpdateScreen(
         ) {
             item {
                 Text(
-                    text = stringResource(R.string.select_application),
+                    text = artworkDataVersion?.let {
+                        stringResource(R.string.artwork_data_version, it)
+                    } ?: stringResource(R.string.no_artwork_data),
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
                 )
             }
-            if (artworkDataVersion != null) {
-                item {
-                    Text(
-                        text = stringResource(R.string.artwork_data_version, artworkDataVersion),
-                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
-                    )
-                }
+            item { HorizontalDivider() }
+            item {
+                Text(
+                    text = stringResource(R.string.select_application),
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
+                )
             }
             if (isUpdating) {
                 item {
