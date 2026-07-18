@@ -235,6 +235,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 destination='${destination.absolutePath}'
                 source_metadata='$sourceMetadata'
                 destination_metadata='${copiedMetadata.absolutePath}'
+                owner_uid='${app.applicationInfo.uid}'
                 test -d "${'$'}source"
                 test -f "${'$'}source_metadata"
                 rm -rf "${'$'}destination"
@@ -247,6 +248,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     tar -x -f -
                 )
                 cp "${'$'}source_metadata" "${'$'}destination_metadata"
+                chown -R "${'$'}owner_uid:${'$'}owner_uid" "${'$'}destination"
+                chown "${'$'}owner_uid:${'$'}owner_uid" "${'$'}destination_metadata"
                 chmod -R 755 "${'$'}destination"
                 chmod 644 "${'$'}destination_metadata"
                 """.trimIndent()
@@ -299,7 +302,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun clearArtworkBackup() {
         val backup = File(app.filesDir, "songs.backup")
-        check(!backup.exists() || backup.deleteRecursively()) {
+        if (!backup.exists() || backup.deleteRecursively()) {
+            return
+        }
+        executeRootCommand("rm -rf '${backup.absolutePath}'")
+        check(!backup.exists()) {
             "Unable to remove previous artwork backup."
         }
     }
