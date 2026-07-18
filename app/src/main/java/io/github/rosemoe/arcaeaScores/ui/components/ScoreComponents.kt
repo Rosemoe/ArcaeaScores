@@ -41,6 +41,7 @@ import io.github.rosemoe.arcaeaScores.util.toScaledString
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
+import kotlin.math.ceil
 
 data class ArcaeaFonts(
     val title: FontFamily,
@@ -131,6 +132,14 @@ fun PlayerSummary(state: MainUiState, fonts: ArcaeaFonts, onClick: () -> Unit) {
 
 @Composable
 fun ScoreCard(score: ArcaeaScore, rank: Int, fonts: ArcaeaFonts) {
+    val lostRankedScore = score.lostRankedScore?.takeIf { it > 0.0 }
+    val playDetails = buildString {
+        append("P/F/L: ${score.pureCount}(+${score.maxPureCount}) / ${score.farCount} / ${score.lostCount}")
+        lostRankedScore?.let {
+            append("  ")
+            append(stringResource(R.string.lost_ranked_score, ceil(it * 100.0) / 100.0))
+        }
+    }
     ElevatedCard(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp),
         elevation = CardDefaults.elevatedCardElevation(defaultElevation = 1.dp)
@@ -174,7 +183,7 @@ fun ScoreCard(score: ArcaeaScore, rank: Int, fonts: ArcaeaFonts) {
                 )
                 Text(text = toScoreText(score.score), fontFamily = fonts.score, fontSize = 17.sp)
                 Text(
-                    text = "P/F/L: ${score.pureCount}(+${score.maxPureCount}) / ${score.farCount} / ${score.lostCount}",
+                    text = playDetails,
                     fontFamily = fonts.exo,
                     fontSize = 15.sp
                 )

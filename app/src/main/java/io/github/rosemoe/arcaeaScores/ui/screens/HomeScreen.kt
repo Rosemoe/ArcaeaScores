@@ -61,12 +61,14 @@ fun HomeScreen(
     var keyword by rememberSaveable { mutableStateOf("") }
     var selectedClearTypes by rememberSaveable { mutableStateOf(emptyList<Int>()) }
     var selectedLevels by rememberSaveable { mutableStateOf(emptyList<String>()) }
+    var zeroLostScoreOnly by rememberSaveable { mutableStateOf(false) }
     val filteredScores = state.scores.filter { score ->
         (keyword.isBlank() ||
             score.title.contains(keyword, ignoreCase = true) ||
             score.songId.contains(keyword, ignoreCase = true)) &&
             (selectedClearTypes.isEmpty() || score.clearType in selectedClearTypes) &&
-            (selectedLevels.isEmpty() || score.chartInfo?.displayRating in selectedLevels)
+            (selectedLevels.isEmpty() || score.chartInfo?.displayRating in selectedLevels) &&
+            (!zeroLostScoreOnly || score.lostRankedScore == 0.0)
     }
     Box(modifier = modifier.fillMaxSize()) {
         Scaffold(
@@ -127,6 +129,10 @@ fun HomeScreen(
                             selectedLevels = selectedLevels,
                             onLevelToggle = { level ->
                                 selectedLevels = selectedLevels.toggle(level)
+                            },
+                            zeroLostScoreOnly = zeroLostScoreOnly,
+                            onZeroLostScoreToggle = {
+                                zeroLostScoreOnly = !zeroLostScoreOnly
                             }
                         )
                     }

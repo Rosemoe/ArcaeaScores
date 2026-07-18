@@ -30,6 +30,7 @@
     <string name="clear_type_easy_clear">Easy Clear</string>
     <string name="clear_type_hard_clear">Hard Clear</string>
     <string name="no_matching_scores">No matching scores</string>
+    <string name="lost_ranked_score">Lost score: %1$.2f</string>
     <string name="set_player_name">Set player name</string>
     <string name="action_open_releases">Open releases</string>
     <string name="action_back">Back</string>

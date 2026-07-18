@@ -43,6 +43,8 @@ fun ScoreSearchFilters(
     availableLevels: List<String>,
     selectedLevels: List<String>,
     onLevelToggle: (String) -> Unit,
+    zeroLostScoreOnly: Boolean,
+    onZeroLostScoreToggle: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     var clearTypeMenuExpanded by remember { mutableStateOf(false) }
@@ -87,6 +89,15 @@ fun ScoreSearchFilters(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+            FilterChip(
+                selected = zeroLostScoreOnly,
+                onClick = onZeroLostScoreToggle,
+                label = { Text("0LS") },
+                colors = FilterChipDefaults.filterChipColors(
+                    selectedContainerColor = MaterialTheme.colorScheme.primary,
+                    selectedLabelColor = MaterialTheme.colorScheme.onPrimary
+                )
+            )
             MultiSelectFilterChip(
                 label = stringResource(R.string.filter_clear_type),
                 selected = selectedClearTypes.isNotEmpty(),

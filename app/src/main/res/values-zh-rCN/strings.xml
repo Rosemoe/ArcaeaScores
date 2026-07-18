@@ -30,6 +30,7 @@
     <string name="clear_type_easy_clear">Easy Clear</string>
     <string name="clear_type_hard_clear">Hard Clear</string>
     <string name="no_matching_scores">没有符合条件的成绩</string>
+    <string name="lost_ranked_score">失分：%1$.2f</string>
     <string name="set_player_name">设置名字</string>
     <string name="action_open_releases">打开发布页面</string>
     <string name="action_back">返回</string>
