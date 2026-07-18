@@ -9,13 +9,13 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import io.github.rosemoe.arcaeaScores.R
-import io.github.rosemoe.arcaeaScores.arc.ArcaeaPlayResult
+import io.github.rosemoe.arcaeaScores.arc.ArcaeaScore
 import io.github.rosemoe.arcaeaScores.arc.clearTypeShortString
 import io.github.rosemoe.arcaeaScores.arc.difficultyMainColor
 import io.github.rosemoe.arcaeaScores.arc.scoreGrade
 import io.github.rosemoe.arcaeaScores.arc.toScoreText
 
-class ArcaeaScoreAdapter(private val activity: Activity, private val data: List<ArcaeaPlayResult>) :
+class ArcaeaScoreAdapter(private val activity: Activity, private val data: List<ArcaeaScore>) :
     BaseAdapter() {
 
     private val scoreTypeface = Typeface.createFromAsset(activity.assets, "fonts/GeosansLight.ttf")
@@ -51,7 +51,7 @@ class ArcaeaScoreAdapter(private val activity: Activity, private val data: List<
         view.findViewById<TextView>(R.id.clearType).text =
             "[${scoreGrade(i.score)}/${clearTypeShortString(i.clearType)}]"
         view.findViewById<TextView>(R.id.potential).text =
-            "Potential: ${i.constant} > ${
+            "Potential: ${i.chartConstant} > ${
                 String.format(
                     "%.5f",
                     i.playPotential
@@ -60,7 +60,7 @@ class ArcaeaScoreAdapter(private val activity: Activity, private val data: List<
         view.findViewById<TextView>(R.id.score).text = toScoreText(i.score)
         view.findViewById<TextView>(R.id.rank).text = "#${position + 1}"
         view.findViewById<TextView>(R.id.notes).text =
-            "P/F/L: ${i.pure}(+${i.maxPure}) / ${i.far} / ${i.lost}"
+            "P/F/L: ${i.pureCount}(+${i.maxPureCount}) / ${i.farCount} / ${i.lostCount}"
         return view
     }
 }

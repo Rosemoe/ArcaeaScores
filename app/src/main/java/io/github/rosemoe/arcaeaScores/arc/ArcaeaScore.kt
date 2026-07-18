@@ -1,17 +1,14 @@
 package io.github.rosemoe.arcaeaScores.arc
 
-class ArcaeaPlayResult(
-    val name: String,
+class ArcaeaScore(
+    val songId: String,
     val difficulty: Int,
     val score: Long,
-    val pure: Int,
-    val maxPure: Int,
-    val far: Int,
-    val lost: Int
-) : Comparable<ArcaeaPlayResult> {
-
+    val pureCount: Int,
+    val maxPureCount: Int,
+    val farCount: Int,
+    val lostCount: Int,
     /**
-     * -1 -> Not Loaded
      * 0 -> Track Lost
      * 1 -> Track Complete
      * 2 -> Full Recall
@@ -19,22 +16,19 @@ class ArcaeaPlayResult(
      * 4 -> Easy Clear
      * 5 -> Hard Clear
      */
-    var clearType = -1
+    var clearType: Int,
+    var chartConstant: Double,
+    var playPotential: Double,
+    var title: String
+) : Comparable<ArcaeaScore> {
 
-    var constant = 0.0
-
-    var playPotential = 0.0
-
-    var title: String = "Unk"
-
-    override fun compareTo(other: ArcaeaPlayResult): Int {
+    override fun compareTo(other: ArcaeaScore): Int {
         val cmp = playPotential.compareTo(other.playPotential)
         return if (cmp == 0) {
-            name.compareTo(other.name)
+            songId.compareTo(other.songId)
         } else {
             cmp
         }
     }
-
 
 }

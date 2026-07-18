@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
             }.onSuccess { record ->
                 withContext(Dispatchers.Main) {
                     findViewById<ListView>(R.id.score_list).adapter =
-                        ArcaeaScoreAdapter(this@MainActivity, record.records)
+                        ArcaeaScoreAdapter(this@MainActivity, record.scores)
                     findViewById<TextView>(R.id.date).text =
                         "Update Time: " + SimpleDateFormat.getDateTimeInstance(
                             SimpleDateFormat.DEFAULT,

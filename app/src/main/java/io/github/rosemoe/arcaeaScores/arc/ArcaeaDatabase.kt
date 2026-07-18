@@ -14,7 +14,6 @@ private val ScoreQueryColumns = arrayOf(
     "missCount"
 )
 
-@SuppressLint("Range")
 fun readDatabase(context: Context): ArcaeaRecord {
     val titles = ArcaeaTitles(context.assets.open("songlist.json"))
     val constants = ArcaeaConstants(context.assets.open("constants.json"))
@@ -27,27 +26,31 @@ fun readDatabase(context: Context): ArcaeaRecord {
             db.query("scores", ScoreQueryColumns, null, null, null, null, null)
         val clearTypeCursor =
             db.query("clearTypes", arrayOf("clearType"), null, null, null, null, null)
-        val list = mutableListOf<ArcaeaPlayResult>()
+        val list = mutableListOf<ArcaeaScore>()
         if (cursor.moveToFirst() && clearTypeCursor.moveToFirst()) {
             do {
-                val result = ArcaeaPlayResult(
-                    cursor.getString(cursor.getColumnIndex("songId")),
-                    cursor.getInt(cursor.getColumnIndex("songDifficulty")),
-                    cursor.getLong(cursor.getColumnIndex("score")),
-                    cursor.getInt(cursor.getColumnIndex("perfectCount")),
-                    cursor.getInt(cursor.getColumnIndex("shinyPerfectCount")),
-                    cursor.getInt(cursor.getColumnIndex("nearCount")),
-                    cursor.getInt(cursor.getColumnIndex("missCount"))
+                val songId = cursor.getString(cursor.getColumnIndexOrThrow("songId"))
+                val difficulty = cursor.getInt(cursor.getColumnIndexOrThrow("songDifficulty"))
+                val chartConstant = constants.queryForId(songId, difficulty)
+                val score = cursor.getLong(cursor.getColumnIndexOrThrow("score"))
+                val result = ArcaeaScore(
+                    songId = songId,
+                    difficulty = difficulty,
+                    score = score,
+                    pureCount = cursor.getInt(cursor.getColumnIndexOrThrow("perfectCount")),
+                    maxPureCount = cursor.getInt(cursor.getColumnIndexOrThrow("shinyPerfectCount")),
+                    farCount = cursor.getInt(cursor.getColumnIndexOrThrow("nearCount")),
+                    lostCount = cursor.getInt(cursor.getColumnIndexOrThrow("missCount")),
+                    title = titles.queryForId(songId),
+                    chartConstant = chartConstant,
+                    playPotential = if (chartConstant > 0.0) {
+                        calculatePlayPotential(chartConstant, score)
+                    } else {
+                        0.0
+                    },
+                    clearType =
+                        clearTypeCursor.getInt(clearTypeCursor.getColumnIndexOrThrow("clearType"))
                 )
-                result.title = titles.queryForId(result.name)
-                result.constant = constants.queryForId(result.name, result.difficulty)
-                result.playPotential = if (result.constant > 0.0) {
-                    calculatePlayPotential(result.constant, result.score)
-                } else {
-                    0.0
-                }
-                result.clearType =
-                    clearTypeCursor.getInt(clearTypeCursor.getColumnIndex("clearType"))
                 list.add(result)
             } while (cursor.moveToNext() && clearTypeCursor.moveToNext())
             list.sort()
