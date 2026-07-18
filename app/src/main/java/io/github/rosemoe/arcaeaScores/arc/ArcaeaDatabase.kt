@@ -1,6 +1,5 @@
 package io.github.rosemoe.arcaeaScores.arc
 
-import android.annotation.SuppressLint
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 
@@ -31,7 +30,7 @@ fun readDatabase(context: Context): ArcaeaRecord {
             do {
                 val songId = cursor.getString(cursor.getColumnIndexOrThrow("songId"))
                 val difficulty = cursor.getInt(cursor.getColumnIndexOrThrow("songDifficulty"))
-                val chartConstant = constants.queryForId(songId, difficulty)
+                val chartConstant = constants.queryForChart(songId, difficulty)
                 val score = cursor.getLong(cursor.getColumnIndexOrThrow("score"))
                 val result = ArcaeaScore(
                     songId = songId,

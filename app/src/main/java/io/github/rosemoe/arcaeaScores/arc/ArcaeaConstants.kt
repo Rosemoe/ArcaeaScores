@@ -20,7 +20,7 @@ class ArcaeaConstants(constantsFile: InputStream) {
         }
     }
 
-    fun queryForId(id: String, difficulty: Int): Double {
+    fun queryForChart(id: String, difficulty: Int): Double {
         val const = mapping[id.lowercase()] ?: EMPTY_CONSTANT
         return if (difficulty in 0..4) {
             const[difficulty]
