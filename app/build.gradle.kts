@@ -51,8 +51,8 @@ android {
         applicationId = "io.github.rosemoe.arcaeaScores"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 20000
-        versionName = "2.0.0"
+        versionCode = 21000
+        versionName = "2.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
