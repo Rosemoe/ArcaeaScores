@@ -6,6 +6,17 @@
     <string name="nav_settings">设置</string>
     <string name="settings_section_profile">资料</string>
     <string name="settings_section_app">应用</string>
+    <string name="best_30_potential">Best 30 潜力值</string>
+    <string name="best_30">成绩列表</string>
+    <string name="max_potential">最高潜力值</string>
+    <string name="last_updated">上次更新</string>
+    <string name="not_updated">尚未更新</string>
+    <plurals name="score_count">
+        <item quantity="other">%d 首</item>
+    </plurals>
+    <string name="empty_scores_title">暂无成绩</string>
+    <string name="empty_scores_description">读取游戏数据后，即可查看 Best 30 成绩。</string>
+    <string name="action_read_game_data">读取游戏数据</string>
     <string name="set_player_name">设置名字</string>
     <string name="action_open_releases">打开发布页面</string>
     <string name="action_back">返回</string>

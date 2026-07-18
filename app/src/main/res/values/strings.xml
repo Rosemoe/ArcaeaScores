@@ -5,6 +5,18 @@
     <string name="nav_settings">Settings</string>
     <string name="settings_section_profile">Profile</string>
     <string name="settings_section_app">App</string>
+    <string name="best_30_potential">Best 30 Potential</string>
+    <string name="best_30">Scores</string>
+    <string name="max_potential">Max Potential</string>
+    <string name="last_updated">Last updated</string>
+    <string name="not_updated">Not updated</string>
+    <plurals name="score_count">
+        <item quantity="one">%d song</item>
+        <item quantity="other">%d songs</item>
+    </plurals>
+    <string name="empty_scores_title">No scores yet</string>
+    <string name="empty_scores_description">Read your game data to view your Best 30 scores.</string>
+    <string name="action_read_game_data">Read game data</string>
     <string name="set_player_name">Set player name</string>
     <string name="action_open_releases">Open releases</string>
     <string name="action_back">Back</string>
