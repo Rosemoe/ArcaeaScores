@@ -41,6 +41,19 @@ class ArcaeaScoreTest {
         assertEquals(0.0, requireNotNull(score.lostRankedScore), 0.0)
     }
 
+    @Test
+    fun theoreticalScoreDistance_includesEveryNote() {
+        val score = score(
+            difficulty = 2,
+            score = 9_999_000,
+            pureCount = 900,
+            farCount = 80,
+            lostCount = 20
+        )
+
+        assertEquals(2_000L, score.theoreticalScoreDistance)
+    }
+
     private fun score(
         difficulty: Int,
         score: Long = 10_000_000,

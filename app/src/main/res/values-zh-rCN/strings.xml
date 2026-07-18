@@ -23,6 +23,11 @@
     <string name="action_clear_search">清空关键词</string>
     <string name="filter_clear_type">通关类型</string>
     <string name="filter_chart_level">谱面等级</string>
+    <string name="filter_sort_order">排序方式</string>
+    <string name="sort_order_potential">潜力值</string>
+    <string name="sort_order_theoretical_distance">距离理论值</string>
+    <string name="sort_order_lost_ranked_score">失分</string>
+    <string name="sort_order_chart_constant">定数</string>
     <string name="clear_type_track_lost">失败</string>
     <string name="clear_type_track_complete">通关</string>
     <string name="clear_type_full_recall">Full Recall</string>

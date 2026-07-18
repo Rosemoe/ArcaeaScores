@@ -41,6 +41,7 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.github.rosemoe.arcaeaScores.R
+import io.github.rosemoe.arcaeaScores.arc.ArcaeaScoreSortOrder
 import io.github.rosemoe.arcaeaScores.app.MainUiState
 import io.github.rosemoe.arcaeaScores.ui.components.PlayerSummary
 import io.github.rosemoe.arcaeaScores.ui.components.ScoreCard
@@ -62,14 +63,18 @@ fun HomeScreen(
     var selectedClearTypes by rememberSaveable { mutableStateOf(emptyList<Int>()) }
     var selectedLevels by rememberSaveable { mutableStateOf(emptyList<String>()) }
     var zeroLostScoreOnly by rememberSaveable { mutableStateOf(false) }
-    val filteredScores = state.scores.filter { score ->
-        (keyword.isBlank() ||
-            score.title.contains(keyword, ignoreCase = true) ||
-            score.songId.contains(keyword, ignoreCase = true)) &&
-            (selectedClearTypes.isEmpty() || score.clearType in selectedClearTypes) &&
-            (selectedLevels.isEmpty() || score.chartInfo?.displayRating in selectedLevels) &&
-            (!zeroLostScoreOnly || score.lostRankedScore == 0.0)
-    }
+    var sortOrderName by rememberSaveable { mutableStateOf(ArcaeaScoreSortOrder.Potential.name) }
+    val sortOrder = ArcaeaScoreSortOrder.valueOf(sortOrderName)
+    val filteredScores = state.scores
+        .filter { score ->
+            (keyword.isBlank() ||
+                score.title.contains(keyword, ignoreCase = true) ||
+                score.songId.contains(keyword, ignoreCase = true)) &&
+                (selectedClearTypes.isEmpty() || score.clearType in selectedClearTypes) &&
+                (selectedLevels.isEmpty() || score.chartInfo?.displayRating in selectedLevels) &&
+                (!zeroLostScoreOnly || score.lostRankedScore == 0.0)
+        }
+        .sortedWith(sortOrder.comparator())
     Box(modifier = modifier.fillMaxSize()) {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
@@ -133,7 +138,9 @@ fun HomeScreen(
                             zeroLostScoreOnly = zeroLostScoreOnly,
                             onZeroLostScoreToggle = {
                                 zeroLostScoreOnly = !zeroLostScoreOnly
-                            }
+                            },
+                            sortOrder = sortOrder,
+                            onSortOrderChange = { sortOrderName = it.name }
                         )
                     }
                     item {

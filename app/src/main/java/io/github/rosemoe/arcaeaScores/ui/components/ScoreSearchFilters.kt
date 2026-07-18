@@ -20,6 +20,7 @@ import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -32,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.github.rosemoe.arcaeaScores.R
+import io.github.rosemoe.arcaeaScores.arc.ArcaeaScoreSortOrder
 
 @Composable
 @OptIn(ExperimentalLayoutApi::class)
@@ -45,10 +47,13 @@ fun ScoreSearchFilters(
     onLevelToggle: (String) -> Unit,
     zeroLostScoreOnly: Boolean,
     onZeroLostScoreToggle: () -> Unit,
+    sortOrder: ArcaeaScoreSortOrder,
+    onSortOrderChange: (ArcaeaScoreSortOrder) -> Unit,
     modifier: Modifier = Modifier
 ) {
     var clearTypeMenuExpanded by remember { mutableStateOf(false) }
     var chartLevelMenuExpanded by remember { mutableStateOf(false) }
+    var sortOrderMenuExpanded by remember { mutableStateOf(false) }
     androidx.compose.foundation.layout.Column(
         modifier = modifier
             .fillMaxWidth()
@@ -98,6 +103,28 @@ fun ScoreSearchFilters(
                     selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                 )
             )
+            MultiSelectFilterChip(
+                label = stringResource(R.string.filter_sort_order),
+                selected = sortOrder != ArcaeaScoreSortOrder.Potential,
+                expanded = sortOrderMenuExpanded,
+                onExpandChange = { sortOrderMenuExpanded = it }
+            ) {
+                ArcaeaScoreSortOrder.entries.forEach { option ->
+                    DropdownMenuItem(
+                        text = { Text(sortOrderLabel(option)) },
+                        onClick = {
+                            onSortOrderChange(option)
+                            sortOrderMenuExpanded = false
+                        },
+                        leadingIcon = {
+                            RadioButton(
+                                selected = option == sortOrder,
+                                onClick = null
+                            )
+                        }
+                    )
+                }
+            }
             MultiSelectFilterChip(
                 label = stringResource(R.string.filter_clear_type),
                 selected = selectedClearTypes.isNotEmpty(),
@@ -179,6 +206,16 @@ private fun clearTypeLabel(clearType: Int): String = stringResource(
         3 -> R.string.clear_type_pure_memory
         4 -> R.string.clear_type_easy_clear
         else -> R.string.clear_type_hard_clear
+    }
+)
+
+@Composable
+private fun sortOrderLabel(sortOrder: ArcaeaScoreSortOrder): String = stringResource(
+    when (sortOrder) {
+        ArcaeaScoreSortOrder.Potential -> R.string.sort_order_potential
+        ArcaeaScoreSortOrder.TheoreticalDistance -> R.string.sort_order_theoretical_distance
+        ArcaeaScoreSortOrder.LostRankedScore -> R.string.sort_order_lost_ranked_score
+        ArcaeaScoreSortOrder.ChartConstant -> R.string.sort_order_chart_constant
     }
 )
 

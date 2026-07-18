@@ -2,6 +2,23 @@ package io.github.rosemoe.arcaeaScores.arc
 
 private const val RANKED_SCORE_MULTIPLIER = 100.0
 
+enum class ArcaeaScoreSortOrder {
+    Potential,
+    TheoreticalDistance,
+    LostRankedScore,
+    ChartConstant;
+
+    fun comparator(): Comparator<ArcaeaScore> {
+        val primaryComparator = when (this) {
+            Potential -> compareByDescending<ArcaeaScore> { it.playPotential }
+            TheoreticalDistance -> compareByDescending { it.theoreticalScoreDistance }
+            LostRankedScore -> compareBy { it.lostRankedScore ?: Double.POSITIVE_INFINITY }
+            ChartConstant -> compareByDescending { it.chartConstant }
+        }
+        return primaryComparator.thenByDescending { it.chartConstant }
+    }
+}
+
 class ArcaeaScore(
     val songId: String,
     val difficulty: Int,
@@ -24,6 +41,9 @@ class ArcaeaScore(
     var title: String,
     val chartInfo: ChartInfo?
 ) : Comparable<ArcaeaScore> {
+
+    val theoreticalScoreDistance: Long
+        get() = 10_000_000L + pureCount + farCount + lostCount - score
 
     /**
      * Potential loss relative to a maximally ranked score. This metric only applies to

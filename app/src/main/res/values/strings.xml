@@ -23,6 +23,11 @@
     <string name="action_clear_search">Clear search</string>
     <string name="filter_clear_type">Clear type</string>
     <string name="filter_chart_level">Chart level</string>
+    <string name="filter_sort_order">Sort order</string>
+    <string name="sort_order_potential">Potential</string>
+    <string name="sort_order_theoretical_distance">Distance to theory</string>
+    <string name="sort_order_lost_ranked_score">Lost score</string>
+    <string name="sort_order_chart_constant">Chart constant</string>
     <string name="clear_type_track_lost">Track Lost</string>
     <string name="clear_type_track_complete">Track Complete</string>
     <string name="clear_type_full_recall">Full Recall</string>
