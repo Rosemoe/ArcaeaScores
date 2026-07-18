@@ -10,8 +10,7 @@
         android:theme="@style/Theme.ArcaeaScores">
         <activity
             android:name=".app.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.ArcaeaScores.NoActionBar">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

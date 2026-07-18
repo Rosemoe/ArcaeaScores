@@ -1,7 +1,6 @@
 package io.github.rosemoe.arcaeaScores.arc
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 
 private val ScoreQueryColumns = arrayOf(
     "songId",
@@ -18,7 +17,7 @@ fun readDatabase(context: Context): ArcaeaRecord {
     val constants = ArcaeaConstants(context.assets.open("constants.json"))
     context.openOrCreateDatabase(
         "st3.db",
-        AppCompatActivity.MODE_PRIVATE,
+        Context.MODE_PRIVATE,
         null
     ).use { db ->
         val cursor =

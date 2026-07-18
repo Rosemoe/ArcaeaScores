@@ -1,29 +1,72 @@
 package io.github.rosemoe.arcaeaScores.app
 
-import android.app.ProgressDialog
+import android.content.Intent
 import android.content.SharedPreferences
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.Typeface
+import android.net.Uri
 import android.os.Bundle
-import android.text.Editable
-import android.text.util.Linkify
-import android.view.Menu
-import android.view.MenuItem
-import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ListView
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.edit
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardCapitalization
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import io.github.rosemoe.arcaeaScores.R
+import io.github.rosemoe.arcaeaScores.arc.ArcaeaRecord
+import io.github.rosemoe.arcaeaScores.arc.ArcaeaScore
+import io.github.rosemoe.arcaeaScores.arc.clearTypeShortString
+import io.github.rosemoe.arcaeaScores.arc.difficultyMainColor
 import io.github.rosemoe.arcaeaScores.arc.readDatabase
-import io.github.rosemoe.arcaeaScores.util.showMsgDialog
-import io.github.rosemoe.arcaeaScores.util.showToast
+import io.github.rosemoe.arcaeaScores.arc.scoreGrade
+import io.github.rosemoe.arcaeaScores.arc.toScoreText
+import io.github.rosemoe.arcaeaScores.ui.theme.ArcaeaScoresTheme
 import io.github.rosemoe.arcaeaScores.util.toScaledString
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -32,35 +75,36 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     private lateinit var prefs: SharedPreferences
+    private var uiState by mutableStateOf(MainUiState())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        enableEdgeToEdge()
         prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        findViewById<ListView>(R.id.score_list).dividerHeight = 0
-        findViewById<FloatingActionButton>(R.id.fab).let {
-            it.imageTintList = ColorStateList.valueOf(Color.WHITE)
-            it.imageTintMode = PorterDuff.Mode.SRC_ATOP
-            it.setOnClickListener {
-                onUpdateScoreClicked()
+        uiState = uiState.copy(
+            playerName = prefs.getString("player_name", getString(R.string.click_to_set_name)).orEmpty(),
+            updateTime = prefs.getLong("date", 0)
+        )
+        setContent {
+            ArcaeaScoresTheme {
+                ArcaeaScoresApp(
+                    state = uiState,
+                    onUpdate = ::onUpdateScoreClicked,
+                    onRootPermission = ::onRootPermissionResult,
+                    onDismissRootPermission = { uiState = uiState.copy(showRootPermissionDialog = false) },
+                    onSetName = ::setPlayerName,
+                    onShowNameDialog = { uiState = uiState.copy(showNameDialog = true) },
+                    onDismissNameDialog = { uiState = uiState.copy(showNameDialog = false) },
+                    onShowAboutDialog = { uiState = uiState.copy(showAboutDialog = true) },
+                    onDismissAboutDialog = { uiState = uiState.copy(showAboutDialog = false) },
+                    onDismissError = { uiState = uiState.copy(error = null) },
+                    onOpenReleases = ::openReleases
+                )
             }
         }
-        val exoSemiBold = Typeface.createFromAsset(assets, "fonts/Exo-SemiBold.ttf")
-        val exoTypeface = Typeface.createFromAsset(assets, "fonts/Exo-Regular.ttf")
-        findViewById<TextView>(R.id.player_name).let {
-            it.setOnClickListener {
-                onSetNameClicked()
-            }
-            it.text = prefs.getString("player_name", getString(R.string.click_to_set_name))
-            it.typeface = exoSemiBold
-        }
-        findViewById<TextView>(R.id.max_potential).typeface = exoTypeface
-        findViewById<TextView>(R.id.date).typeface = exoTypeface
-
         updateScoreList()
     }
 
@@ -68,92 +112,65 @@ class MainActivity : AppCompatActivity() {
         if (prefs.getBoolean("agree_using_root", false)) {
             refreshScores()
         } else {
-            AlertDialog.Builder(this)
-                .setTitle(R.string.dialog_title_root)
-                .setMessage(R.string.dialog_msg_root)
-                .setPositiveButton(R.string.action_permit) { _, _ ->
-                    prefs.edit {
-                        putBoolean("agree_using_root", true)
-                    }
-                    refreshScores()
-                }
-                .setNegativeButton(android.R.string.cancel) { _, _ ->
-                    showToast(R.string.tip_reject_root)
-                }.show()
+            uiState = uiState.copy(showRootPermissionDialog = true)
         }
     }
 
-    private fun onSetNameClicked() {
-        val et = EditText(this)
-        et.layoutParams = ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT
-        )
-        AlertDialog.Builder(this)
-            .setTitle("设置名字")
-            .setView(et)
-            .setPositiveButton(android.R.string.ok) { _, _ ->
-                if (et.text.isEmpty()) {
-                    showToast(R.string.name_empty)
-                } else {
-                    prefs.edit {
-                        putString("player_name", et.text.toString())
-                    }
-                    findViewById<TextView>(R.id.player_name).text = et.text
-                }
-            }
-            .setNegativeButton(android.R.string.cancel, null)
-            .show()
+    private fun onRootPermissionResult(permitted: Boolean) {
+        uiState = uiState.copy(showRootPermissionDialog = false)
+        if (permitted) {
+            prefs.edit().putBoolean("agree_using_root", true).apply()
+            refreshScores()
+        } else {
+            uiState = uiState.copy(error = getString(R.string.tip_reject_root))
+        }
     }
 
-    @Suppress("DEPRECATION")
+    private fun setPlayerName(name: String) {
+        prefs.edit().putString("player_name", name).apply()
+        uiState = uiState.copy(playerName = name, showNameDialog = false)
+    }
+
     private fun refreshScores() {
-        val pd = ProgressDialog.show(this, getString(R.string.pd_dialog_title), "...", true, false)
-
-        suspend fun update(text: String) = withContext(Dispatchers.Main) {
-            pd.setMessage(text)
-        }
-
         lifecycleScope.launch {
-            val packageName = application.packageName
-            val arcaeaPackageName = "moe.low.arc"
+            uiState = uiState.copy(
+                isLoading = true,
+                loadingMessage = getString(R.string.state_obtaining_root)
+            )
             runCatching {
-                // Copy `st3` database
-                val process = Runtime.getRuntime().exec("su -mm")
-                update(getString(R.string.state_obtaining_root))
-                process.outputStream.writer().use {
-                    it.write(
-                        "mkdir /data/data/$packageName/databases/\n" +
+                withContext(Dispatchers.IO) {
+                    val packageName = application.packageName
+                    val arcaeaPackageName = "moe.low.arc"
+                    val process = Runtime.getRuntime().exec("su -mm")
+                    process.outputStream.writer().use {
+                        it.write(
+                            "mkdir /data/data/$packageName/databases/\n" +
                                 "cp -f /data/data/$arcaeaPackageName/files/st3 /data/data/$packageName/databases/st3.db\n" +
                                 "chmod 777 /data/data/$packageName/databases\n" +
                                 "chmod 777 /data/data/$packageName/databases/st3.db\n" +
                                 "exit\n"
-                    )
-                    it.flush()
-                }
-                update(getString(R.string.state_reading_save))
-                val exitCode = process.waitFor()
-                if (exitCode != 0) {
-                    throw Exception(
-                        "Non-zero exit code: $exitCode\nError Output:\n${
-                            process.errorStream.reader().readText()
-                        }"
-                    )
+                        )
+                        it.flush()
+                    }
+                    withContext(Dispatchers.Main) {
+                        uiState = uiState.copy(loadingMessage = getString(R.string.state_reading_save))
+                    }
+                    val exitCode = process.waitFor()
+                    if (exitCode != 0) {
+                        throw IllegalStateException(
+                            "Non-zero exit code: $exitCode\nError Output:\n${
+                                process.errorStream.reader().readText()
+                            }"
+                        )
+                    }
                 }
             }.onSuccess {
-                withContext(Dispatchers.Main) {
-                    prefs.edit {
-                        putLong("date", System.currentTimeMillis())
-                    }
-                    updateScoreList()
-                    pd.cancel()
-                    showToast(R.string.tip_upddate_finished)
-                }
+                val updateTime = System.currentTimeMillis()
+                prefs.edit().putLong("date", updateTime).apply()
+                uiState = uiState.copy(updateTime = updateTime)
+                updateScoreList()
             }.onFailure {
-                withContext(Dispatchers.Main) {
-                    showMsgDialog(getString(R.string.update_failed), it.stackTraceToString())
-                    pd.cancel()
-                }
+                uiState = uiState.copy(isLoading = false, loadingMessage = null, error = it.stackTraceToString())
             }
         }
     }
@@ -162,55 +179,342 @@ class MainActivity : AppCompatActivity() {
         if (!getDatabasePath("st3.db").exists()) {
             return
         }
-        val updateTime = prefs.getLong("date", 0)
         lifecycleScope.launch {
+            uiState = uiState.copy(isLoading = true, loadingMessage = getString(R.string.state_reading_save))
             runCatching {
-                readDatabase(this@MainActivity)
-            }.onSuccess { record ->
-                withContext(Dispatchers.Main) {
-                    findViewById<ListView>(R.id.score_list).adapter =
-                        ArcaeaScoreAdapter(this@MainActivity, record.scores)
-                    findViewById<TextView>(R.id.date).text =
-                        "Update Time: " + SimpleDateFormat.getDateTimeInstance(
-                            SimpleDateFormat.DEFAULT,
-                            SimpleDateFormat.DEFAULT,
-                            Locale.ENGLISH
-                        ).format(Date(updateTime))
-                    findViewById<TextView>(R.id.max_potential).text =
-                        "Best30: " + record.best30Potential.toScaledString() + "  Max Ptt: " + record.maxPotential.toScaledString()
+                withContext(Dispatchers.IO) {
+                    readDatabase(this@MainActivity)
                 }
-            }.onFailure {
-                it.printStackTrace()
-                withContext(Dispatchers.Main) {
-                    showMsgDialog(getString(R.string.update_failed), it.stackTraceToString())
-                }
+            }.onSuccess(::showRecord).onFailure {
+                uiState = uiState.copy(isLoading = false, loadingMessage = null, error = it.stackTraceToString())
             }
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
+    private fun showRecord(record: ArcaeaRecord) {
+        uiState = uiState.copy(
+            scores = record.scores,
+            best30Potential = record.best30Potential,
+            maxPotential = record.maxPotential,
+            updateTime = prefs.getLong("date", 0),
+            isLoading = false,
+            loadingMessage = null
+        )
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> {
-                val text =
-                    Editable.Factory.getInstance().newEditable(getString(R.string.dialog_msg_about))
-                showMsgDialog(getString(R.string.about_app), text).apply {
-                    findViewById<TextView>(android.R.id.message).apply {
-                        autoLinkMask = Linkify.WEB_URLS
-                        isClickable = true
-                        linksClickable = true
-                        this.text = text
+    private fun openReleases() {
+        startActivity(
+            Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
+            )
+        )
+    }
+}
+
+private data class MainUiState(
+    val playerName: String = "",
+    val scores: List<ArcaeaScore> = emptyList(),
+    val best30Potential: Double = 0.0,
+    val maxPotential: Double = 0.0,
+    val updateTime: Long = 0,
+    val isLoading: Boolean = false,
+    val loadingMessage: String? = null,
+    val showRootPermissionDialog: Boolean = false,
+    val showNameDialog: Boolean = false,
+    val showAboutDialog: Boolean = false,
+    val error: String? = null
+)
+
+@Composable
+@OptIn(ExperimentalMaterial3Api::class)
+private fun ArcaeaScoresApp(
+    state: MainUiState,
+    onUpdate: () -> Unit,
+    onRootPermission: (Boolean) -> Unit,
+    onDismissRootPermission: () -> Unit,
+    onSetName: (String) -> Unit,
+    onShowNameDialog: () -> Unit,
+    onDismissNameDialog: () -> Unit,
+    onShowAboutDialog: () -> Unit,
+    onDismissAboutDialog: () -> Unit,
+    onDismissError: () -> Unit,
+    onOpenReleases: () -> Unit
+) {
+    val context = LocalContext.current
+    val titleFont = remember { FontFamily(android.graphics.Typeface.createFromAsset(context.assets, "fonts/L2-Regular.ttf")) }
+    val scoreFont = remember { FontFamily(android.graphics.Typeface.createFromAsset(context.assets, "fonts/GeosansLight.ttf")) }
+    val exoFont = remember { FontFamily(android.graphics.Typeface.createFromAsset(context.assets, "fonts/Exo-Regular.ttf")) }
+    val exoSemiBoldFont = remember { FontFamily(android.graphics.Typeface.createFromAsset(context.assets, "fonts/Exo-SemiBold.ttf")) }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.app_name)) },
+                actions = {
+                    TextButton(onClick = onShowAboutDialog) {
+                        Text(stringResource(R.string.about_app))
                     }
                 }
-                true
+            )
+        },
+        floatingActionButton = {
+            FloatingActionButton(onClick = onUpdate) {
+                androidx.compose.material3.Icon(
+                    painter = painterResource(R.drawable.refresh),
+                    contentDescription = stringResource(R.string.pd_dialog_title)
+                )
             }
-
-            else -> super.onOptionsItemSelected(item)
+        }
+    ) { contentPadding ->
+        Box(modifier = Modifier.fillMaxSize().padding(contentPadding)) {
+            LazyColumn(
+                contentPadding = PaddingValues(bottom = 88.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.fillMaxSize()
+            ) {
+                item {
+                    PlayerSummary(
+                        state = state,
+                        exoFont = exoFont,
+                        exoSemiBoldFont = exoSemiBoldFont,
+                        onClick = onShowNameDialog
+                    )
+                }
+                itemsIndexed(
+                    items = state.scores,
+                    key = { _, score -> "${score.songId}-${score.difficulty}" }
+                ) { index, score ->
+                    ScoreCard(
+                        score = score,
+                        rank = index + 1,
+                        titleFont = titleFont,
+                        scoreFont = scoreFont,
+                        exoFont = exoFont
+                    )
+                }
+            }
+            if (state.isLoading) {
+                LoadingOverlay(state.loadingMessage.orEmpty())
+            }
         }
     }
 
+    if (state.showRootPermissionDialog) {
+        AlertDialog(
+            onDismissRequest = onDismissRootPermission,
+            title = { Text(stringResource(R.string.dialog_title_root)) },
+            text = { Text(stringResource(R.string.dialog_msg_root)) },
+            confirmButton = {
+                TextButton(onClick = { onRootPermission(true) }) {
+                    Text(stringResource(R.string.action_permit))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { onRootPermission(false) }) {
+                    Text(stringResource(android.R.string.cancel))
+                }
+            }
+        )
+    }
+
+    if (state.showNameDialog) {
+        PlayerNameDialog(
+            initialName = state.playerName,
+            onDismiss = onDismissNameDialog,
+            onConfirm = onSetName
+        )
+    }
+
+    if (state.showAboutDialog) {
+        AlertDialog(
+            onDismissRequest = onDismissAboutDialog,
+            title = { Text(stringResource(R.string.about_app)) },
+            text = { Text(stringResource(R.string.dialog_msg_about)) },
+            confirmButton = {
+                TextButton(onClick = onOpenReleases) {
+                    Text("Releases")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = onDismissAboutDialog) {
+                    Text(stringResource(android.R.string.ok))
+                }
+            }
+        )
+    }
+
+    state.error?.let { error ->
+        AlertDialog(
+            onDismissRequest = onDismissError,
+            title = { Text(stringResource(R.string.update_failed)) },
+            text = {
+                Text(
+                    text = error,
+                    modifier = Modifier.verticalScroll(rememberScrollState())
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = onDismissError) {
+                    Text(stringResource(android.R.string.ok))
+                }
+            }
+        )
+    }
+}
+
+@Composable
+private fun PlayerSummary(
+    state: MainUiState,
+    exoFont: FontFamily,
+    exoSemiBoldFont: FontFamily,
+    onClick: () -> Unit
+) {
+    ElevatedCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 4.dp)
+            .clickable(onClick = onClick),
+        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 4.dp)
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = state.playerName,
+                fontFamily = exoSemiBoldFont,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(Modifier.height(8.dp))
+            Text(
+                text = "Best30: ${state.best30Potential.toScaledString()}  Max Ptt: ${state.maxPotential.toScaledString()}",
+                fontFamily = exoFont
+            )
+            Spacer(Modifier.height(8.dp))
+            Text(
+                text = if (state.updateTime > 0) {
+                    "Update Time: " + SimpleDateFormat.getDateTimeInstance(
+                        SimpleDateFormat.DEFAULT,
+                        SimpleDateFormat.DEFAULT,
+                        Locale.ENGLISH
+                    ).format(Date(state.updateTime))
+                } else {
+                    "Update Time: -"
+                },
+                fontFamily = exoFont,
+                fontSize = 15.sp
+            )
+        }
+    }
+}
+
+@Composable
+private fun ScoreCard(
+    score: ArcaeaScore,
+    rank: Int,
+    titleFont: FontFamily,
+    scoreFont: FontFamily,
+    exoFont: FontFamily
+) {
+    ElevatedCard(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
+        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 4.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(IntrinsicSize.Min)
+                .padding(12.dp)
+        ) {
+            Box(
+                modifier = Modifier
+                    .width(5.dp)
+                    .fillMaxHeight()
+                    .clip(MaterialTheme.shapes.extraSmall)
+                    .background(Color(difficultyMainColor(score.difficulty)))
+            )
+            Spacer(Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = score.title,
+                        modifier = Modifier.weight(1f),
+                        maxLines = 1,
+                        fontFamily = titleFont,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        text = "[${scoreGrade(score.score)}/${clearTypeShortString(score.clearType)}]",
+                        fontFamily = exoFont
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Text(text = "#$rank", fontFamily = FontFamily.Monospace)
+                }
+                Text(
+                    text = "Potential: ${score.chartConstant} > ${String.format(Locale.getDefault(), "%.5f", score.playPotential)}",
+                    fontFamily = exoFont,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(text = toScoreText(score.score), fontFamily = scoreFont, fontSize = 19.sp)
+                Text(
+                    text = "P/F/L: ${score.pureCount}(+${score.maxPureCount}) / ${score.farCount} / ${score.lostCount}",
+                    fontFamily = exoFont,
+                    fontSize = 17.sp
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun LoadingOverlay(message: String) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.scrim.copy(alpha = 0.32f)),
+        contentAlignment = Alignment.Center
+    ) {
+        ElevatedCard {
+            Row(
+                modifier = Modifier.padding(24.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                CircularProgressIndicator()
+                Text(message)
+            }
+        }
+    }
+}
+
+@Composable
+private fun PlayerNameDialog(
+    initialName: String,
+    onDismiss: () -> Unit,
+    onConfirm: (String) -> Unit
+) {
+    var name by rememberSaveable(initialName) { mutableStateOf(initialName) }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("设置名字") },
+        text = {
+            OutlinedTextField(
+                value = name,
+                onValueChange = { name = it },
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Words)
+            )
+        },
+        confirmButton = {
+            TextButton(onClick = { if (name.isNotBlank()) onConfirm(name) }) {
+                Text(stringResource(android.R.string.ok))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(android.R.string.cancel))
+            }
+        }
+    )
 }
