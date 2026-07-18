@@ -7,13 +7,16 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
 import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.Image
 import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Update
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -28,7 +31,10 @@ import io.github.rosemoe.arcaeaScores.R
 @OptIn(ExperimentalMaterial3Api::class)
 fun SettingsScreen(
     playerName: String,
+    showArtwork: Boolean,
     onEditPlayerName: () -> Unit,
+    onShowArtworkChange: (Boolean) -> Unit,
+    onUpdateArtworkData: () -> Unit,
     onCheckUpdates: () -> Unit,
     onOpenAbout: () -> Unit,
     modifier: Modifier = Modifier
@@ -62,6 +68,28 @@ fun SettingsScreen(
                 )
             }
             item {
+                SettingsSectionHeader(stringResource(R.string.settings_section_display))
+            }
+            item {
+                SettingsSwitchItem(
+                    title = stringResource(R.string.show_artwork),
+                    subtitle = stringResource(R.string.show_artwork_description),
+                    checked = showArtwork,
+                    icon = { Icon(Icons.Outlined.Image, contentDescription = null) },
+                    onCheckedChange = onShowArtworkChange
+                )
+            }
+            item {
+                SettingsSectionHeader(stringResource(R.string.settings_section_data))
+            }
+            item {
+                SettingsItem(
+                    title = stringResource(R.string.update_artwork_data),
+                    icon = { Icon(Icons.Outlined.Update, contentDescription = null) },
+                    onClick = onUpdateArtworkData
+                )
+            }
+            item {
                 SettingsSectionHeader(stringResource(R.string.settings_section_app))
             }
             item {
@@ -81,6 +109,31 @@ fun SettingsScreen(
             }
         }
     }
+}
+
+@Composable
+private fun SettingsSwitchItem(
+    title: String,
+    subtitle: String,
+    checked: Boolean,
+    icon: @Composable () -> Unit,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    ListItem(
+        headlineContent = { Text(title) },
+        supportingContent = { Text(subtitle) },
+        leadingContent = icon,
+        trailingContent = {
+            Switch(
+                checked = checked,
+                onCheckedChange = onCheckedChange
+            )
+        },
+        modifier = Modifier.clickable { onCheckedChange(!checked) },
+        colors = androidx.compose.material3.ListItemDefaults.colors(
+            containerColor = MaterialTheme.colorScheme.surface
+        )
+    )
 }
 
 @Composable

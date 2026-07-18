@@ -153,7 +153,13 @@ fun HomeScreen(
                             items = filteredScores,
                             key = { _, score -> "${score.songId}-${score.difficulty}" }
                         ) { index, score ->
-                            ScoreCard(score = score, rank = index + 1, fonts = fonts)
+                            ScoreCard(
+                                score = score,
+                                rank = index + 1,
+                                fonts = fonts,
+                                showArtwork = state.showArtwork,
+                                artworkDataVersion = state.artworkDataVersion
+                            )
                         }
                     }
                 }
@@ -188,7 +194,13 @@ fun HomeScreen(
                         items = state.scores,
                         key = { _, score -> "${score.songId}-${score.difficulty}" }
                     ) { index, score ->
-                        ScoreCard(score = score, rank = index + 1, fonts = fonts)
+                        ScoreCard(
+                            score = score,
+                            rank = index + 1,
+                            fonts = fonts,
+                            showArtwork = state.showArtwork,
+                            artworkDataVersion = state.artworkDataVersion
+                        )
                     }
                 }
             }

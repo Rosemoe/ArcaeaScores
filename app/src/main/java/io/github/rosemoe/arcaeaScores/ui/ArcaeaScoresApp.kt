@@ -31,6 +31,7 @@ import io.github.rosemoe.arcaeaScores.app.MainViewModel
 import io.github.rosemoe.arcaeaScores.ui.components.AppDialogHost
 import io.github.rosemoe.arcaeaScores.ui.screens.HomeScreen
 import io.github.rosemoe.arcaeaScores.ui.screens.AboutScreen
+import io.github.rosemoe.arcaeaScores.ui.screens.DataUpdateScreen
 import io.github.rosemoe.arcaeaScores.ui.screens.SettingsScreen
 
 private enum class AppDestination(val route: String, val labelRes: Int) {
@@ -39,6 +40,7 @@ private enum class AppDestination(val route: String, val labelRes: Int) {
 }
 
 private const val ABOUT_ROUTE = "about"
+private const val DATA_UPDATE_ROUTE = "data-update"
 
 @Composable
 fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
@@ -101,7 +103,10 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
             composable(AppDestination.Settings.route) {
                 SettingsScreen(
                     playerName = state.playerName,
+                    showArtwork = state.showArtwork,
                     onEditPlayerName = viewModel::showNameDialog,
+                    onShowArtworkChange = viewModel::setShowArtwork,
+                    onUpdateArtworkData = { navController.navigate(DATA_UPDATE_ROUTE) },
                     onCheckUpdates = {
                         uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
                     },
@@ -115,6 +120,20 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                         uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
                     },
                     onOpenSource = { uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores") }
+                )
+            }
+            composable(DATA_UPDATE_ROUTE) {
+                DataUpdateScreen(
+                    onBack = navController::popBackStack,
+                    onApplicationSelected = viewModel::updateArtworkData,
+                    isUpdating = state.isLoading,
+                    updateMessage = state.loadingMessage,
+                    artworkDataVersion = state.artworkDataVersion,
+                    completedArtworkUpdateVersion = state.completedArtworkUpdateVersion,
+                    onArtworkUpdateCompleted = {
+                        viewModel.dismissArtworkUpdateCompleted()
+                        navController.popBackStack()
+                    }
                 )
             }
         }

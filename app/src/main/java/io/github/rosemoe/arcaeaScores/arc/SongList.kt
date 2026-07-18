@@ -1,20 +1,25 @@
 package io.github.rosemoe.arcaeaScores.arc
 
 import org.json.JSONObject
+import java.io.File
 import java.io.InputStream
 
 data class ChartInfo(
     val title: String?,
     val rating: Int?,
-    val ratingPlus: Boolean
+    val ratingPlus: Boolean,
+    val jacketOverride: Boolean
 ) {
     val displayRating: String?
         get() = rating?.let { "$it${if (ratingPlus) "+" else ""}" }
 }
 
+private data class SongInfo(val remoteDl: Boolean)
+
 class SongList(songListJson: InputStream) {
 
     private val songTitles = mutableMapOf<String, String>()
+    private val songInfo = mutableMapOf<String, SongInfo>()
     private val chartTitles = mutableMapOf<Pair<String, Int>, String>()
     private val chartInfo = mutableMapOf<Pair<String, Int>, ChartInfo>()
 
@@ -29,6 +34,7 @@ class SongList(songListJson: InputStream) {
             }
             val songId = song.getString("id")
             songTitles[songId] = song.getJSONObject("title_localized").getString("en")
+            songInfo[songId] = SongInfo(remoteDl = song.optBoolean("remote_dl"))
 
             val difficulties = song.getJSONArray("difficulties")
             for (difficultyIndex in 0 until difficulties.length()) {
@@ -41,7 +47,8 @@ class SongList(songListJson: InputStream) {
                 chartInfo[chartKey] = ChartInfo(
                     title = title?.takeIf { it.isNotBlank() },
                     rating = difficulty.takeIf { it.has("rating") }?.getInt("rating"),
-                    ratingPlus = difficulty.optBoolean("ratingPlus")
+                    ratingPlus = difficulty.optBoolean("ratingPlus"),
+                    jacketOverride = difficulty.optBoolean("jacketOverride")
                 )
             }
         }
@@ -57,6 +64,22 @@ class SongList(songListJson: InputStream) {
 
     fun queryForChartInfo(songId: String, difficulty: Int): ChartInfo? {
         return chartInfo[songId to difficulty]
+    }
+
+    fun queryForJacketPaths(songsDirectory: File, songId: String, difficulty: Int): List<File> {
+        val resourceDirectory = File(
+            songsDirectory,
+            if (songInfo[songId]?.remoteDl == true) "dl_$songId" else songId
+        )
+        val imageName = buildString {
+            append("1080_")
+            append(if (chartInfo[songId to difficulty]?.jacketOverride == true) difficulty else "base")
+            append("_256.jpg")
+        }
+        return listOf(
+            File(resourceDirectory, imageName),
+            File(resourceDirectory, imageName.removePrefix("1080_"))
+        ).distinct()
     }
 
 }

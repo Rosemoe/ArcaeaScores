@@ -2,6 +2,7 @@ package io.github.rosemoe.arcaeaScores.arc
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import java.io.File
 
 class SongListTest {
 
@@ -12,11 +13,13 @@ class SongListTest {
                 {
                   "id": "example",
                   "title_localized": { "en": "Song title" },
+                  "remote_dl": true,
                   "difficulties": [
                     { "ratingClass": 2, "rating": 10, "ratingPlus": true },
                     {
                       "ratingClass": 3,
-                      "title_localized": { "en": "Chart title" }
+                      "title_localized": { "en": "Chart title" },
+                      "jacketOverride": true
                     }
                   ]
                 }
@@ -49,5 +52,31 @@ class SongListTest {
         assertEquals(10, chartInfo?.rating)
         assertEquals(true, chartInfo?.ratingPlus)
         assertEquals("10+", chartInfo?.displayRating)
+    }
+
+    @Test
+    fun queryForJacketPaths_usesDownloadDirectoryAndChartOverride() {
+        val paths = titles.queryForJacketPaths(File("songs"), "example", 3)
+
+        assertEquals(
+            listOf(
+                File("songs/dl_example/1080_3_256.jpg"),
+                File("songs/dl_example/3_256.jpg")
+            ),
+            paths
+        )
+    }
+
+    @Test
+    fun queryForJacketPaths_usesBaseJacketWithoutOverride() {
+        val paths = titles.queryForJacketPaths(File("songs"), "example", 2)
+
+        assertEquals(
+            listOf(
+                File("songs/dl_example/1080_base_256.jpg"),
+                File("songs/dl_example/base_256.jpg")
+            ),
+            paths
+        )
     }
 }

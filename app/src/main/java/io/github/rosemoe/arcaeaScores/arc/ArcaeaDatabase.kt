@@ -1,6 +1,7 @@
 package io.github.rosemoe.arcaeaScores.arc
 
 import android.content.Context
+import java.io.File
 
 private val ScoreQuery = """
     SELECT
@@ -45,6 +46,11 @@ fun readDatabase(context: Context): ArcaeaRecord {
                         lostCount = cursor.getInt(cursor.getColumnIndexOrThrow("missCount")),
                         title = chartInfo?.title ?: titles.queryForChart(songId, difficulty),
                         chartInfo = chartInfo,
+                        artworkPaths = titles.queryForJacketPaths(
+                            songsDirectory = File(context.filesDir, "songs"),
+                            songId = songId,
+                            difficulty = difficulty
+                        ).map(File::getAbsolutePath),
                         chartConstant = chartConstant,
                         playPotential = if (chartConstant > 0.0) {
                             calculatePlayPotential(chartConstant, score)

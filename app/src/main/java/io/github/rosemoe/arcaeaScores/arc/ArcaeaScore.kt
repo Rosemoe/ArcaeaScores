@@ -39,7 +39,8 @@ class ArcaeaScore(
     var chartConstant: Double,
     var playPotential: Double,
     var title: String,
-    val chartInfo: ChartInfo?
+    val chartInfo: ChartInfo?,
+    val artworkPaths: List<String> = emptyList()
 ) : Comparable<ArcaeaScore> {
 
     val theoreticalScoreDistance: Long
