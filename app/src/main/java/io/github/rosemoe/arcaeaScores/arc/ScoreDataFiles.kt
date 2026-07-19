@@ -44,11 +44,20 @@ object ScoreDataFiles {
         }.getOrNull()
     }
 
+    fun readCurrentVersion(context: Context): ScoreDataVersion? =
+        readLocalVersion(context) ?: readBuiltInVersion(context)
+
     fun update(context: Context): ScoreDataVersion {
         val remoteVersion = fetchVersion()
         val localVersion = readLocalVersion(context)
-        if (localVersion?.updatedAt == remoteVersion.updatedAt && hasUpdatedData(context)) {
+        if (localVersion?.updatedAt == remoteVersion.updatedAt) {
             return localVersion
+        }
+        if (!hasUpdatedData(context)) {
+            val builtInVersion = readBuiltInVersion(context)
+            if (builtInVersion?.updatedAt == remoteVersion.updatedAt) {
+                return builtInVersion
+            }
         }
 
         val songList = fetchJson("songlist")
@@ -67,6 +76,12 @@ object ScoreDataFiles {
             context.assets.open(fileName)
         }
     }
+
+    private fun readBuiltInVersion(context: Context): ScoreDataVersion? = runCatching {
+        context.assets.open(VERSION_FILE_NAME).use { input ->
+            parseVersion(JSONObject(input.bufferedReader().readText()))
+        }
+    }.getOrNull()
 
     private fun hasUpdatedData(context: Context): Boolean {
         val directory = dataDirectory(context)

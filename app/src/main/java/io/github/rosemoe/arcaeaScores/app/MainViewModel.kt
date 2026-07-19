@@ -42,7 +42,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
         viewModelScope.launch(Dispatchers.IO) {
-            val version = ScoreDataFiles.readLocalVersion(app)?.displayVersion
+            val version = ScoreDataFiles.readCurrentVersion(app)?.displayVersion
             _uiState.update { it.copy(songDataVersion = version) }
         }
         loadScores()
