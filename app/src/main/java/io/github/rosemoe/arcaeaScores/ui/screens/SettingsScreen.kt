@@ -8,6 +8,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Image
+import androidx.compose.material.icons.outlined.LibraryMusic
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Update
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -36,6 +37,7 @@ fun SettingsScreen(
     onEditPlayerName: () -> Unit,
     onShowArtworkChange: (Boolean) -> Unit,
     onUpdateArtworkData: () -> Unit,
+    onUpdateSongData: () -> Unit,
     onCheckUpdates: () -> Unit,
     onOpenAbout: () -> Unit,
     modifier: Modifier = Modifier
@@ -91,6 +93,14 @@ fun SettingsScreen(
                     } ?: stringResource(R.string.no_artwork_data),
                     icon = { Icon(Icons.Outlined.Update, contentDescription = null) },
                     onClick = onUpdateArtworkData
+                )
+            }
+            item {
+                SettingsItem(
+                    title = stringResource(R.string.update_song_data),
+                    subtitle = stringResource(R.string.update_song_data_description),
+                    icon = { Icon(Icons.Outlined.LibraryMusic, contentDescription = null) },
+                    onClick = onUpdateSongData
                 )
             }
             item {

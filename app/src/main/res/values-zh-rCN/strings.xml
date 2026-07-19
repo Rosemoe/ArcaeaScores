@@ -11,6 +11,8 @@
     <string name="show_artwork">展示曲绘</string>
     <string name="show_artwork_description">是否在列表中展示曲绘</string>
     <string name="update_artwork_data">更新曲绘数据</string>
+    <string name="update_song_data">更新曲目数据</string>
+    <string name="update_song_data_description">更新应用内置的定数和曲目列表数据</string>
     <string name="select_application">选择 Arcaea 应用以导入数据</string>
     <string name="no_compatible_applications">未找到兼容的应用</string>
     <string name="state_updating_artwork">正在更新曲绘数据…</string>
