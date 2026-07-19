@@ -62,10 +62,11 @@ fun HomeScreen(
     state: MainUiState,
     onUpdate: () -> Unit,
     onSetName: () -> Unit,
-    modifier: Modifier = Modifier
+    collapseTopbarOnScroll: Boolean,
+    modifier: Modifier = Modifier,
 ) {
     val fonts = rememberArcaeaFonts()
-    val topAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+    val topAppBarScrollBehavior = if (!collapseTopbarOnScroll) TopAppBarDefaults.pinnedScrollBehavior() else TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
     var isFiltering by rememberSaveable { mutableStateOf(false) }
     var keyword by rememberSaveable { mutableStateOf("") }
     var selectedClearTypes by rememberSaveable { mutableStateOf(emptyList<Int>()) }

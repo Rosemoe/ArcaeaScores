@@ -66,6 +66,12 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
     } else {
         NavigationSuiteType.None
     }
+
+    val shouldPinTopbarForHeight = with(currentWindowAdaptiveInfoV2()) {
+        windowSizeClass.minHeightDp >= 600
+    }
+    val collapseTopbarOnScroll = navigationSuiteType == NavigationSuiteType.NavigationRail && !shouldPinTopbarForHeight
+
     val onDestinationSelected: (AppDestination) -> Unit = { destination ->
         if (currentRoute != destination.route) {
             navController.navigate(destination.route) {
@@ -91,9 +97,9 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                 )
             }
         },
-        containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
+        containerColor = MaterialTheme.colorScheme.surfaceContainer,
         navigationSuiteColors = NavigationSuiteDefaults.colors(
-            navigationRailContainerColor = MaterialTheme.colorScheme.surfaceContainerLow
+            navigationRailContainerColor = MaterialTheme.colorScheme.surfaceContainer
         )
     ) {
         Surface(
@@ -121,7 +127,8 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                     HomeScreen(
                         state = state,
                         onUpdate = viewModel::requestScoreUpdate,
-                        onSetName = viewModel::showNameDialog
+                        onSetName = viewModel::showNameDialog,
+                        collapseTopbarOnScroll = collapseTopbarOnScroll
                     )
                 }
                 composable(AppDestination.Settings.route) {
@@ -132,6 +139,7 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                         onEditPlayerName = viewModel::showNameDialog,
                         onShowArtworkChange = viewModel::setShowArtwork,
                         onUpdateArtworkData = { navController.navigate(DATA_UPDATE_ROUTE) },
+                        onUpdateSongData = {},
                         onCheckUpdates = {
                             uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
                         },
