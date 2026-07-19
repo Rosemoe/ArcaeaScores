@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.rosemoe.arcaeaScores.R
+import io.github.rosemoe.arcaeaScores.arc.ScoreDataFiles
 import io.github.rosemoe.arcaeaScores.arc.readDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -39,6 +40,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     )
                 }
             }
+        }
+        viewModelScope.launch(Dispatchers.IO) {
+            val version = ScoreDataFiles.readLocalVersion(app)?.displayVersion
+            _uiState.update { it.copy(songDataVersion = version) }
         }
         loadScores()
     }
@@ -86,6 +91,41 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun setShowArtwork(showArtwork: Boolean) {
         viewModelScope.launch { settingsRepository.setShowArtwork(showArtwork) }
         _uiState.update { it.copy(showArtwork = showArtwork) }
+    }
+
+    fun updateSongData() {
+        if (_uiState.value.isLoading) {
+            return
+        }
+        viewModelScope.launch {
+            _uiState.update {
+                it.copy(isLoading = true, loadingMessage = app.getString(R.string.state_updating_song_data))
+            }
+            runCatching {
+                withContext(Dispatchers.IO) {
+                    val version = ScoreDataFiles.update(app)
+                    val record = if (app.getDatabasePath("st3.db").exists()) {
+                        readDatabase(app)
+                    } else {
+                        null
+                    }
+                    version to record
+                }
+            }.onSuccess { (version, record) ->
+                _uiState.update { current ->
+                    current.copy(
+                        songDataVersion = version.displayVersion,
+                        scores = record?.scores ?: current.scores,
+                        best30Potential = record?.best30Potential ?: current.best30Potential,
+                        maxPotential = record?.maxPotential ?: current.maxPotential,
+                        isLoading = false,
+                        loadingMessage = null
+                    )
+                }
+            }.onFailure { error ->
+                showError(error.stackTraceToString())
+            }
+        }
     }
 
     fun updateArtworkData(packageName: String) {

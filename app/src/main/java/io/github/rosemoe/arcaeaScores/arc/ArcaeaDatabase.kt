@@ -20,8 +20,8 @@ private val ScoreQuery = """
 """.trimIndent()
 
 fun readDatabase(context: Context): ArcaeaRecord {
-    val titles = SongList(context.assets.open("songlist.json"))
-    val constants = ArcaeaConstants(context.assets.open("constants.json"))
+    val titles = ScoreDataFiles.openSongList(context).use(::SongList)
+    val constants = ScoreDataFiles.openConstants(context).use(::ArcaeaConstants)
     context.openOrCreateDatabase(
         "st3.db",
         Context.MODE_PRIVATE,

@@ -34,6 +34,7 @@ fun SettingsScreen(
     playerName: String,
     showArtwork: Boolean,
     artworkDataVersion: String?,
+    songDataVersion: String?,
     onEditPlayerName: () -> Unit,
     onShowArtworkChange: (Boolean) -> Unit,
     onUpdateArtworkData: () -> Unit,
@@ -98,7 +99,9 @@ fun SettingsScreen(
             item {
                 SettingsItem(
                     title = stringResource(R.string.update_song_data),
-                    subtitle = stringResource(R.string.update_song_data_description),
+                    subtitle = songDataVersion?.let {
+                        stringResource(R.string.song_data_version, it)
+                    } ?: stringResource(R.string.update_song_data_description),
                     icon = { Icon(Icons.Outlined.LibraryMusic, contentDescription = null) },
                     onClick = onUpdateSongData
                 )

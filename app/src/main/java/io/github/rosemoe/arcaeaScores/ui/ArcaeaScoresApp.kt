@@ -136,10 +136,14 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                         playerName = state.playerName,
                         showArtwork = state.showArtwork,
                         artworkDataVersion = state.artworkDataVersion,
+                        songDataVersion = state.songDataVersion,
                         onEditPlayerName = viewModel::showNameDialog,
                         onShowArtworkChange = viewModel::setShowArtwork,
                         onUpdateArtworkData = { navController.navigate(DATA_UPDATE_ROUTE) },
-                        onUpdateSongData = {},
+                        onUpdateSongData = {
+                            onDestinationSelected(AppDestination.Home)
+                            viewModel.updateSongData()
+                        },
                         onCheckUpdates = {
                             uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
                         },

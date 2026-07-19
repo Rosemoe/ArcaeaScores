@@ -11,6 +11,7 @@ data class MainUiState(
     val rootPermissionGranted: Boolean = false,
     val showArtwork: Boolean = true,
     val artworkDataVersion: String? = null,
+    val songDataVersion: String? = null,
     val completedArtworkUpdateVersion: String? = null,
     val isLoading: Boolean = false,
     val loadingMessage: String? = null,
