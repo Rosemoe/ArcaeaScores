@@ -10,8 +10,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FilterList
 import androidx.compose.material.icons.outlined.MusicNote
@@ -115,14 +117,16 @@ fun HomeScreen(
         ) { contentPadding ->
             Box(modifier = Modifier.fillMaxSize().padding(contentPadding)) {
             if (isFiltering) {
-                LazyColumn(
+                LazyVerticalGrid(
+                    columns = GridCells.Adaptive(minSize = scoreCardMinWidth),
                     contentPadding = PaddingValues(bottom = 24.dp),
                     verticalArrangement = Arrangement.spacedBy(4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
                     modifier = Modifier
                         .fillMaxSize()
                         .nestedScroll(topAppBarScrollBehavior.nestedScrollConnection)
                 ) {
-                    item {
+                    item(span = { GridItemSpan(maxLineSpan) }) {
                         ScoreSearchFilters(
                             keyword = keyword,
                             onKeywordChange = { keyword = it },
@@ -143,11 +147,11 @@ fun HomeScreen(
                             onSortOrderChange = { sortOrderName = it.name }
                         )
                     }
-                    item {
+                    item(span = { GridItemSpan(maxLineSpan) }) {
                         ScoreListHeader(scoreCount = filteredScores.size)
                     }
                     if (filteredScores.isEmpty()) {
-                        item { EmptySearchResults() }
+                        item(span = { GridItemSpan(maxLineSpan) }) { EmptySearchResults() }
                     } else {
                         itemsIndexed(
                             items = filteredScores,
@@ -177,17 +181,19 @@ fun HomeScreen(
                     }
                 }
             } else {
-                LazyColumn(
+                LazyVerticalGrid(
+                    columns = GridCells.Adaptive(minSize = scoreCardMinWidth),
                     contentPadding = PaddingValues(bottom = 24.dp),
                     verticalArrangement = Arrangement.spacedBy(4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
                     modifier = Modifier
                         .fillMaxSize()
                         .nestedScroll(topAppBarScrollBehavior.nestedScrollConnection)
                 ) {
-                    item {
+                    item(span = { GridItemSpan(maxLineSpan) }) {
                         PlayerSummary(state = state, fonts = fonts, onClick = onSetName)
                     }
-                    item {
+                    item(span = { GridItemSpan(maxLineSpan) }) {
                         ScoreListHeader(scoreCount = state.scores.size)
                     }
                     itemsIndexed(
@@ -288,6 +294,8 @@ private val chartLevelOptions = buildList {
         }
     }
 }
+
+private val scoreCardMinWidth = 400.dp
 
 @Composable
 private fun LoadingOverlay(message: String) {
