@@ -6,6 +6,7 @@ composeBom = "2026.06.00"
 datastore = "1.2.1"
 kotlin = "2.3.21"
 lifecycle = "2.10.0"
+material3 = "1.5.0-alpha24"
 minSdk = "23"
 navigation = "2.9.8"
 targetSdk = "37"
@@ -13,7 +14,7 @@ targetSdk = "37"
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.13.0" }
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
-androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }

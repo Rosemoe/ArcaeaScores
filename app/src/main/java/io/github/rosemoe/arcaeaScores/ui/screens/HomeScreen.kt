@@ -1,6 +1,12 @@
 package io.github.rosemoe.arcaeaScores.ui.screens
 
-import androidx.compose.foundation.background
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.animation.togetherWith
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,13 +24,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FilterList
 import androidx.compose.material.icons.outlined.MusicNote
 import androidx.compose.material3.Button
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.LoadingIndicator
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -115,8 +121,30 @@ fun HomeScreen(
             )
         }
         ) { contentPadding ->
-            Box(modifier = Modifier.fillMaxSize().padding(contentPadding)) {
-            if (isFiltering) {
+            AnimatedContent(
+                targetState = state.isLoading,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(contentPadding),
+                transitionSpec = {
+                    if (targetState) {
+                        (fadeIn(animationSpec = tween(180)) +
+                            slideInVertically(animationSpec = tween(180)) { -it / 8 }) togetherWith
+                            (fadeOut(animationSpec = tween(120)) +
+                                slideOutVertically(animationSpec = tween(120)) { it / 8 })
+                    } else {
+                        (fadeIn(animationSpec = tween(260, delayMillis = 60)) +
+                            slideInVertically(animationSpec = tween(260, delayMillis = 60)) { it / 8 }) togetherWith
+                            (fadeOut(animationSpec = tween(140)) +
+                                slideOutVertically(animationSpec = tween(140)) { -it / 8 })
+                    }
+                },
+                label = "score loading state"
+            ) { isLoading ->
+                Box(modifier = Modifier.fillMaxSize()) {
+            if (isLoading) {
+                LoadingScores(message = state.loadingMessage.orEmpty())
+            } else if (isFiltering) {
                 LazyVerticalGrid(
                     columns = GridCells.Adaptive(minSize = scoreCardMinWidth),
                     contentPadding = PaddingValues(bottom = 24.dp),
@@ -211,9 +239,7 @@ fun HomeScreen(
                 }
             }
             }
-        }
-        if (state.isLoading) {
-            LoadingOverlay(state.loadingMessage.orEmpty())
+            }
         }
     }
 }
@@ -298,22 +324,23 @@ private val chartLevelOptions = buildList {
 private val scoreCardMinWidth = 400.dp
 
 @Composable
-private fun LoadingOverlay(message: String) {
-    Box(
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
+private fun LoadingScores(message: String) {
+    Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.scrim.copy(alpha = 0.32f)),
-        contentAlignment = Alignment.Center
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
-        ElevatedCard {
-            Row(
-                modifier = Modifier.padding(24.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                CircularProgressIndicator()
-                Text(message)
-            }
+        LoadingIndicator(modifier = Modifier.size(64.dp))
+        if (message.isNotBlank()) {
+            Text(
+                text = message,
+                modifier = Modifier.padding(top = 20.dp),
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         }
     }
 }
