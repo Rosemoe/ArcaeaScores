@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -44,6 +45,7 @@ fun MainScreen(
     modifier: Modifier = Modifier
 ) {
     var selectedDestinationName by rememberSaveable { mutableStateOf(MainDestination.Home.name) }
+    val destinationStateHolder = rememberSaveableStateHolder()
     val selectedDestination = MainDestination.entries.firstOrNull {
         it.name == selectedDestinationName
     } ?: MainDestination.Home
@@ -90,29 +92,31 @@ fun MainScreen(
             },
             color = MaterialTheme.colorScheme.surface
         ) {
-            when (selectedDestination) {
-                MainDestination.Home -> HomeScreen(
-                    state = state,
-                    onUpdate = onUpdateScores,
-                    onSetName = onSetPlayerName,
-                    collapseTopbarOnScroll = collapseTopbarOnScroll
-                )
+            destinationStateHolder.SaveableStateProvider(selectedDestination.name) {
+                when (selectedDestination) {
+                    MainDestination.Home -> HomeScreen(
+                        state = state,
+                        onUpdate = onUpdateScores,
+                        onSetName = onSetPlayerName,
+                        collapseTopbarOnScroll = collapseTopbarOnScroll
+                    )
 
-                MainDestination.Settings -> SettingsScreen(
-                    playerName = state.playerName,
-                    showArtwork = state.showArtwork,
-                    artworkDataVersion = state.artworkDataVersion,
-                    songDataVersion = state.songDataVersion,
-                    onEditPlayerName = onSetPlayerName,
-                    onShowArtworkChange = onShowArtworkChange,
-                    onUpdateArtworkData = onUpdateArtworkData,
-                    onUpdateSongData = {
-                        selectedDestinationName = MainDestination.Home.name
-                        onUpdateSongData()
-                    },
-                    onCheckUpdates = onCheckUpdates,
-                    onOpenAbout = onOpenAbout
-                )
+                    MainDestination.Settings -> SettingsScreen(
+                        playerName = state.playerName,
+                        showArtwork = state.showArtwork,
+                        artworkDataVersion = state.artworkDataVersion,
+                        songDataVersion = state.songDataVersion,
+                        onEditPlayerName = onSetPlayerName,
+                        onShowArtworkChange = onShowArtworkChange,
+                        onUpdateArtworkData = onUpdateArtworkData,
+                        onUpdateSongData = {
+                            selectedDestinationName = MainDestination.Home.name
+                            onUpdateSongData()
+                        },
+                        onCheckUpdates = onCheckUpdates,
+                        onOpenAbout = onOpenAbout
+                    )
+                }
             }
         }
     }

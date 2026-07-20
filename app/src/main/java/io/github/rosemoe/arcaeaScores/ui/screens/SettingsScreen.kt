@@ -4,6 +4,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
 import androidx.compose.material.icons.outlined.Info
@@ -44,6 +45,7 @@ fun SettingsScreen(
     modifier: Modifier = Modifier
 ) {
     val topAppBarScrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+    val settingsListState = rememberLazyListState()
 
     Scaffold(
         modifier = modifier,
@@ -55,6 +57,7 @@ fun SettingsScreen(
         }
     ) { contentPadding ->
         LazyColumn(
+            state = settingsListState,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(contentPadding)

@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FilterList
 import androidx.compose.material.icons.outlined.MusicNote
@@ -73,6 +74,8 @@ fun HomeScreen(
     var selectedLevels by rememberSaveable { mutableStateOf(emptyList<String>()) }
     var zeroLostScoreOnly by rememberSaveable { mutableStateOf(false) }
     var sortOrderName by rememberSaveable { mutableStateOf(ArcaeaScoreSortOrder.Potential.name) }
+    val filteredScoreListState = rememberLazyGridState()
+    val scoreListState = rememberLazyGridState()
     val sortOrder = ArcaeaScoreSortOrder.valueOf(sortOrderName)
     val filteredScores = state.scores
         .filter { score ->
@@ -147,6 +150,7 @@ fun HomeScreen(
                 LoadingScores(message = state.loadingMessage.orEmpty())
             } else if (isFiltering) {
                 LazyVerticalGrid(
+                    state = filteredScoreListState,
                     columns = GridCells.Adaptive(minSize = scoreCardMinWidth),
                     contentPadding = PaddingValues(bottom = 24.dp),
                     verticalArrangement = Arrangement.spacedBy(4.dp),
@@ -211,6 +215,7 @@ fun HomeScreen(
                 }
             } else {
                 LazyVerticalGrid(
+                    state = scoreListState,
                     columns = GridCells.Adaptive(minSize = scoreCardMinWidth),
                     contentPadding = PaddingValues(bottom = 24.dp),
                     verticalArrangement = Arrangement.spacedBy(4.dp),
