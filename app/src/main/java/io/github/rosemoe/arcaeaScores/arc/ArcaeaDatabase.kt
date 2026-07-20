@@ -45,6 +45,9 @@ fun readDatabase(context: Context): ArcaeaRecord {
                         farCount = cursor.getInt(cursor.getColumnIndexOrThrow("nearCount")),
                         lostCount = cursor.getInt(cursor.getColumnIndexOrThrow("missCount")),
                         title = chartInfo?.title ?: titles.queryForChart(songId, difficulty),
+                        artist = titles.queryArtist(songId),
+                        side = titles.querySide(songId),
+                        releaseDate = titles.queryReleaseDate(songId, difficulty),
                         chartInfo = chartInfo,
                         artworkPaths = titles.queryForJacketPaths(
                             songsDirectory = File(context.filesDir, "songs"),

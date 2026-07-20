@@ -152,11 +152,15 @@ fun ScoreCard(
     rank: Int,
     fonts: ArcaeaFonts,
     showArtwork: Boolean,
-    artworkDataVersion: String?
+    artworkDataVersion: String?,
+    onClick: () -> Unit
 ) {
     val lostRankedScore = score.lostRankedScore?.takeIf { it > 0.0 }
     ElevatedCard(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp)
+            .clickable(onClick = onClick),
         elevation = CardDefaults.elevatedCardElevation(defaultElevation = 1.dp)
     ) {
         Row(

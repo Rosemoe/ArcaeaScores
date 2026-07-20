@@ -8,13 +8,21 @@ data class ChartInfo(
     val title: String?,
     val rating: Int?,
     val ratingPlus: Boolean,
-    val jacketOverride: Boolean
+    val jacketOverride: Boolean,
+    val chartDesigner: String?,
+    val jacketDesigner: String?,
+    val releaseDate: Long?
 ) {
     val displayRating: String?
         get() = rating?.let { "$it${if (ratingPlus) "+" else ""}" }
 }
 
-private data class SongInfo(val remoteDl: Boolean)
+private data class SongInfo(
+    val remoteDl: Boolean,
+    val artist: String?,
+    val side: Int?,
+    val releaseDate: Long?
+)
 
 class SongList(songListJson: InputStream) {
 
@@ -34,7 +42,12 @@ class SongList(songListJson: InputStream) {
             }
             val songId = song.getString("id")
             songTitles[songId] = song.getJSONObject("title_localized").getString("en")
-            songInfo[songId] = SongInfo(remoteDl = song.optBoolean("remote_dl"))
+            songInfo[songId] = SongInfo(
+                remoteDl = song.optBoolean("remote_dl"),
+                artist = song.optString("artist").takeIf { it.isNotBlank() },
+                side = song.takeIf { it.has("side") }?.getInt("side"),
+                releaseDate = song.takeIf { it.has("date") }?.getLong("date")
+            )
 
             val difficulties = song.getJSONArray("difficulties")
             for (difficultyIndex in 0 until difficulties.length()) {
@@ -48,7 +61,10 @@ class SongList(songListJson: InputStream) {
                     title = title?.takeIf { it.isNotBlank() },
                     rating = difficulty.takeIf { it.has("rating") }?.getInt("rating"),
                     ratingPlus = difficulty.optBoolean("ratingPlus"),
-                    jacketOverride = difficulty.optBoolean("jacketOverride")
+                    jacketOverride = difficulty.optBoolean("jacketOverride"),
+                    chartDesigner = difficulty.optString("chartDesigner").takeIf { it.isNotBlank() },
+                    jacketDesigner = difficulty.optString("jacketDesigner").takeIf { it.isNotBlank() },
+                    releaseDate = difficulty.takeIf { it.has("date") }?.getLong("date")
                 )
             }
         }
@@ -64,6 +80,14 @@ class SongList(songListJson: InputStream) {
 
     fun queryForChartInfo(songId: String, difficulty: Int): ChartInfo? {
         return chartInfo[songId to difficulty]
+    }
+
+    fun queryArtist(songId: String): String? = songInfo[songId]?.artist
+
+    fun querySide(songId: String): Int? = songInfo[songId]?.side
+
+    fun queryReleaseDate(songId: String, difficulty: Int): Long? {
+        return chartInfo[songId to difficulty]?.releaseDate ?: songInfo[songId]?.releaseDate
     }
 
     fun queryForJacketPaths(songsDirectory: File, songId: String, difficulty: Int): List<File> {

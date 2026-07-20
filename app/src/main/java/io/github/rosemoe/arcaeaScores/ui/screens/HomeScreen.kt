@@ -53,6 +53,7 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.github.rosemoe.arcaeaScores.R
+import io.github.rosemoe.arcaeaScores.arc.ArcaeaScore
 import io.github.rosemoe.arcaeaScores.arc.ArcaeaScoreSortOrder
 import io.github.rosemoe.arcaeaScores.app.MainUiState
 import io.github.rosemoe.arcaeaScores.ui.components.PlayerSummary
@@ -67,6 +68,7 @@ fun HomeScreen(
     state: MainUiState,
     onUpdate: () -> Unit,
     onSetName: () -> Unit,
+    onOpenScore: (ArcaeaScore) -> Unit,
     collapseTopbarOnScroll: Boolean,
     modifier: Modifier = Modifier,
 ) {
@@ -212,7 +214,8 @@ fun HomeScreen(
                                 rank = index + 1,
                                 fonts = fonts,
                                 showArtwork = state.showArtwork,
-                                artworkDataVersion = state.artworkDataVersion
+                                artworkDataVersion = state.artworkDataVersion,
+                                onClick = { onOpenScore(score) }
                             )
                         }
                     }
@@ -256,7 +259,8 @@ fun HomeScreen(
                             rank = index + 1,
                             fonts = fonts,
                             showArtwork = state.showArtwork,
-                            artworkDataVersion = state.artworkDataVersion
+                            artworkDataVersion = state.artworkDataVersion,
+                            onClick = { onOpenScore(score) }
                         )
                     }
                 }

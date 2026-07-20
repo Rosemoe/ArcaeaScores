@@ -8,19 +8,24 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import io.github.rosemoe.arcaeaScores.app.MainUiState
 import io.github.rosemoe.arcaeaScores.app.MainViewModel
 import io.github.rosemoe.arcaeaScores.ui.components.AppDialogHost
 import io.github.rosemoe.arcaeaScores.ui.screens.AboutScreen
 import io.github.rosemoe.arcaeaScores.ui.screens.DataUpdateScreen
 import io.github.rosemoe.arcaeaScores.ui.screens.MainScreen
+import io.github.rosemoe.arcaeaScores.ui.screens.ScoreDetailScreen
 
 private const val MAIN_ROUTE = "main"
 private const val ABOUT_ROUTE = "about"
 private const val DATA_UPDATE_ROUTE = "data-update"
+private const val SCORE_DETAIL_ROUTE = "score-detail"
+private const val SCORE_DETAIL_ROUTE_PATTERN = "$SCORE_DETAIL_ROUTE/{songId}/{difficulty}"
 
 @Composable
 fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
@@ -47,7 +52,10 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                 onCheckUpdates = {
                     uriHandler.openUri("https://github.com/Rosemoe/ArcaeaScores/releases/latest/")
                 },
-                onOpenAbout = { navController.navigate(ABOUT_ROUTE) }
+                onOpenAbout = { navController.navigate(ABOUT_ROUTE) },
+                onOpenScore = { score ->
+                    navController.navigate("$SCORE_DETAIL_ROUTE/${score.songId}/${score.difficulty}")
+                }
             )
         }
         composable(ABOUT_ROUTE) {
@@ -72,6 +80,20 @@ fun ArcaeaScoresApp(state: MainUiState, viewModel: MainViewModel) {
                     navController.popBackStack()
                 }
             )
+        }
+        composable(
+            route = SCORE_DETAIL_ROUTE_PATTERN,
+            arguments = listOf(
+                navArgument("songId") { type = NavType.StringType },
+                navArgument("difficulty") { type = NavType.IntType }
+            )
+        ) { entry ->
+            val songId = entry.arguments?.getString("songId")
+            val difficulty = entry.arguments?.getInt("difficulty")
+            val score = state.scores.firstOrNull {
+                it.songId == songId && it.difficulty == difficulty
+            }
+            ScoreDetailScreen(score = score, onBack = navController::popBackStack)
         }
     }
 

@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowSizeClass
 import io.github.rosemoe.arcaeaScores.R
 import io.github.rosemoe.arcaeaScores.app.MainUiState
+import io.github.rosemoe.arcaeaScores.arc.ArcaeaScore
 
 private enum class MainDestination(val labelRes: Int) {
     Home(R.string.nav_home),
@@ -42,6 +43,7 @@ fun MainScreen(
     onUpdateSongData: () -> Unit,
     onCheckUpdates: () -> Unit,
     onOpenAbout: () -> Unit,
+    onOpenScore: (ArcaeaScore) -> Unit,
     modifier: Modifier = Modifier
 ) {
     var selectedDestinationName by rememberSaveable { mutableStateOf(MainDestination.Home.name) }
@@ -98,6 +100,7 @@ fun MainScreen(
                         state = state,
                         onUpdate = onUpdateScores,
                         onSetName = onSetPlayerName,
+                        onOpenScore = onOpenScore,
                         collapseTopbarOnScroll = collapseTopbarOnScroll
                     )
 
