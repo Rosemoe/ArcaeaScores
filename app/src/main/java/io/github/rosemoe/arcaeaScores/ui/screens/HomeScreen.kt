@@ -7,6 +7,7 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -39,12 +40,14 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -56,6 +59,7 @@ import io.github.rosemoe.arcaeaScores.ui.components.PlayerSummary
 import io.github.rosemoe.arcaeaScores.ui.components.ScoreCard
 import io.github.rosemoe.arcaeaScores.ui.components.ScoreSearchFilters
 import io.github.rosemoe.arcaeaScores.ui.components.rememberArcaeaFonts
+import kotlinx.coroutines.launch
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
@@ -76,6 +80,7 @@ fun HomeScreen(
     var sortOrderName by rememberSaveable { mutableStateOf(ArcaeaScoreSortOrder.Potential.name) }
     val filteredScoreListState = rememberLazyGridState()
     val scoreListState = rememberLazyGridState()
+    val coroutineScope = rememberCoroutineScope()
     val sortOrder = ArcaeaScoreSortOrder.valueOf(sortOrderName)
     val filteredScores = state.scores
         .filter { score ->
@@ -87,12 +92,24 @@ fun HomeScreen(
                 (!zeroLostScoreOnly || score.lostRankedScore == 0.0)
         }
         .sortedWith(sortOrder.comparator())
+    val scrollToTop = {
+        coroutineScope.launch {
+            if (isFiltering) {
+                filteredScoreListState.animateScrollToItem(0)
+            } else {
+                scoreListState.animateScrollToItem(0)
+            }
+        }
+    }
     Box(modifier = modifier.fillMaxSize()) {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.nav_home)) },
+                modifier = Modifier.pointerInput(Unit) {
+                    detectTapGestures(onDoubleTap = { scrollToTop() })
+                },
+                title = { Text(text = stringResource(R.string.nav_home)) },
                 actions = {
                     IconButton(onClick = onUpdate) {
                         Icon(
