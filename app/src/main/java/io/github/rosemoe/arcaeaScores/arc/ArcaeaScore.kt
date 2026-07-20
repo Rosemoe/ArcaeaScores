@@ -11,7 +11,7 @@ enum class ArcaeaScoreSortOrder {
     fun comparator(): Comparator<ArcaeaScore> {
         val primaryComparator = when (this) {
             Potential -> compareByDescending<ArcaeaScore> { it.playPotential }
-            TheoreticalDistance -> compareByDescending { it.theoreticalScoreDistance }
+            TheoreticalDistance -> compareBy { it.theoreticalScoreDistance }
             LostRankedScore -> compareBy { it.lostRankedScore ?: Double.POSITIVE_INFINITY }
             ChartConstant -> compareByDescending { it.chartConstant }
         }
