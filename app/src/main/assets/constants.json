@@ -2863,6 +2863,24 @@
     "ftr": 8.7,
     "etr": 10.5
   },
+  "synthesis": {
+    "pst": 4.0,
+    "prs": 8.2,
+    "ftr": 9.7,
+    "etr": 10.5
+  },
+  "acidgod": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.9,
+    "etr": 10.9
+  },
+  "chronologia": {
+    "pst": 4.5,
+    "prs": 7.8,
+    "ftr": 9.8,
+    "etr": 10.8
+  },
   "particlearts": {
     "pst": 3.5,
     "prs": 6.0,

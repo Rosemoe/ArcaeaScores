@@ -34626,6 +34626,215 @@
                     "rating": 10
                 }
             ]
+        },
+        {
+            "idx": 542,
+            "id": "synthesis",
+            "title_localized": {
+                "en": "Synthesis."
+            },
+            "artist": "tn-shi",
+            "search_title": {
+                "ja": [
+                    "しんせしす"
+                ],
+                "ko": [
+                    "신테시스",
+                    "신세시스"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "てんし"
+                ],
+                "ko": [
+                    "텐시"
+                ]
+            },
+            "bpm": "180",
+            "bpm_base": 180,
+            "set": "single",
+            "category": "variety",
+            "purchase": "synthesis",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "single2_conflict",
+            "bg_inverse": "single2_light",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1785369600,
+            "version": "6.16",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Souplex",
+                    "jacketDesigner": "AT基調",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Souplex",
+                    "jacketDesigner": "AT基調",
+                    "rating": 8
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Souplex",
+                    "jacketDesigner": "AT基調",
+                    "rating": 9,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "Synthesis.raycast()",
+                    "jacketDesigner": "AT基調",
+                    "rating": 10
+                }
+            ]
+        },
+        {
+            "idx": 543,
+            "id": "acidgod",
+            "title_localized": {
+                "en": "Acid God"
+            },
+            "artist": "Yuta Imai",
+            "search_title": {
+                "ja": [
+                    "あしっどごっど"
+                ],
+                "ko": [
+                    "애시드 갓"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "ゆうたいまい"
+                ],
+                "ko": [
+                    "유타 이마이",
+                    "유우타 이마이"
+                ]
+            },
+            "bpm": "160",
+            "bpm_base": 160,
+            "set": "single",
+            "category": "musicgames",
+            "source_localized": {
+                "en": "CHUNITHM"
+            },
+            "source_copyright": "©SEGA",
+            "purchase": "acidgod",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 1,
+            "bg": "chuni-ikazuchi",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1785369601,
+            "version": "6.16",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "nora::pengin",
+                    "jacketDesigner": "",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "nora::pengin",
+                    "jacketDesigner": "",
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "nora::pengin",
+                    "jacketDesigner": "",
+                    "rating": 9,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "終点",
+                    "jacketDesigner": "",
+                    "rating": 10,
+                    "ratingPlus": true
+                }
+            ]
+        },
+        {
+            "idx": 545,
+            "id": "chronologia",
+            "title_localized": {
+                "en": "chronologia"
+            },
+            "artist": "lowiro Sound Team (ak+q x nitro)",
+            "search_title": {
+                "ja": [
+                    "くろのろじあ"
+                ],
+                "ko": [
+                    "크로노로지아"
+                ]
+            },
+            "search_artist": {
+                "ja": [
+                    "ろーいろさうんどちーむ",
+                    "えーけーぷらすきゅー",
+                    "ないとろ",
+                    "にとろ"
+                ],
+                "ko": [
+                    "로위로 사운드 팀",
+                    "에이케이 플러스 큐",
+                    "니트로"
+                ]
+            },
+            "bpm": "180",
+            "bpm_base": 180,
+            "set": "single",
+            "category": "original",
+            "purchase": "chronologia",
+            "audioPreview": 0,
+            "audioPreviewEnd": 0,
+            "side": 0,
+            "bg": "eden_light",
+            "bg_inverse": "eden_conflict",
+            "remote_dl": true,
+            "world_unlock": false,
+            "date": 1785369603,
+            "version": "6.16",
+            "difficulties": [
+                {
+                    "ratingClass": 0,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "Khronetic x SARYN",
+                    "rating": 4
+                },
+                {
+                    "ratingClass": 1,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "Khronetic x SARYN",
+                    "rating": 7,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 2,
+                    "chartDesigner": "Nitro",
+                    "jacketDesigner": "Khronetic x SARYN",
+                    "rating": 9,
+                    "ratingPlus": true
+                },
+                {
+                    "ratingClass": 4,
+                    "chartDesigner": "Nitro x Toaster",
+                    "jacketDesigner": "Khronetic x SARYN",
+                    "rating": 10,
+                    "ratingPlus": true
+                }
+            ]
         }
     ]
 }
