@@ -267,6 +267,7 @@ private fun sideName(side: Int?): String = stringResource(
         1 -> R.string.side_conflict
         2 -> R.string.side_colorless
         3 -> R.string.side_lephon
+        4 -> R.string.side_dark_lephon
         else -> R.string.score_detail_not_available
     }
 )

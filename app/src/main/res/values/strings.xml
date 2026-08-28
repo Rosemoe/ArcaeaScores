@@ -79,6 +79,7 @@
     <string name="side_conflict">Conflict</string>
     <string name="side_colorless">Colorless</string>
     <string name="side_lephon">Lephon</string>
+    <string name="side_dark_lephon">DarkLephon</string>
     <string name="set_player_name">Set player name</string>
     <string name="action_open_releases">Open releases</string>
     <string name="action_back">Back</string>
