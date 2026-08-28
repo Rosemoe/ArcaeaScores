@@ -116,6 +116,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     current.copy(
                         songDataVersion = version.displayVersion,
                         scores = record?.scores ?: current.scores,
+                        playerPotential = record?.playerPotential ?: current.playerPotential,
                         best10Potential = record?.best10Potential ?: current.best10Potential,
                         best50Potential = record?.best50Potential ?: current.best50Potential,
                         isLoading = false,
@@ -218,6 +219,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 _uiState.update {
                     it.copy(
                         scores = record.scores,
+                        playerPotential = record.playerPotential,
                         best10Potential = record.best10Potential,
                         best50Potential = record.best50Potential,
                         isLoading = false,

@@ -95,6 +95,18 @@ fun PlayerSummary(state: MainUiState, fonts: ArcaeaFonts, onClick: () -> Unit) {
                 style = MaterialTheme.typography.titleLarge
             )
             Spacer(Modifier.height(20.dp))
+            Text(
+                text = stringResource(R.string.player_potential),
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Text(
+                text = state.playerPotential.toScaledString(),
+                fontFamily = fonts.exoSemiBold,
+                style = MaterialTheme.typography.displaySmall,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Spacer(Modifier.height(16.dp))
             Row {
                 Column(
                     modifier = Modifier.weight(1f),
@@ -108,7 +120,7 @@ fun PlayerSummary(state: MainUiState, fonts: ArcaeaFonts, onClick: () -> Unit) {
                     Text(
                         text = state.best10Potential.toScaledString(),
                         fontFamily = fonts.exoSemiBold,
-                        style = MaterialTheme.typography.displaySmall
+                        style = MaterialTheme.typography.titleLarge
                     )
                 }
                 Column(
@@ -123,7 +135,7 @@ fun PlayerSummary(state: MainUiState, fonts: ArcaeaFonts, onClick: () -> Unit) {
                     Text(
                         text = state.best50Potential.toScaledString(),
                         fontFamily = fonts.exoSemiBold,
-                        style = MaterialTheme.typography.displaySmall
+                        style = MaterialTheme.typography.titleLarge
                     )
                 }
             }

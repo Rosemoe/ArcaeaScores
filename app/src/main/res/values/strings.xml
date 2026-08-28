@@ -20,6 +20,7 @@
     <string name="artwork_data_version">Current artwork data version: %1$s</string>
     <string name="no_artwork_data">No artwork data</string>
     <string name="artwork_update_complete">Artwork data updated</string>
+    <string name="player_potential">Player Potential</string>
     <string name="best_10_potential">Best 10 Potential</string>
     <string name="best_50_potential">Best 50 Potential</string>
     <string name="best_30">Scores</string>
