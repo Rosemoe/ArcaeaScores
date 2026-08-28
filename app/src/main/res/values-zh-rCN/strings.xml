@@ -21,9 +21,9 @@
     <string name="artwork_data_version">当前曲绘数据版本：%1$s</string>
     <string name="no_artwork_data">暂无曲绘数据</string>
     <string name="artwork_update_complete">曲绘数据已更新</string>
-    <string name="best_30_potential">Best 30 潜力值</string>
+    <string name="best_10_potential">Best 10 潜力值</string>
+    <string name="best_50_potential">Best 50 潜力值</string>
     <string name="best_30">成绩列表</string>
-    <string name="max_potential">最高潜力值</string>
     <string name="last_updated">上次更新</string>
     <string name="not_updated">尚未更新</string>
     <plurals name="score_count">
@@ -73,6 +73,7 @@
     <string name="difficulty_present">Present</string>
     <string name="difficulty_future">Future</string>
     <string name="difficulty_beyond">Beyond</string>
+    <string name="difficulty_inscribed">Inscribed</string>
     <string name="difficulty_eternal">Eternal</string>
     <string name="side_light">Light</string>
     <string name="side_conflict">Conflict</string>

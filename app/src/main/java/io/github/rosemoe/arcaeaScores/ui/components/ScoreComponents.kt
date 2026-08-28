@@ -95,29 +95,35 @@ fun PlayerSummary(state: MainUiState, fonts: ArcaeaFonts, onClick: () -> Unit) {
                 style = MaterialTheme.typography.titleLarge
             )
             Spacer(Modifier.height(20.dp))
-            Row(verticalAlignment = Alignment.Bottom) {
-                Column(modifier = Modifier.weight(1f)) {
+            Row {
+                Column(
+                    modifier = Modifier.weight(1f),
+                    horizontalAlignment = Alignment.Start
+                ) {
                     Text(
-                        text = stringResource(R.string.best_30_potential),
+                        text = stringResource(R.string.best_10_potential),
                         style = MaterialTheme.typography.labelLarge,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Text(
-                        text = state.best30Potential.toScaledString(),
+                        text = state.best10Potential.toScaledString(),
                         fontFamily = fonts.exoSemiBold,
                         style = MaterialTheme.typography.displaySmall
                     )
                 }
-                Column(horizontalAlignment = Alignment.End) {
+                Column(
+                    modifier = Modifier.weight(1f),
+                    horizontalAlignment = Alignment.Start
+                ) {
                     Text(
-                        text = stringResource(R.string.max_potential),
+                        text = stringResource(R.string.best_50_potential),
                         style = MaterialTheme.typography.labelLarge,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Text(
-                        text = state.maxPotential.toScaledString(),
+                        text = state.best50Potential.toScaledString(),
                         fontFamily = fonts.exoSemiBold,
-                        style = MaterialTheme.typography.titleLarge
+                        style = MaterialTheme.typography.displaySmall
                     )
                 }
             }
@@ -206,7 +212,10 @@ fun ScoreCard(
                             lineTo(size.width, triangleSize)
                             close()
                         }
-                        drawPath(triangle, Color(difficultyMainColor(score.difficulty)))
+                        drawPath(
+                            triangle,
+                            Color(difficultyMainColor(score.difficulty, score.chartInfo?.ratingClassAlias))
+                        )
                     }
                 }
                 Spacer(Modifier.width(12.dp))
@@ -216,7 +225,9 @@ fun ScoreCard(
                         .width(5.dp)
                         .fillMaxHeight()
                         .clip(MaterialTheme.shapes.extraSmall)
-                        .background(Color(difficultyMainColor(score.difficulty)))
+                        .background(
+                            Color(difficultyMainColor(score.difficulty, score.chartInfo?.ratingClassAlias))
+                        )
                 )
                 Spacer(Modifier.width(12.dp))
             }

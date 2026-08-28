@@ -2,6 +2,7 @@ package io.github.rosemoe.arcaeaScores.arc
 
 data class ArcaeaRecord(
     val scores: List<ArcaeaScore>,
-    val maxPotential: Double,
-    val best30Potential: Double
+    val best10Potential: Double,
+    val best50Potential: Double,
+    val playerPotential: Double
 )

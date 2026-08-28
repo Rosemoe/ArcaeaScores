@@ -34,6 +34,7 @@ fun readDatabase(context: Context): ArcaeaRecord {
                 val difficulty = cursor.getInt(cursor.getColumnIndexOrThrow("songDifficulty"))
                 val chartConstant = constants.queryForChart(songId, difficulty)
                 val score = cursor.getLong(cursor.getColumnIndexOrThrow("score"))
+                val clearType = cursor.getInt(cursor.getColumnIndexOrThrow("clearType"))
                 val chartInfo = titles.queryForChartInfo(songId, difficulty)
                 list.add(
                     ArcaeaScore(
@@ -56,19 +57,24 @@ fun readDatabase(context: Context): ArcaeaRecord {
                         ).map(File::getAbsolutePath),
                         chartConstant = chartConstant,
                         playPotential = if (chartConstant > 0.0) {
-                            calculatePlayPotential(chartConstant, score)
+                            calculatePlayPotential(chartConstant, score, clearType)
                         } else {
                             0.0
                         },
-                        clearType = cursor.getInt(cursor.getColumnIndexOrThrow("clearType"))
+                        clearType = clearType
                     )
                 )
             }
         }
         list.sortDescending()
 
-        val b30 = list.asSequence().take(30).sumOf { it.playPotential } / 30.0
-        val max = (b30 * 30.0 + list.asSequence().take(10).sumOf { it.playPotential }) / 40.0
-        return ArcaeaRecord(list, max, b30)
+        val best10Total = list.asSequence().take(10).sumOf { it.playPotential }
+        val best50Total = list.asSequence().take(50).sumOf { it.playPotential }
+        return ArcaeaRecord(
+            scores = list,
+            best10Potential = best10Total / 10.0,
+            best50Potential = best50Total / 50.0,
+            playerPotential = (best10Total + best50Total) / 60.0
+        )
     }
 }

@@ -25,24 +25,35 @@ fun scoreGrade(score: Long): String {
     return ScoreGrades.last()
 }
 
-fun difficultyMainColor(difficulty: Int): Int = when (difficulty) {
-    0 -> 0xFF3C95AC
-    1 -> 0xFFB7C484
-    2 -> 0xFF8B4A79
-    3 -> 0xFF941F38
-    4 -> 0xFF9D87B3
-    else -> Color.GRAY
-}.toInt()
+fun isInscribedChart(difficulty: Int, ratingClassAlias: Int?): Boolean =
+    difficulty == 3 && ratingClassAlias == 1
 
-fun calculatePlayPotential(constant: Double, score: Long) = when {
-    score > 10000000 -> constant + 2.0
-    score in 9800000..10000000 ->
-        constant + 1.0 + (score - 9800000) / 200000.0
+fun difficultyMainColor(difficulty: Int, ratingClassAlias: Int? = null): Int {
+    if (isInscribedChart(difficulty, ratingClassAlias)) {
+        return 0xFF243071.toInt()
+    }
+    return when (difficulty) {
+        0 -> 0xFF3C95AC
+        1 -> 0xFFB7C484
+        2 -> 0xFF8B4A79
+        3 -> 0xFF941F38
+        4 -> 0xFF9D87B3
+        else -> Color.GRAY
+    }.toInt()
+}
 
-    else -> max(
-        0.0,
-        constant + (score - 9500000) / 300000.0
-    )
+fun calculatePlayPotential(constant: Double, score: Long, clearType: Int): Double {
+    val scorePotential = when {
+        score > 10000000 -> constant + 2.0
+        score in 9800000..10000000 ->
+            constant + 1.0 + (score - 9800000) / 200000.0
+
+        else -> max(
+            0.0,
+            constant + (score - 9500000) / 300000.0
+        )
+    }
+    return scorePotential + if (clearType > 0) 0.2 else 0.0
 }
 
 fun toScoreText(score: Long): String {

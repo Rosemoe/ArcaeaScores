@@ -8,6 +8,7 @@ data class ChartInfo(
     val title: String?,
     val rating: Int?,
     val ratingPlus: Boolean,
+    val ratingClassAlias: Int?,
     val jacketOverride: Boolean,
     val chartDesigner: String?,
     val jacketDesigner: String?,
@@ -61,6 +62,8 @@ class SongList(songListJson: InputStream) {
                     title = title?.takeIf { it.isNotBlank() },
                     rating = difficulty.takeIf { it.has("rating") }?.getInt("rating"),
                     ratingPlus = difficulty.optBoolean("ratingPlus"),
+                    ratingClassAlias = difficulty.takeIf { it.has("ratingClassAlias") }
+                        ?.getInt("ratingClassAlias"),
                     jacketOverride = difficulty.optBoolean("jacketOverride"),
                     chartDesigner = difficulty.optString("chartDesigner").takeIf { it.isNotBlank() },
                     jacketDesigner = difficulty.optString("jacketDesigner").takeIf { it.isNotBlank() },

@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import io.github.rosemoe.arcaeaScores.R
 import io.github.rosemoe.arcaeaScores.arc.ArcaeaScore
 import io.github.rosemoe.arcaeaScores.arc.clearTypeShortString
+import io.github.rosemoe.arcaeaScores.arc.isInscribedChart
 import io.github.rosemoe.arcaeaScores.arc.scoreGrade
 import io.github.rosemoe.arcaeaScores.arc.toScoreText
 import java.text.DateFormat
@@ -138,7 +139,7 @@ fun ScoreDetailScreen(score: ArcaeaScore?, onBack: () -> Unit) {
                         )
                         DetailRow(
                             label = stringResource(R.string.score_detail_chart_level),
-                            value = "${difficultyName(score.difficulty)} ${score.chartInfo?.displayRating.orEmpty()}".trim()
+                            value = "${difficultyName(score.difficulty, score.chartInfo?.ratingClassAlias)} ${score.chartInfo?.displayRating.orEmpty()}".trim()
                         )
                         DetailRow(
                             label = stringResource(R.string.score_detail_side),
@@ -187,7 +188,7 @@ private fun ScoreOverview(score: ArcaeaScore) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "${difficultyName(score.difficulty)} ${score.chartInfo?.displayRating.orEmpty()}".trim(),
+                    text = "${difficultyName(score.difficulty, score.chartInfo?.ratingClassAlias)} ${score.chartInfo?.displayRating.orEmpty()}".trim(),
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -245,14 +246,17 @@ private fun DetailRow(label: String, value: String, emphasized: Boolean = false)
 }
 
 @Composable
-private fun difficultyName(difficulty: Int): String = stringResource(
-    when (difficulty) {
+private fun difficultyName(difficulty: Int, ratingClassAlias: Int?): String = stringResource(
+    when {
+        isInscribedChart(difficulty, ratingClassAlias) -> R.string.difficulty_inscribed
+        else -> when (difficulty) {
         0 -> R.string.difficulty_past
         1 -> R.string.difficulty_present
         2 -> R.string.difficulty_future
         3 -> R.string.difficulty_beyond
         4 -> R.string.difficulty_eternal
         else -> R.string.score_detail_not_available
+        }
     }
 )
 

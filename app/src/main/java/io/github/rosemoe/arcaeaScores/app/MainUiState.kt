@@ -5,8 +5,8 @@ import io.github.rosemoe.arcaeaScores.arc.ArcaeaScore
 data class MainUiState(
     val playerName: String = "",
     val scores: List<ArcaeaScore> = emptyList(),
-    val best30Potential: Double = 0.0,
-    val maxPotential: Double = 0.0,
+    val best10Potential: Double = 0.0,
+    val best50Potential: Double = 0.0,
     val updateTime: Long = 0,
     val rootPermissionGranted: Boolean = false,
     val showArtwork: Boolean = true,

@@ -20,9 +20,9 @@
     <string name="artwork_data_version">Current artwork data version: %1$s</string>
     <string name="no_artwork_data">No artwork data</string>
     <string name="artwork_update_complete">Artwork data updated</string>
-    <string name="best_30_potential">Best 30 Potential</string>
+    <string name="best_10_potential">Best 10 Potential</string>
+    <string name="best_50_potential">Best 50 Potential</string>
     <string name="best_30">Scores</string>
-    <string name="max_potential">Max Potential</string>
     <string name="last_updated">Last updated</string>
     <string name="not_updated">Not updated</string>
     <plurals name="score_count">
@@ -73,6 +73,7 @@
     <string name="difficulty_present">Present</string>
     <string name="difficulty_future">Future</string>
     <string name="difficulty_beyond">Beyond</string>
+    <string name="difficulty_inscribed">Inscribed</string>
     <string name="difficulty_eternal">Eternal</string>
     <string name="side_light">Light</string>
     <string name="side_conflict">Conflict</string>
